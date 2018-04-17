@@ -11,10 +11,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
-
-/**
- * A simple {@link Fragment} subclass.
- */
 public class login extends Fragment {
 
     EditText etLogin;
@@ -24,11 +20,11 @@ public class login extends Fragment {
     Button btContinuar;
 
 
-
-
     public login() {
         // Required empty public constructor
     }
+
+
 
 
     @Override
@@ -46,7 +42,7 @@ public class login extends Fragment {
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Realizar a verificação do login e setar a mensagem no show Dialog se necessário.
+                //Realizar a verificação e envio do login e setar a mensagem no show Dialog se necessário.
             }
         };
 
