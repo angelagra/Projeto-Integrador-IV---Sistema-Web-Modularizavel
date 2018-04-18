@@ -22,6 +22,19 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
+<<<<<<< HEAD
+=======
+            <groupId>org.glassfish.jersey.bundles</groupId>
+            <artifactId>jaxrs-ri</artifactId>
+            <version>2.26-b03</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jersey.media</groupId>
+            <artifactId>jersey-media-json-jackson</artifactId>
+            <version>2.26-b03</version>
+        </dependency>
+        <dependency>
+>>>>>>> 5c929dbac83dd5b8a6d6fdf224d8dc63b338d7a4
             <groupId>com.microsoft.sqlserver</groupId>
             <artifactId>mssql-jdbc</artifactId>
             <version>6.4.0.jre7</version>
