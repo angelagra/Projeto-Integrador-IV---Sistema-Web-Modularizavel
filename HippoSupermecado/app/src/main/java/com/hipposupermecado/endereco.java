@@ -14,13 +14,13 @@ import android.widget.EditText;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class endereco extends Fragment {
+public class Endereco extends Fragment {
 
     EditText etEndereco, etLogradouro, etNumero, etCep, etComplemento, etCidade, etUf, etPais;
     Button btEnviar;
 
 
-    public endereco() {
+    public Endereco() {
         // Required empty public constructor
     }
 
@@ -61,7 +61,7 @@ public class endereco extends Fragment {
     }
 
     public void showDialog(){
-        AlertDialog.Builder builder = new AlertDialog.Builder(endereco.this.getContext());
+        AlertDialog.Builder builder = new AlertDialog.Builder(Endereco.this.getContext());
         builder.setTitle("erro endereço");
         builder.setMessage("variável erro endereço");
         builder.setPositiveButton("OK", null);
