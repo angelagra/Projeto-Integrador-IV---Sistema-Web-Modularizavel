@@ -47,7 +47,7 @@ public class CadastroUsuario extends Fragment
                 if (verificaEmail.find())
                     System.out.println("email incorreto!");
 
-                /*
+
                 if((nome.equals("") || email.equals("")) || (senha.equals("") || confSenha.equals(""))){
                     showDialog("Erro", "Preencher todos os campos");
                 }else if(!senha.equals(confSenha)){
@@ -55,7 +55,6 @@ public class CadastroUsuario extends Fragment
                 }else{
                     showDialog("Sucesso", "Acesso ao banco OK");
                 }
-                */
             }
         };
         btnSalvar.setOnClickListener(listener);

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.hipposupermecado.TestesDeFragmentos">
+    tools:context="com.hipposupermecado.TestesFragmentos">
 
     <FrameLayout
         android:id="@+id/frameLayout"
@@ -28,4 +28,5 @@
         android:text="Cadastro Usuario"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 </android.support.constraint.ConstraintLayout>

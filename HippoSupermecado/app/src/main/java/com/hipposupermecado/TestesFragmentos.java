@@ -5,16 +5,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class TestesDeFragmentos extends AppCompatActivity
-{
+public class TestesFragmentos extends AppCompatActivity {
 
     private Button btnCadastroUsuario;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_testes_de_fragmentos);
+        setContentView(R.layout.activity_testes_fragmentos);
 
         btnCadastroUsuario = (Button) findViewById(R.id.btnCadastroUsuario);
 
