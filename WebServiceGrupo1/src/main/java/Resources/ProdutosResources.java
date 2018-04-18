@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
 
@@ -54,6 +55,15 @@ public class ProdutosResources {
         response = Response.ok(produtos).build();
         return response;
         
+    }
+    
+    @GET
+    @Path("/{id}")
+    @Produces("application/json")
+    public Response getProduto(@PathParam("id") Long id) {
+        Response response = null;
+
+        return response;
     }
     
 }

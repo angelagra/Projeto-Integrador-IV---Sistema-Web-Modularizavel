@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package DetalhesResource;
+package Resources;
 
-import Detalhes.Detalhe;
+import Lista.Detalhe;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -13,11 +13,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import javax.ws.rs.Consumes;
-import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
-import javax.ws.rs.POST;
-import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
@@ -47,11 +43,11 @@ public class DetalheResource {
        List<Detalhe> detalhes = new ArrayList<Detalhe>(); // lista que guarda categoria
        
        while(rs.next()){ //enquanto tiver proximo, pego os dados 
-           Long id     = rs.getLong("idCategoria"); 
-           String nome = rs.getString("nomeCategoria");
-           String descricao = rs.getString("descCategoria");
-           Double preco = rs.getDouble("preco");
-           Double desconto = rs.getDouble("desconto");
+           Long id     = rs.getLong("idProduto"); 
+           String nome = rs.getString("nomeProduto");
+           String descricao = rs.getString("descProduto");
+           Double preco = rs.getDouble("precProduto");
+           Double desconto = rs.getDouble("descontoPromocao");
            
            Detalhe d = new Detalhe(id,nome,descricao,preco,desconto); //cria a categoria
            detalhes.add(d); // adiciona na lista 
@@ -60,40 +56,14 @@ public class DetalheResource {
        response = Response.ok(detalhes).build();
         return response;
     }
-
+    
     @GET
     @Path("/{id}")
     @Produces("application/json")
-    public Response getDetalhes(@PathParam("id") Long id) {
+    public Response getDetalhe(@PathParam("id") Long id) {
         Response response = null;
 
         return response;
     }
 
-    @POST // criar
-    @Consumes("application/json") // vai consumi um Json
-    public Response postDetalhes(Detalhe detalhe) {
-        Response response = null;
-
-        return response;
-    }
-
-    @PUT //  atualiza 
-    @Path("/{id}") // em um lugar especifico
-    @Consumes("application/json") // este metodo consome um json
-    public Response putDetalhes(@PathParam("id") Long id, Detalhe detalhes) {
-        Response response = null;
-
-        return response;
-    }
-
-    @DELETE 
-    @Path("/{id}")
-    public Response deleteDetalhes(@PathParam("id") Long id) {
-        Response response = null;
-
-        return response;
-    }
-
-    
 }
