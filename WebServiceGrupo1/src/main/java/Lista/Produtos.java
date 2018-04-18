@@ -20,7 +20,7 @@ public class Produtos implements Serializable {
         
     }
     
-    public Produtos(Long id, String nome, String descricao, double preco, double desconto, int qtdMinEstoque){
+    public Produtos(Long id, String nome, String descricao, double preco, double desconto, int qtdMinEstoque, Long idCategoria){
         
         this.id = id;
         this.nome = nome;
@@ -28,6 +28,7 @@ public class Produtos implements Serializable {
         this.preco = preco;
         this.desconto = desconto;
         this.qtdMinEstoque = qtdMinEstoque;
+        this.idCategoria = idCategoria;
     }
            
     @XmlAttribute
@@ -62,6 +63,11 @@ public class Produtos implements Serializable {
     @XmlElement
     public int getQtdEstoque(){
         return qtdMinEstoque;
+    }
+    
+    @XmlElement
+    public Long getIdCategoria(){
+        return idCategoria;
     }
     
 }

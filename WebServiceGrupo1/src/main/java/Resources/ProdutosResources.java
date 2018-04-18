@@ -44,8 +44,9 @@ public class ProdutosResources {
             double preco = rs.getDouble("precProduto");
             double desconto = rs.getDouble("descontoPromocao");
             int estoque = rs.getInt("qtdMinEstoque");
+            Long categoria = rs.getLong("idCategoria");
             
-            Produtos p = new Produtos(id, nome, descricao, preco, desconto, estoque);
+            Produtos p = new Produtos(id, nome, descricao, preco, desconto, estoque,categoria);
             produtos.add(p);
             
         }
