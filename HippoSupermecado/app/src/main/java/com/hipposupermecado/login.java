@@ -42,7 +42,13 @@ public class Login extends Fragment {
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Realizar a verificação e envio do Login e setar a mensagem no show Dialog se necessário.
+            //Realizar a verificação e envio do Login e setar a mensagem no show Dialog se necessário.
+            String login = etLogin.getText().toString();
+            String senha = etSenha.getText().toString();
+
+            if(login.trim().equals("") || senha.trim().equals("")){
+                showDialog("Erro","Preencha todos os campos");
+            }
             }
         };
 
@@ -50,8 +56,8 @@ public class Login extends Fragment {
         return inflater.inflate(R.layout.fragment_login, container, false);
     }
 
-    public void showDialog(){
-        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+    public void showDialog(String título,String mensagem){
+        AlertDialog.Builder builder = new AlertDialog.Builder(Login.this.getContext());
         builder.setTitle("erro Login");
         builder.setMessage("variável erro Login");
         builder.setPositiveButton("OK", null);

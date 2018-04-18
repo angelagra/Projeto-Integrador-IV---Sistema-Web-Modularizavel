@@ -46,7 +46,15 @@ public class Endereco extends Fragment {
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Realizar a verificação e envio do endereço e setar a mensagem no show Dialog se necessário.
+                String endereco = etEndereco.getText().toString();
+                String logradouro = etLogradouro.getText().toString();
+                String numero = etNumero.getText().toString();
+                String cep = etCep.getText().toString();
+                String complemento = etComplemento.getText().toString();
+                String cidade = etCidade.getText().toString();
+                String uf = etUf.getText().toString();
+                String pais = etPais.getText().toString();
+                
             }
         };
 
