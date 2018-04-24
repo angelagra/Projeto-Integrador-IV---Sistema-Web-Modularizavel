@@ -36,35 +36,56 @@ public class CategoriaResource {
     private static final String USER = "TSI";
     private static final String PASS = "SistemasInternet123";
 
-    @GET
+    
+      @GET
     @Produces("application/json")
-    public Response getCategorias() throws ClassNotFoundException, SQLException {
+    public Response getCategorias() {
         Response response = null;
-            Class.forName(DRIVER);   // carregar o driver
-           Connection comn =  DriverManager.getConnection(URL, USER, PASS);    
-        PreparedStatement stmt =  comn.prepareStatement("select * from categoria order by nomeCategoria"); //PREPARA 
-       ResultSet rs =  stmt.executeQuery(); // quando so vai consultar faz query
-       
-       List<Categoria> categorias = new ArrayList<Categoria>(); // lista que guarda categoria
-       
-       while(rs.next()){ //enquanto tiver proximo, pego os dados 
-           Long id     = rs.getLong("idCategoria"); 
-           String nome = rs.getString("nomeCategoria");
-           String descricao = rs.getString("descCategoria");
-           
-           Categoria c = new Categoria(id,nome,descricao); //cria a categoria
-           categorias.add(c); // adiciona na lista 
-       }
-       
-       response = Response.ok(categorias).build();
+
+        try (Connection conn = getConnection();
+                PreparedStatement stmt = conn.prepareStatement("select * from categoria order by nomeCategoria");
+                ResultSet rs = stmt.executeQuery()) {
+            List<Categoria> categorias = new ArrayList<>();
+            while (rs.next()) {
+                Long id = rs.getLong("idCategoria");
+                String nome = rs.getString("nomeCategoria");
+                String descricao = rs.getString("descCategoria");
+
+                Categoria categoria = new Categoria(null, nome, descricao);
+                categorias.add(categoria);
+            }
+            response = Response.ok(categorias).build();
+        } catch (ClassNotFoundException | SQLException ex) {
+            response = Response.status(Response.Status.SERVICE_UNAVAILABLE).entity(ex == null ? "?" : ex.getMessage()).build();
+        }
+
         return response;
     }
+
 
     @GET
     @Path("/{id}")
     @Produces("application/json")
     public Response getCategoria(@PathParam("id") Long id) {
         Response response = null;
+
+        try (Connection conn = getConnection();
+                PreparedStatement stmt = conn.prepareStatement("select * from categoria where idCategoria = ?")) {
+            stmt.setLong(1, id);
+            try (ResultSet rs = stmt.executeQuery()) {
+                if (rs.next()) {
+                    String nome = rs.getString("nomeCategoria");
+                    String descricao = rs.getString("descCategoria");
+
+                    Categoria categoria = new Categoria(id, nome, descricao);
+                    response = Response.ok(categoria).build();
+                } else {
+                    response = Response.status(Response.Status.NOT_FOUND).entity(id).build();
+                }
+            }
+        } catch (ClassNotFoundException | SQLException ex) {
+            response = Response.status(Response.Status.SERVICE_UNAVAILABLE).entity(ex == null ? "?" : ex.getMessage()).build();
+        }
 
         return response;
     }
@@ -93,5 +114,8 @@ public class CategoriaResource {
 
         return response;
     }
-
+    private static Connection getConnection() throws ClassNotFoundException, SQLException {
+        Class.forName(DRIVER);
+        return DriverManager.getConnection(URL, USER, PASS);
+    }
 }
