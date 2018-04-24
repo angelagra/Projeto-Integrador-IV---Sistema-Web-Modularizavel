@@ -1,6 +1,7 @@
 
 package Resources;
 
+import Lista.Categoria;
 import Lista.Produtos;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -28,31 +29,31 @@ public class ProdutosResources {
     public Response getProdutos() throws ClassNotFoundException, SQLException{
         
         Response response = null;
-        Class.forName(DRIVER); // carrega o driver
         
-        Connection con = DriverManager.getConnection(URL,USER,PASS); //  conecta ao banco
-        
-        PreparedStatement stmt = con.prepareStatement("select * from produto order by nomeProduto"); // prepara
-        
-        ResultSet rs = stmt.executeQuery(); // usar executeQuery apara se for consultar
-        
-        List<Produtos> produtos = new ArrayList<Produtos>();
-        
-        while(rs.next()){
-            Long id = rs.getLong("idProduto");
-            String nome = rs.getString("nomeProduto");
-            String descricao = rs.getString("descProduto");
-            double preco = rs.getDouble("precProduto");
-            double desconto = rs.getDouble("descontoPromocao");
-            int estoque = rs.getInt("qtdMinEstoque");
-            Long categoria = rs.getLong("idCategoria");
+        try(Connection conn = getConnection();
+               PreparedStatement stmt = conn.prepareStatement("select * from produto order by nomeProduto");
+                ResultSet rs = stmt.executeQuery()){ /*usar executeQuery apara se for consultar*/          
+
+            List<Produtos> produtos = new ArrayList<>();
             
-            Produtos p = new Produtos(id, nome, descricao, preco, desconto, estoque,categoria);
-            produtos.add(p);
-            
+            while(rs.next()){
+                Long id = rs.getLong("idProduto");
+                String nome = rs.getString("nomeProduto");
+                String descricao = rs.getString("descProduto");
+                double preco = rs.getDouble("precProduto");
+                double desconto = rs.getDouble("descontoPromocao");
+                int estoque = rs.getInt("qtdMinEstoque");
+                Long categoria =  rs.getLong("idCategoria");
+
+                Produtos p = new Produtos(id, nome, descricao, preco, desconto, estoque,categoria);
+                produtos.add(p);
+
+            }
+
+            response = Response.ok(produtos).build();
+        }catch(ClassNotFoundException | SQLException ex){
+            response = Response.status(Response.Status.SERVICE_UNAVAILABLE).entity("Serviço Invalido").build();
         }
-        
-        response = Response.ok(produtos).build();
         return response;
         
     }
@@ -64,6 +65,11 @@ public class ProdutosResources {
         Response response = null;
 
         return response;
+    }
+    
+    private static Connection getConnection() throws ClassNotFoundException, SQLException{
+        Class.forName(DRIVER);
+        return DriverManager.getConnection(URL,USER,PASS);
     }
     
 }
