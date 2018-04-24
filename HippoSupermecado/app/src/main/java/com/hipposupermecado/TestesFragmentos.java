@@ -7,7 +7,7 @@ import android.widget.Button;
 
 public class TestesFragmentos extends AppCompatActivity {
 
-    private Button btnCadastroUsuario;
+    private Button btnCadastroUsuario, btnLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,6 +15,8 @@ public class TestesFragmentos extends AppCompatActivity {
         setContentView(R.layout.activity_testes_fragmentos);
 
         btnCadastroUsuario = (Button) findViewById(R.id.btnCadastroUsuario);
+        btnLogin = (Button) findViewById(R.id.btnLogin);
+
 
         View.OnClickListener listenerCadastroUsuario = new View.OnClickListener() {
             @Override
@@ -24,5 +26,15 @@ public class TestesFragmentos extends AppCompatActivity {
             }
         };
         btnCadastroUsuario.setOnClickListener(listenerCadastroUsuario);
+
+
+        View.OnClickListener listenerLogin = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Login login = new Login();
+                getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, login).commit();
+            }
+        };
+        btnLogin.setOnClickListener(listenerLogin);
     }
 }
