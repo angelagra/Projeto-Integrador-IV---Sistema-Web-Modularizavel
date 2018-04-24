@@ -21,31 +21,30 @@
             <version>7.0</version>
             <scope>provided</scope>
         </dependency>
-<<<<<<< HEAD
         
         <dependency>
-    <groupId>com.microsoft.sqlserver</groupId>
-    <artifactId>mssql-jdbc</artifactId>
-    <version>6.4.0.jre7</version>
-=======
+            <groupId>com.microsoft.sqlserver</groupId>
+            <artifactId>mssql-jdbc</artifactId>
+            <version>6.4.0.jre7</version>
+        </dependency>
+
         <dependency>
-<<<<<<< HEAD
-=======
             <groupId>org.glassfish.jersey.bundles</groupId>
             <artifactId>jaxrs-ri</artifactId>
             <version>2.26-b03</version>
         </dependency>
+        
         <dependency>
             <groupId>org.glassfish.jersey.media</groupId>
             <artifactId>jersey-media-json-jackson</artifactId>
             <version>2.26-b03</version>
         </dependency>
         <dependency>
->>>>>>> 5c929dbac83dd5b8a6d6fdf224d8dc63b338d7a4
+
             <groupId>com.microsoft.sqlserver</groupId>
             <artifactId>mssql-jdbc</artifactId>
             <version>6.4.0.jre7</version>
->>>>>>> f81a063e782e1b58c921810497d5887cca61424e
+
         </dependency>
     </dependencies>
 

@@ -10,17 +10,18 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class Produtos implements Serializable {
     
-    private Long id, idCategoria;
+    private Long id;
     private String nome, descricao ;
     private double preco, desconto;
     private int qtdMinEstoque;
+    private Long categoria;
     //private   imagem;
     
     protected Produtos(){
         
     }
     
-    public Produtos(Long id, String nome, String descricao, double preco, double desconto, int qtdMinEstoque){
+    public Produtos(Long id, String nome, String descricao, double preco, double desconto, int qtdMinEstoque, Long categoria){
         
         this.id = id;
         this.nome = nome;
@@ -28,8 +29,9 @@ public class Produtos implements Serializable {
         this.preco = preco;
         this.desconto = desconto;
         this.qtdMinEstoque = qtdMinEstoque;
+        this.categoria = categoria;
     }
-           
+      
     @XmlAttribute
     public Long getId(){
         return id;
@@ -62,6 +64,11 @@ public class Produtos implements Serializable {
     @XmlElement
     public int getQtdEstoque(){
         return qtdMinEstoque;
+    }
+    
+    @XmlElement
+    public Long getIDCategoria(){
+        return categoria;
     }
     
 }
