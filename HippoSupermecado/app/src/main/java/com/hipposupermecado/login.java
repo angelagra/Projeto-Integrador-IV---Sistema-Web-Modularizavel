@@ -10,12 +10,12 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class Login extends Fragment {
 
-    EditText etLogin;
-    EditText etSenha;
-    //Verificar como a mensagem será disponibilizada
+    EditText etLogin, etSenha;
+    TextView tvMsg;
     ImageView ivLogo;
     Button btContinuar;
 
@@ -24,20 +24,14 @@ public class Login extends Fragment {
         // Required empty public constructor
     }
 
-
-
-
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View view = inflater.inflate(
-                R.layout.fragment_login,
-                container, false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate( R.layout.fragment_login, container, false);
 
-        etLogin = (EditText)view.findViewById(R.id.etLogin);
-        etSenha =(EditText)view.findViewById(R.id.etSenha);
-        btContinuar =(Button)view.findViewById(R.id.btContinue);
+        etLogin = (EditText) view.findViewById(R.id.etLogin);
+        etSenha = (EditText) view.findViewById(R.id.etSenha);
+        tvMsg = (TextView) view.findViewById(R.id.tvMsg);
+        btContinuar =(Button) view.findViewById(R.id.btContinue);
 
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
@@ -47,7 +41,9 @@ public class Login extends Fragment {
             String senha = etSenha.getText().toString();
 
             if(login.trim().equals("") || senha.trim().equals("")){
-                showDialog("Erro","Preencha todos os campos");
+                tvMsg.setText("Atenção! Todos os campos devem ser preencido");
+            }else{
+                tvMsg.setText("Logado");
             }
             }
         };
