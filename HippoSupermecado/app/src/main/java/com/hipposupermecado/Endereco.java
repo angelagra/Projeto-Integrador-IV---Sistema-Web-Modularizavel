@@ -40,8 +40,8 @@ public class Endereco extends Fragment {
         etCep = (EditText)view.findViewById(R.id.etCep);
         etComplemento = (EditText)view.findViewById(R.id.etComplemento);
         etCidade = (EditText)view.findViewById(R.id.etCidade);
-        etUf = (EditText)view.findViewById(R.id.etUf);
         etPais = (EditText)view.findViewById(R.id.etPais);
+        etUf = (EditText)view.findViewById(R.id.etUf);
 
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
@@ -54,7 +54,7 @@ public class Endereco extends Fragment {
                 String cidade = etCidade.getText().toString();
                 String pais = etPais.getText().toString();
                 String uf = etUf.getText().toString();
-                
+
             }
         };
 
