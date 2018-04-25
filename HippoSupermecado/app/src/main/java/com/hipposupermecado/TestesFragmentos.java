@@ -7,7 +7,7 @@ import android.widget.Button;
 
 public class TestesFragmentos extends AppCompatActivity {
 
-    private Button btnCadastroUsuario, btnLogin;
+    private Button btnCadastroUsuario, btnLogin, btnDetalhes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,6 +16,16 @@ public class TestesFragmentos extends AppCompatActivity {
 
         btnCadastroUsuario = (Button) findViewById(R.id.btnCadastroUsuario);
         btnLogin = (Button) findViewById(R.id.btnLogin);
+        btnDetalhes = (Button) findViewById(R.id.btnDetalhes);
+
+        View.OnClickListener listenerDestaque = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Detalhes detalhes = new Detalhes();
+                getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, detalhes).commit();
+            }
+        };
+        btnDetalhes.setOnClickListener(listenerDestaque);
 
 
         View.OnClickListener listenerCadastroUsuario = new View.OnClickListener() {
