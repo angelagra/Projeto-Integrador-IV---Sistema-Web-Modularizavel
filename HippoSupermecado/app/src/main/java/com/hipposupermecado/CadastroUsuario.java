@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.hipposupermecado.validate.PatternEmail;
+
 import java.util.regex.Pattern;
 
 
@@ -43,6 +45,8 @@ public class CadastroUsuario extends Fragment
                 String senha = etSenha.getText().toString();
                 String confSenha = etConfirmarSenha.getText().toString();
 
+                PatternEmail pattermEmail = new PatternEmail();
+
                 // VALIDAÇÕES NO APP ----------------------------------------------
                 if(isEmptyForm(nome, email, senha, confSenha)){
                     // Se algum campo estiver vazio!
@@ -54,7 +58,7 @@ public class CadastroUsuario extends Fragment
                     tvMsg.setText("Os campos de senhas contem valores diferentes");
                     return;
                 }
-                if(!patternEmail(email)){
+                if(!pattermEmail.isEmail(email)){
                     // Se o e-mail não seguir o padrão de e-mail.
                     tvMsg.setText("E-mail inválido");
                     return;
@@ -82,24 +86,6 @@ public class CadastroUsuario extends Fragment
             return true;
         }
         return false;
-    }
-
-    private boolean patternEmail (String email){
-        Pattern EMAIL_ADDRESS_PATTERN = Pattern.compile(
-                "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}" +
-                "\\@" +
-                "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,64}" +
-                "(" +
-                "\\." +
-                "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25}" +
-                ")+"
-        );
-
-        if(EMAIL_ADDRESS_PATTERN.matcher(email).matches()){
-            return true;
-        }else{
-            return false;
-        }
     }
 
 }
