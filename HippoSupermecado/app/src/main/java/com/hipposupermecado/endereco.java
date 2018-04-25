@@ -54,7 +54,7 @@ public class Endereco extends Fragment {
                 String cidade = etCidade.getText().toString();
                 String pais = etPais.getText().toString();
                 String uf = etUf.getText().toString();
-                
+
             }
         };
 
