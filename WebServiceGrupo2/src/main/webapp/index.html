@@ -6,12 +6,33 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>Login</title>
+        <title>Login - Autenticação</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+                 
+        </script>
+        <script>
+            
+        function validalogin(){
+             var JSONObject= {"LoginUsuario":uname, "senhaUsuario":password };
+             var jsonData = JSON.parse( JSONObject ); 
+                    
+                $.ajax({
+                   method: 'POST',
+                   url: "/webresources/Login",
+                   data: jsonData,
+                   dataType: "json"
+                   
+                 });
+	 
+        }
+        </script>
+              
     </head>
     <body>
-    <form id="form1" name="form1" method="post" action="login">
+    <form id="form1" name="form1" method="post" action="/webresources/Login/">
       <table width="100%" border="0">
         <tr>
           <td width="29%" align="right">&nbsp;</td>
@@ -23,7 +44,8 @@ and open the template in the editor.
             <td colspan="2" align="right"><input name="LoginUsuario" type="text" id="LoginUsuario" placeholder="Digite seu Login" size="25" /></td>
           <td><label for="LoginUsuario"></label></td>
           <td width="22%"><input name="senhaUsuario" type="password" id="senhaUsuario" size="25" placeholder="Digite sua Senha"/></td>
-          <td width="28%"><input type="submit" name="button" id="button" value="Acessar" /></td>
+          <td width="28%"><input type="button" name="button" id="button" value="Acessar" onclick="validalogin()" /></td>
+ 
         </tr>
         <tr>
           <td align="right">&nbsp;</td>
@@ -32,6 +54,14 @@ and open the template in the editor.
           <td colspan="2">&nbsp;</td>
         </tr>
       </table>
+        
+        <b><p align=center> Test RESTFUL Web Services</p></b>
+        <br>
+        <p align=center> Request: GET https://hippo.azurewebsites.net/WebServiceGrupo2/webresources/Login</p>
+        <p align=center>Retorno do WebService Status: 200 (OK) e Received: true  </p>
+        <br>
+        <p align=center> Request: GET https://hippo.azurewebsites.net/WebServiceGrupo2/webresources/Login/admin,teste?</p>
+        <p align=center>Retorno do WebService Status: 401 (Unauthorized)  e Received: false  </p>
     </form>
     </body>
 </html>
