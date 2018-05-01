@@ -1,15 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Resources;
 
-/**
- *
- * @author leonardo.prodrigues6
- */
 import Lista.Categoria;
+import Lista.Produtos;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -70,15 +63,21 @@ public class CategoriaResource{
         Response response = null;
 
         try (Connection conn = getConnection();
-                PreparedStatement stmt = conn.prepareStatement("select * from categoria where idCategoria = ?")) {
+                PreparedStatement stmt = conn.prepareStatement("select * from produto where idCategoria = ?")) {
             stmt.setLong(1, id);
             try (ResultSet rs = stmt.executeQuery()) {
                 if (rs.next()) {
-                    String nome = rs.getString("nomeCategoria");
-                    String descricao = rs.getString("descCategoria");
+                    
+                    Long idProduto = rs.getLong("idProduto");
+                    String nome = rs.getString("nomeProduto");
+                    String descricao = rs.getString("descProduto");
+                    double preco = rs.getDouble("precProduto");
+                    double desconto = rs.getDouble("descontoPromocao");
+                    int estoque = rs.getInt("qtdMinEstoque");
+                    Long categoria =  rs.getLong("idCategoria");
 
-                    Categoria categoria = new Categoria(id, nome, descricao);
-                    response = Response.ok(categoria).build();
+                    Produtos  produto = new Produtos(idProduto, nome, descricao, preco,desconto,estoque,categoria);
+                    response = Response.ok(produto).build();
                 } else {
                     response = Response.status(Response.Status.NOT_FOUND).entity(id).build();
                 }
