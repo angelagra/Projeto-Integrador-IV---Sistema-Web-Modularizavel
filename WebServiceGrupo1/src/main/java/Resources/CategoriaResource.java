@@ -30,7 +30,7 @@ public class CategoriaResource{
     private static final String PASS = "SistemasInternet123";
 
     
-      @GET
+    @GET
     @Produces("application/json")
     public Response getCategorias() {
         Response response = null;
@@ -44,7 +44,7 @@ public class CategoriaResource{
                 String nome = rs.getString("nomeCategoria");
                 String descricao = rs.getString("descCategoria");
 
-                Categoria categoria = new Categoria(null, nome, descricao);
+                Categoria categoria = new Categoria(id, nome, descricao);
                 categorias.add(categoria);
             }
             response = Response.ok(categorias).build();
