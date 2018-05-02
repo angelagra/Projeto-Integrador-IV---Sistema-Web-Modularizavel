@@ -31,15 +31,17 @@ import javax.ws.rs.core.Response;
 @Path("/Login")
 public class LoginResource {
     
-    private static final String DRIVER = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
-    private static final String URL = "jdbc:sqlserver://hippo-pi.database.windows.net;database=hippo";
-    private static final String USER = "TSI";
-    private static final String PASS = "SistemasInternet123";
-    
+        private static final String DRIVER = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
+        private static final String URL = "jdbc:sqlserver://hippo-pi.database.windows.net;database=hippo";
+        private static final String USER = "TSI";
+        private static final String PASS = "SistemasInternet123";
+
 
     @Context
     private UriInfo context;
-    private String senhaUsuario;
+    private String emailCliente;
+    private String senhaCliente;
+    
 
     /**
      * Creates a new instance of LoginResource
@@ -54,19 +56,19 @@ public class LoginResource {
   
 
     @GET
-    @Path("/{loginUsuario},{senhaUsuario}") // em um lugar especifico
+    @Path("/{emailCliente},{senhaCliente}") // em um lugar especifico
     @Produces(MediaType.APPLICATION_JSON)
     public Response getJson(
-                   // @PathParam("loginUsuario") String loginUsuario, Login loginusuario,
-                    //@PathParam("senhaUsuario") String senhaUsuario, Login senhausuario) throws Exception {
-                    @PathParam("loginUsuario") String loginusuario,
-                    @PathParam("senhaUsuario") String senhausuario) throws Exception {  
+                   // @PathParam("emailCliente") String emailCliente, Login loginusuario,
+                    //@PathParam("senhaCliente") String senhaCliente, Login senhausuario) throws Exception {
+                    @PathParam("emailCliente") String loginusuario,
+                    @PathParam("senhaCliente") String senhausuario) throws Exception {  
             
         Response response = null;
         Class.forName(DRIVER);   // carregar o driver
         Connection comn =  DriverManager.getConnection(URL, USER, PASS);    
 
-        String sql = "select loginUsuario,senhaUsuario from Usuario where loginUsuario = ? and senhaUsuario = ? and usuarioAtivo = 1";
+        String sql = "select emailCliente,senhaCliente from Cliente where emailCliente = ? and senhaCliente = ?";
         
         try(PreparedStatement stmt = comn.prepareStatement(sql)){
             
@@ -78,8 +80,8 @@ public class LoginResource {
                 if(rs.next()){
                     //tem o id
                      //Long id =  rs.getLong("id");
-                     String usuario = rs.getString("loginUsuario");
-                     String senha = rs.getString("senhaUsuario");
+                     String usuario = rs.getString("emailCliente");
+                     String senha = rs.getString("senhaCliente");
                
                      Login c = new Login(usuario,senha); //cria a Usuario
 
