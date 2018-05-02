@@ -65,8 +65,12 @@ public class CategoriaResource{
         try (Connection conn = getConnection();
                 PreparedStatement stmt = conn.prepareStatement("select * from produto where idCategoria = ?")) {
             stmt.setLong(1, id);
+            
+            List<Produtos> produtos = new ArrayList<>();
             try (ResultSet rs = stmt.executeQuery()) {
-                if (rs.next()) {
+                
+                while(rs.next()){
+                
                     
                     Long idProduto = rs.getLong("idProduto");
                     String nome = rs.getString("nomeProduto");
@@ -77,10 +81,12 @@ public class CategoriaResource{
                     Long categoria =  rs.getLong("idCategoria");
 
                     Produtos  produto = new Produtos(idProduto, nome, descricao, preco,desconto,estoque,categoria);
-                    response = Response.ok(produto).build();
-                } else {
-                    response = Response.status(Response.Status.NOT_FOUND).entity(id).build();
+                    produtos.add(produto);
+                    
+                
+                    //response = Response.status(Response.Status.NOT_FOUND).entity(id).build();
                 }
+                response = Response.ok(produtos).build();
             }
         } catch (ClassNotFoundException | SQLException ex) {
             response = Response.status(Response.Status.SERVICE_UNAVAILABLE).entity(ex == null ? "?" : ex.getMessage()).build();
