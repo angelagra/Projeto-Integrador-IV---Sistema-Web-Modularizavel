@@ -31,7 +31,7 @@ public class CategoriasFragment extends Fragment {
 
     private CategoriaAdapter adapter;
     private ListView listView;
-    private FrameLayout layoutContainer;
+    private FrameLayout frag_container;
 
     public CategoriasFragment() {
         // Required empty public constructor
@@ -57,11 +57,11 @@ public class CategoriasFragment extends Fragment {
                 adapter = new CategoriaAdapter(getContext(), categoria);
                 listView.setAdapter(adapter);
 
-                /*listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
 
-                        layoutContainer = (FrameLayout) view.findViewById(R.id.layoutContainer);
+                        frag_container = (FrameLayout) view.findViewById(R.id.frag_container);
                         ProdutosFragment fragment = new ProdutosFragment();
 
                         int idProd = Integer.parseInt(view.getTag().toString());
@@ -71,9 +71,9 @@ public class CategoriasFragment extends Fragment {
                         fragment.setArguments(args);
 
 
-                        getFragmentManager().beginTransaction().replace(R.id.layoutContainer, fragment).commit();
+                        getFragmentManager().beginTransaction().replace(R.id.frag_container, fragment).commit();
                     }
-                });*/
+                });
             }
 
             @Override

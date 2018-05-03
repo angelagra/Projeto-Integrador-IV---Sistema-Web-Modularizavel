@@ -20,6 +20,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Destaque fragment = new Destaque();
+        getSupportFragmentManager().beginTransaction().replace(R.id.frag_container, fragment).commit();
+
         // Habilitar os botões do menu.
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);

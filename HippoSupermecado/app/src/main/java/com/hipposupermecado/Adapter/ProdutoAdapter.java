@@ -47,6 +47,7 @@ public class ProdutoAdapter extends BaseAdapter {
         TextView txtDesc = (TextView) v.findViewById(R.id.txtDesc);
 
         txtNome.setText(listaProduto.get(position).getNome());
+        txtPreco.setText(String.valueOf(listaProduto.get(position).getPreco()));
         txtDesc.setText(listaProduto.get(position).getDescricao());
 
         v.setTag(listaProduto.get(position).getId());
