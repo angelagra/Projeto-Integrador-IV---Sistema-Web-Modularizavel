@@ -19,17 +19,17 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class Login implements Serializable {
     
     private Long id; 
-    private String loginUsuario;
+    private String emailCliente;
     private String NomeUsuario;
-    private String senhaUsuario;
+    private String senhaCliente;
     
      protected Login() {
          
     }
-    //public Login(Long id, String loginUsuario, String NomeUsuario, String senhaUsuario) {
-    public Login(String loginUsuario,String senhaUsuario) {
-         this.loginUsuario = loginUsuario;
-         this.senhaUsuario = senhaUsuario;
+    //public Login(Long id, String emailCliente, String NomeUsuario, String senhaCliente) {
+    public Login(String emailCliente,String senhaCliente) {
+         this.emailCliente = emailCliente;
+         this.senhaCliente = senhaCliente;
      }
 
  
@@ -41,15 +41,15 @@ public class Login implements Serializable {
         this.id = id;
     }
     @XmlElement
-    public String getloginUsuario() {
-        return loginUsuario;
+    public String getemailCliente() {
+        return emailCliente;
     }
     @XmlElement
     public String getNomeUsuario() {
         return NomeUsuario;
     }
     @XmlElement
-    public String getsenhaUsuario() {
-        return senhaUsuario;
+    public String getsenhaCliente() {
+        return senhaCliente;
     }
 }

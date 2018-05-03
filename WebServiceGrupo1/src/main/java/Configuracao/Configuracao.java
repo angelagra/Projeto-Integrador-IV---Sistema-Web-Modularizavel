@@ -22,6 +22,7 @@ public class Configuracao extends Application {
 //        resources.add(fasterxml.jackson.jaxrs.json.JacksonJaxbJsonProvider.class);
 //        resources.add(fasterxml.jackson.jaxrs.json.JacksonJsonProvider.class);
         resources.add(Resources.ProdutosResources.class);
+       // resources.add(org.glassfish.jersey.server.wadl.internal.WadlResource.class);
         resources.add(org.glassfish.jersey.server.wadl.internal.WadlResource.class);
 
         
