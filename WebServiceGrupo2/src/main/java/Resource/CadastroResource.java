@@ -59,14 +59,17 @@ public class CadastroResource {
      */
   
 
-    @GET
-    @Path("/{emailCliente},{senhaCliente}") // em um lugar especifico
-    @Produces(MediaType.APPLICATION_JSON)
-    public Response getJson(
-                   // @PathParam("emailCliente") String emailCliente, Login loginusuario,
-                    //@PathParam("senhaCliente") String senhaCliente, Login senhausuario) throws Exception {
-                    @PathParam("emailCliente") String loginusuario,
-                    @PathParam("senhaCliente") String senhausuario) throws Exception {  
+    @PUT
+    @Path("/{nomeCompletoCliente},{dtNasCliente},{emailCliente},{senhaCliente},{CPFCliente},{celularCliente},{recebeNewsLetter}") // em um lugar especifico
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response putJson(
+                    @PathParam("nomeCompletoCliente") String nomeCompletoCliente,
+                    @PathParam("dtNasCliente") String dtNasCliente,
+                    @PathParam("emailCliente") String emailCliente,
+                    @PathParam("senhaCliente") String senhaCliente,
+                    @PathParam("CPFCliente") String CPFCliente,
+                    @PathParam("celularCliente") String celularCliente,
+                    @PathParam("recebeNewsLetter") String recebeNewsLetter) throws Exception {  
             
         Response response = null;
         Class.forName(DRIVER);   // carregar o driver
@@ -117,9 +120,10 @@ public class CadastroResource {
      * @param content representation for the resource
      */
     
-   @PUT
-   @Consumes(MediaType.APPLICATION_JSON)
-   public void putJson(String content) {
+   @GET
+   
+   @Produces(MediaType.APPLICATION_JSON)
+   public void getJson(String content) {
         throw new UnsupportedOperationException();
    }
 
