@@ -17,9 +17,10 @@ public class Configuracao extends Application {
 
     private void addRestResourceClasses(Set<Class<?>> resources) {
         
-        resources.add(Resource.LoginResource.class);
+        resources.add(Resource.CadastroResource.class);
 //        resources.add(fasterxml.jackson.jaxrs.json.JacksonJaxbJsonProvider.class);
 //        resources.add(fasterxml.jackson.jaxrs.json.JacksonJsonProvider.class);
+        resources.add(Resource.LoginResource.class);
         resources.add(org.glassfish.jersey.server.wadl.internal.WadlResource.class);
 
         
