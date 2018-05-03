@@ -35,10 +35,6 @@ public class MainActivity extends AppCompatActivity {
                 else { item.setChecked(true); }
 
                 drawerLayout.closeDrawers();
-
-                if(item.getItemId() == R.id.action_settings){
-                }
-
                 return false;
             }
         });
