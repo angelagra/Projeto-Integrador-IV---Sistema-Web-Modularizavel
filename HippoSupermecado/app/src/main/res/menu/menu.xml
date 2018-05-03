@@ -3,10 +3,10 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/action_settings"
+            android:id="@+id/action_newUser"
             android:checked="false"
-            android:icon="@android:drawable/ic_menu_preferences"
-            android:title="Configurações"
+            android:icon="@android:drawable/ic_input_add"
+            android:title="CadastroUsuario"
             />
     </group>
 
