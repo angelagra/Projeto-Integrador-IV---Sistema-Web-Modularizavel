@@ -5,8 +5,8 @@
         <item
             android:id="@+id/action_newUser"
             android:checked="false"
-            android:icon="@android:drawable/ic_input_add"
-            android:title="CadastroUsuario"
+            android:icon="@android:drawable/ic_menu_preferences"
+            android:title="Cadastrar Usuário"
             />
     </group>
 

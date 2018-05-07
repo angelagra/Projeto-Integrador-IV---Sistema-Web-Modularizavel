@@ -1,6 +1,5 @@
 package com.hipposupermecado;
 
-import android.app.AlertDialog;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -11,8 +10,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.hipposupermecado.validate.PatternEmail;
-
-import java.util.regex.Pattern;
 
 
 public class CadastroUsuario extends Fragment
