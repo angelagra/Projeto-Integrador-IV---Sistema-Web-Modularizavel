@@ -1,44 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\saulo.samarques1\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
+            "outputFile": "C:\\Users\\manuel.cteixeira\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\saulo.samarques1\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\e969955a5b8b57bdabc7e854342058d4\\res\\values-v16\\values-v16.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endLines": "5",
-                        "endColumns": "12",
-                        "endOffsets": "223"
-                    },
-                    "to": {
-                        "startLines": "3",
-                        "startColumns": "4",
-                        "startOffsets": "121",
-                        "endLines": "6",
-                        "endColumns": "12",
-                        "endOffsets": "289"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\saulo.samarques1\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\5b8e13efba2ef408355e808a75ba9995\\res\\values-v16\\values-v16.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "65",
-                        "endOffsets": "116"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "C:\\Users\\Noah\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
-            "map": [
-                {
-                    "source": "C:\\Users\\Noah\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\e0a67c6f8cfd71646cda16d71f1a4de0\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\manuel.cteixeira\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\8b7af412892dd2072b71fc4f8b5e6932\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -48,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Noah\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\ad1e35af07464a46fd0858fd6db1dc58\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\manuel.cteixeira\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\4d640bf5d060ad23154d0c5ff0c2b8ca\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

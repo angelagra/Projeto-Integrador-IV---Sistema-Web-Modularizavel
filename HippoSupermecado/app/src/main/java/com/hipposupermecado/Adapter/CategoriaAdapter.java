@@ -43,10 +43,8 @@ public class CategoriaAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         View v = View.inflate(mContext, R.layout.item_categoria, null);
         TextView txtNome = (TextView) v.findViewById(R.id.txtNome);
-        TextView txtDesc = (TextView) v.findViewById(R.id.txtDesc);
 
         txtNome.setText(listaCategoria.get(position).getNome());
-        txtDesc.setText(listaCategoria.get(position).getDescricao());
 
         v.setTag(listaCategoria.get(position).getId());
 
