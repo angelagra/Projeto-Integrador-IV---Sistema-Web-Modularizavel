@@ -1,6 +1,22 @@
 {
     "logs": [
         {
+            "outputFile": "C:\\Users\\angela.gfpedra1\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hdpi-v4\\values-hdpi-v4.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\angela.gfpedra1\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\4816a3ee4f04aee20e6f60f9d8237be3\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "6",
+                        "endColumns": "13",
+                        "endOffsets": "327"
+                    }
+                }
+            ]
+        },
+        {
             "outputFile": "C:\\Users\\manuel.cteixeira\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hdpi-v4\\values-hdpi-v4.xml",
             "map": [
                 {

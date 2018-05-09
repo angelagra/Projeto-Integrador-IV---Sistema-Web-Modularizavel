@@ -43,12 +43,15 @@ public class ProdutoAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         View v = View.inflate(mContext, R.layout.item_produto, null);
         TextView txtNome = (TextView) v.findViewById(R.id.txtNome);
+        // TextView txtCategoria = (TextView) v.findViewById(R.id.txtCategoria);
         TextView txtPreco = (TextView) v.findViewById(R.id.txtPreco);
-        TextView txtDesc = (TextView) v.findViewById(R.id.txtDesc);
+        TextView txtDesconto = (TextView) v.findViewById(R.id.txtDesconto);
+
 
         txtNome.setText(listaProduto.get(position).getNome());
+        // txtCategoria.setText(listaProduto.get(position).getCategoria());
         txtPreco.setText(String.valueOf(listaProduto.get(position).getPreco()));
-        txtDesc.setText(listaProduto.get(position).getDescricao());
+        txtDesconto.setText(String.valueOf(listaProduto.get(position).getDesconto()));
 
         v.setTag(listaProduto.get(position).getId());
 

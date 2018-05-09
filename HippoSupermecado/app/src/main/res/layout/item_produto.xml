@@ -6,42 +6,110 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="109dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_report_image" />
+
     <TextView
         android:id="@+id/txtNome"
-        android:layout_width="332dp"
-        android:layout_height="33dp"
+        android:layout_width="210dp"
+        android:layout_height="49dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="TextView"
-        android:textColor="@android:color/background_dark"
-        android:textSize="18sp"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.463"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txtPreco"
-        android:layout_width="332dp"
-        android:layout_height="33dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:id="@+id/txtDesconto"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_marginEnd="68dp"
         android:layout_marginTop="8dp"
-        android:text="TextView"
+        android:text="Preco desc"
+        android:textAllCaps="false"
+        android:textSize="14sp"
+        android:textStyle=""
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtNome" />
 
     <TextView
-        android:id="@+id/txtDesc"
-        android:layout_width="332dp"
+        android:id="@+id/txtPreco"
+        android:layout_width="112dp"
+        android:layout_height="34dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        android:textColor="@color/colorAccent"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDesconto" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="37dp"
+        android:layout_height="36dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:text="R$"
+        android:textAlignment="textEnd"
+        android:textColor="@color/colorAccent"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/txtPreco"
+        app:layout_constraintTop_toBottomOf="@+id/txtDesconto" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="45dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="8dp"
+        android:text="POR:"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="DE:"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/txtDesconto"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/txtNome" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="96dp"
         android:layout_height="33dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="TextView"
+        android:text="___"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtPreco"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtPreco" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/txtNome"
+        app:layout_constraintVertical_bias="0.888" />
+
 
 </android.support.constraint.ConstraintLayout>

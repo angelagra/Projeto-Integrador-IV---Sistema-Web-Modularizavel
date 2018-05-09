@@ -1,179 +1,179 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\manuel.cteixeira\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:2:1-30:12
-INJECTED from C:\Users\manuel.cteixeira\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:2:1-30:12
-INJECTED from C:\Users\manuel.cteixeira\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:2:1-30:12
-INJECTED from C:\Users\manuel.cteixeira\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:2:1-30:12
-MERGED from [com.android.support:design:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\8e415dce6400054a2d2c865bb4aa23f1\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\4d640bf5d060ad23154d0c5ff0c2b8ca\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\298e20294b756093a9b6e574e864166e\AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\fe1582dae9a71ac4e60ff3eff170a504\AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\ede9e0e40c1eb1e8d7f76ab0e9bc3723\AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\bf3f72f7284014854ca8e435874d879d\AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:transition:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\b6d7e870353839e16146f19db0f7cc92\AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:support-v4:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\732c4fe9f89940a92055c4c213dc1b2e\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\482f1f58cedf0d039a93480c8bb9561e\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\e42914f7e8c62298607e532bcaca9fd7\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\0bffa6d980a0ec438e10bf8064e92dc9\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\d7ac4d704a096375d32997b20fea25ab\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-compat:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\8b7af412892dd2072b71fc4f8b5e6932\AndroidManifest.xml:17:1-31:12
-MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\d433cbc575e7b1f3615be6534e0a73a5\AndroidManifest.xml:17:1-30:12
-INJECTED from C:\Users\manuel.cteixeira\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:2:1-30:12
-INJECTED from C:\Users\manuel.cteixeira\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:2:1-30:12
-INJECTED from C:\Users\manuel.cteixeira\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:2:1-30:12
+ADDED from C:\Users\angela.gfpedra1\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:2:1-30:12
+INJECTED from C:\Users\angela.gfpedra1\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:2:1-30:12
+INJECTED from C:\Users\angela.gfpedra1\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:2:1-30:12
+INJECTED from C:\Users\angela.gfpedra1\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:2:1-30:12
+MERGED from [com.android.support:design:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\d01058ff70810bb9bbfa85a9f483f0b9\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\4816a3ee4f04aee20e6f60f9d8237be3\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\0a331d86b44d232d0825a5e9dcb728ad\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\7baaa474e7adb83550065a0e8286e771\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\0222937306f46121ba2cda3be831be62\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\68401e59e57fe2278d510cd2f470a6c2\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:transition:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\68c45f8b74eaa0738162065c1b4eb3d3\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\9e378e87efdee4c827783c9146ddfbff\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\ee8b23d6726a075b3b4c0a063526f872\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\8e25ab97669ef5827a7be82c8cf74b00\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\3c3e877748967e5a76871ceabba2a859\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\411c27ef8722dfd9b45fa8a8b162b695\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\2cdd42e86bba362a6135d66ce8492fab\AndroidManifest.xml:17:1-31:12
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\971e03cc1de9059904335c8d6a0efb73\AndroidManifest.xml:17:1-30:12
+INJECTED from C:\Users\angela.gfpedra1\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:2:1-30:12
+INJECTED from C:\Users\angela.gfpedra1\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:2:1-30:12
+INJECTED from C:\Users\angela.gfpedra1\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:2:1-30:12
 	package
-		ADDED from C:\Users\manuel.cteixeira\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:3:5-35
-		INJECTED from C:\Users\manuel.cteixeira\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\manuel.cteixeira\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\angela.gfpedra1\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:3:5-35
+		INJECTED from C:\Users\angela.gfpedra1\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\angela.gfpedra1\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\manuel.cteixeira\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\manuel.cteixeira\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:2:1-30:12
-		INJECTED from C:\Users\manuel.cteixeira\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\angela.gfpedra1\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\angela.gfpedra1\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:2:1-30:12
+		INJECTED from C:\Users\angela.gfpedra1\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from C:\Users\manuel.cteixeira\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\manuel.cteixeira\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:2:1-30:12
-		INJECTED from C:\Users\manuel.cteixeira\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\angela.gfpedra1\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\angela.gfpedra1\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:2:1-30:12
+		INJECTED from C:\Users\angela.gfpedra1\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\manuel.cteixeira\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\angela.gfpedra1\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\manuel.cteixeira\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:5:5-67
+ADDED from C:\Users\angela.gfpedra1\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:5:5-67
 	android:name
-		ADDED from C:\Users\manuel.cteixeira\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:5:22-64
+		ADDED from C:\Users\angela.gfpedra1\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:5:22-64
 application
-ADDED from C:\Users\manuel.cteixeira\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:7:5-28:19
-MERGED from [com.android.support:design:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\8e415dce6400054a2d2c865bb4aa23f1\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:design:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\8e415dce6400054a2d2c865bb4aa23f1\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\4d640bf5d060ad23154d0c5ff0c2b8ca\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\4d640bf5d060ad23154d0c5ff0c2b8ca\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\298e20294b756093a9b6e574e864166e\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\298e20294b756093a9b6e574e864166e\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\fe1582dae9a71ac4e60ff3eff170a504\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\fe1582dae9a71ac4e60ff3eff170a504\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\ede9e0e40c1eb1e8d7f76ab0e9bc3723\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\ede9e0e40c1eb1e8d7f76ab0e9bc3723\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\bf3f72f7284014854ca8e435874d879d\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\bf3f72f7284014854ca8e435874d879d\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:transition:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\b6d7e870353839e16146f19db0f7cc92\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:transition:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\b6d7e870353839e16146f19db0f7cc92\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:support-v4:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\732c4fe9f89940a92055c4c213dc1b2e\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-v4:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\732c4fe9f89940a92055c4c213dc1b2e\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\482f1f58cedf0d039a93480c8bb9561e\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\482f1f58cedf0d039a93480c8bb9561e\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\e42914f7e8c62298607e532bcaca9fd7\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\e42914f7e8c62298607e532bcaca9fd7\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\0bffa6d980a0ec438e10bf8064e92dc9\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\0bffa6d980a0ec438e10bf8064e92dc9\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\d7ac4d704a096375d32997b20fea25ab\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\d7ac4d704a096375d32997b20fea25ab\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-compat:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\8b7af412892dd2072b71fc4f8b5e6932\AndroidManifest.xml:25:5-29:19
-MERGED from [com.android.support:support-compat:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\8b7af412892dd2072b71fc4f8b5e6932\AndroidManifest.xml:25:5-29:19
-MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\d433cbc575e7b1f3615be6534e0a73a5\AndroidManifest.xml:24:5-28:19
-MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\d433cbc575e7b1f3615be6534e0a73a5\AndroidManifest.xml:24:5-28:19
+ADDED from C:\Users\angela.gfpedra1\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:7:5-28:19
+MERGED from [com.android.support:design:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\d01058ff70810bb9bbfa85a9f483f0b9\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:design:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\d01058ff70810bb9bbfa85a9f483f0b9\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\4816a3ee4f04aee20e6f60f9d8237be3\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\4816a3ee4f04aee20e6f60f9d8237be3\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\0a331d86b44d232d0825a5e9dcb728ad\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\0a331d86b44d232d0825a5e9dcb728ad\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\7baaa474e7adb83550065a0e8286e771\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\7baaa474e7adb83550065a0e8286e771\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\0222937306f46121ba2cda3be831be62\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\0222937306f46121ba2cda3be831be62\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\68401e59e57fe2278d510cd2f470a6c2\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\68401e59e57fe2278d510cd2f470a6c2\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:transition:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\68c45f8b74eaa0738162065c1b4eb3d3\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:transition:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\68c45f8b74eaa0738162065c1b4eb3d3\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\9e378e87efdee4c827783c9146ddfbff\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\9e378e87efdee4c827783c9146ddfbff\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\ee8b23d6726a075b3b4c0a063526f872\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\ee8b23d6726a075b3b4c0a063526f872\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\8e25ab97669ef5827a7be82c8cf74b00\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\8e25ab97669ef5827a7be82c8cf74b00\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\3c3e877748967e5a76871ceabba2a859\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\3c3e877748967e5a76871ceabba2a859\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\411c27ef8722dfd9b45fa8a8b162b695\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\411c27ef8722dfd9b45fa8a8b162b695\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\2cdd42e86bba362a6135d66ce8492fab\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\2cdd42e86bba362a6135d66ce8492fab\AndroidManifest.xml:25:5-29:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\971e03cc1de9059904335c8d6a0efb73\AndroidManifest.xml:24:5-28:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\971e03cc1de9059904335c8d6a0efb73\AndroidManifest.xml:24:5-28:19
 	android:supportsRtl
-		ADDED from C:\Users\manuel.cteixeira\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:12:9-35
+		ADDED from C:\Users\angela.gfpedra1\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:12:9-35
 	android:label
-		ADDED from C:\Users\manuel.cteixeira\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:10:9-41
+		ADDED from C:\Users\angela.gfpedra1\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:10:9-41
 	android:roundIcon
-		ADDED from C:\Users\manuel.cteixeira\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:11:9-54
+		ADDED from C:\Users\angela.gfpedra1\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:11:9-54
 	android:icon
-		ADDED from C:\Users\manuel.cteixeira\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:9:9-43
+		ADDED from C:\Users\angela.gfpedra1\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:9:9-43
 	android:allowBackup
-		ADDED from C:\Users\manuel.cteixeira\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:8:9-35
+		ADDED from C:\Users\angela.gfpedra1\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:8:9-35
 	android:theme
-		ADDED from C:\Users\manuel.cteixeira\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:13:9-40
+		ADDED from C:\Users\angela.gfpedra1\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:13:9-40
 activity#com.hipposupermecado.TestesFragmentos
-ADDED from C:\Users\manuel.cteixeira\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:14:9-20:20
+ADDED from C:\Users\angela.gfpedra1\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:14:9-20:20
 	android:name
-		ADDED from C:\Users\manuel.cteixeira\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:14:19-51
+		ADDED from C:\Users\angela.gfpedra1\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:14:19-51
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from C:\Users\manuel.cteixeira\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:15:13-19:29
+ADDED from C:\Users\angela.gfpedra1\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:15:13-19:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\manuel.cteixeira\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:16:17-69
+ADDED from C:\Users\angela.gfpedra1\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:16:17-69
 	android:name
-		ADDED from C:\Users\manuel.cteixeira\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:16:25-66
+		ADDED from C:\Users\angela.gfpedra1\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:16:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\manuel.cteixeira\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:18:17-77
+ADDED from C:\Users\angela.gfpedra1\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:18:17-77
 	android:name
-		ADDED from C:\Users\manuel.cteixeira\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:18:27-74
+		ADDED from C:\Users\angela.gfpedra1\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:18:27-74
 activity#com.hipposupermecado.MainActivity
-ADDED from C:\Users\manuel.cteixeira\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:21:9-27:20
+ADDED from C:\Users\angela.gfpedra1\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:21:9-27:20
 	android:name
-		ADDED from C:\Users\manuel.cteixeira\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:21:19-47
+		ADDED from C:\Users\angela.gfpedra1\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml:21:19-47
 uses-sdk
-INJECTED from C:\Users\manuel.cteixeira\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\manuel.cteixeira\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\manuel.cteixeira\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml
-MERGED from [com.android.support:design:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\8e415dce6400054a2d2c865bb4aa23f1\AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:design:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\8e415dce6400054a2d2c865bb4aa23f1\AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\4d640bf5d060ad23154d0c5ff0c2b8ca\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\4d640bf5d060ad23154d0c5ff0c2b8ca\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\298e20294b756093a9b6e574e864166e\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\298e20294b756093a9b6e574e864166e\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\fe1582dae9a71ac4e60ff3eff170a504\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\fe1582dae9a71ac4e60ff3eff170a504\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\ede9e0e40c1eb1e8d7f76ab0e9bc3723\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\ede9e0e40c1eb1e8d7f76ab0e9bc3723\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\bf3f72f7284014854ca8e435874d879d\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\bf3f72f7284014854ca8e435874d879d\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\b6d7e870353839e16146f19db0f7cc92\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\b6d7e870353839e16146f19db0f7cc92\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\732c4fe9f89940a92055c4c213dc1b2e\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-v4:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\732c4fe9f89940a92055c4c213dc1b2e\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\482f1f58cedf0d039a93480c8bb9561e\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\482f1f58cedf0d039a93480c8bb9561e\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\e42914f7e8c62298607e532bcaca9fd7\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\e42914f7e8c62298607e532bcaca9fd7\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\0bffa6d980a0ec438e10bf8064e92dc9\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\0bffa6d980a0ec438e10bf8064e92dc9\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\d7ac4d704a096375d32997b20fea25ab\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\d7ac4d704a096375d32997b20fea25ab\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-compat:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\8b7af412892dd2072b71fc4f8b5e6932\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-compat:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\8b7af412892dd2072b71fc4f8b5e6932\AndroidManifest.xml:21:5-23:58
-MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\d433cbc575e7b1f3615be6534e0a73a5\AndroidManifest.xml:20:5-22:41
-MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\d433cbc575e7b1f3615be6534e0a73a5\AndroidManifest.xml:20:5-22:41
-INJECTED from C:\Users\manuel.cteixeira\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\manuel.cteixeira\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\angela.gfpedra1\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\angela.gfpedra1\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\angela.gfpedra1\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml
+MERGED from [com.android.support:design:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\d01058ff70810bb9bbfa85a9f483f0b9\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:design:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\d01058ff70810bb9bbfa85a9f483f0b9\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\4816a3ee4f04aee20e6f60f9d8237be3\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\4816a3ee4f04aee20e6f60f9d8237be3\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\0a331d86b44d232d0825a5e9dcb728ad\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\0a331d86b44d232d0825a5e9dcb728ad\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\7baaa474e7adb83550065a0e8286e771\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\7baaa474e7adb83550065a0e8286e771\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\0222937306f46121ba2cda3be831be62\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\0222937306f46121ba2cda3be831be62\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\68401e59e57fe2278d510cd2f470a6c2\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\68401e59e57fe2278d510cd2f470a6c2\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\68c45f8b74eaa0738162065c1b4eb3d3\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\68c45f8b74eaa0738162065c1b4eb3d3\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\9e378e87efdee4c827783c9146ddfbff\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\9e378e87efdee4c827783c9146ddfbff\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\ee8b23d6726a075b3b4c0a063526f872\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\ee8b23d6726a075b3b4c0a063526f872\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\8e25ab97669ef5827a7be82c8cf74b00\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\8e25ab97669ef5827a7be82c8cf74b00\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\3c3e877748967e5a76871ceabba2a859\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\3c3e877748967e5a76871ceabba2a859\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\411c27ef8722dfd9b45fa8a8b162b695\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\411c27ef8722dfd9b45fa8a8b162b695\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\2cdd42e86bba362a6135d66ce8492fab\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\2cdd42e86bba362a6135d66ce8492fab\AndroidManifest.xml:21:5-23:58
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\971e03cc1de9059904335c8d6a0efb73\AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\971e03cc1de9059904335c8d6a0efb73\AndroidManifest.xml:20:5-22:41
+INJECTED from C:\Users\angela.gfpedra1\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\angela.gfpedra1\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml
 	tools:overrideLibrary
-		ADDED from [com.android.support:design:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\8e415dce6400054a2d2c865bb4aa23f1\AndroidManifest.xml:23:9-59
+		ADDED from [com.android.support:design:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\d01058ff70810bb9bbfa85a9f483f0b9\AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
-		INJECTED from C:\Users\manuel.cteixeira\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\manuel.cteixeira\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\manuel.cteixeira\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\angela.gfpedra1\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\angela.gfpedra1\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\angela.gfpedra1\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\manuel.cteixeira\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\manuel.cteixeira\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\manuel.cteixeira\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\angela.gfpedra1\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\angela.gfpedra1\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\angela.gfpedra1\Documents\GitHub\Projeto-Integrador-IV---Sistema-Web-Modularizavel\HippoSupermecado\app\src\main\AndroidManifest.xml
 meta-data#android.support.VERSION
-ADDED from [com.android.support:design:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\8e415dce6400054a2d2c865bb4aa23f1\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\4d640bf5d060ad23154d0c5ff0c2b8ca\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\4d640bf5d060ad23154d0c5ff0c2b8ca\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\fe1582dae9a71ac4e60ff3eff170a504\AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\fe1582dae9a71ac4e60ff3eff170a504\AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\ede9e0e40c1eb1e8d7f76ab0e9bc3723\AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\ede9e0e40c1eb1e8d7f76ab0e9bc3723\AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\bf3f72f7284014854ca8e435874d879d\AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\bf3f72f7284014854ca8e435874d879d\AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:transition:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\b6d7e870353839e16146f19db0f7cc92\AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:transition:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\b6d7e870353839e16146f19db0f7cc92\AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:support-v4:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\732c4fe9f89940a92055c4c213dc1b2e\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-v4:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\732c4fe9f89940a92055c4c213dc1b2e\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\482f1f58cedf0d039a93480c8bb9561e\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\482f1f58cedf0d039a93480c8bb9561e\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\e42914f7e8c62298607e532bcaca9fd7\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\e42914f7e8c62298607e532bcaca9fd7\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\0bffa6d980a0ec438e10bf8064e92dc9\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\0bffa6d980a0ec438e10bf8064e92dc9\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\d7ac4d704a096375d32997b20fea25ab\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\d7ac4d704a096375d32997b20fea25ab\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-compat:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\8b7af412892dd2072b71fc4f8b5e6932\AndroidManifest.xml:26:9-28:38
-MERGED from [com.android.support:support-compat:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\8b7af412892dd2072b71fc4f8b5e6932\AndroidManifest.xml:26:9-28:38
+ADDED from [com.android.support:design:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\d01058ff70810bb9bbfa85a9f483f0b9\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\4816a3ee4f04aee20e6f60f9d8237be3\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\4816a3ee4f04aee20e6f60f9d8237be3\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\7baaa474e7adb83550065a0e8286e771\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\7baaa474e7adb83550065a0e8286e771\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\0222937306f46121ba2cda3be831be62\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\0222937306f46121ba2cda3be831be62\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\68401e59e57fe2278d510cd2f470a6c2\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\68401e59e57fe2278d510cd2f470a6c2\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:transition:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\68c45f8b74eaa0738162065c1b4eb3d3\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:transition:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\transition-26.1.0.aar\68c45f8b74eaa0738162065c1b4eb3d3\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\9e378e87efdee4c827783c9146ddfbff\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\9e378e87efdee4c827783c9146ddfbff\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\ee8b23d6726a075b3b4c0a063526f872\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\ee8b23d6726a075b3b4c0a063526f872\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\8e25ab97669ef5827a7be82c8cf74b00\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\8e25ab97669ef5827a7be82c8cf74b00\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\3c3e877748967e5a76871ceabba2a859\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\3c3e877748967e5a76871ceabba2a859\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\411c27ef8722dfd9b45fa8a8b162b695\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\411c27ef8722dfd9b45fa8a8b162b695\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\2cdd42e86bba362a6135d66ce8492fab\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\2cdd42e86bba362a6135d66ce8492fab\AndroidManifest.xml:26:9-28:38
 	android:value
-		ADDED from [com.android.support:design:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\8e415dce6400054a2d2c865bb4aa23f1\AndroidManifest.xml:28:13-35
+		ADDED from [com.android.support:design:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\d01058ff70810bb9bbfa85a9f483f0b9\AndroidManifest.xml:28:13-35
 	android:name
-		ADDED from [com.android.support:design:26.1.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\8e415dce6400054a2d2c865bb4aa23f1\AndroidManifest.xml:27:13-51
+		ADDED from [com.android.support:design:26.1.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\d01058ff70810bb9bbfa85a9f483f0b9\AndroidManifest.xml:27:13-51
 meta-data#android.arch.lifecycle.VERSION
-ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\d433cbc575e7b1f3615be6534e0a73a5\AndroidManifest.xml:25:9-27:47
+ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\971e03cc1de9059904335c8d6a0efb73\AndroidManifest.xml:25:9-27:47
 	android:value
-		ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\d433cbc575e7b1f3615be6534e0a73a5\AndroidManifest.xml:27:13-44
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\971e03cc1de9059904335c8d6a0efb73\AndroidManifest.xml:27:13-44
 	android:name
-		ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\manuel.cteixeira\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\d433cbc575e7b1f3615be6534e0a73a5\AndroidManifest.xml:26:13-58
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\angela.gfpedra1\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\971e03cc1de9059904335c8d6a0efb73\AndroidManifest.xml:26:13-58
