@@ -13,6 +13,12 @@ import android.widget.TextView;
 
 import com.hipposupermecado.validate.PatternEmail;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
 public class Login extends Fragment {
 
     private EditText etEmail, etSenha;
@@ -52,7 +58,30 @@ public class Login extends Fragment {
                 return;
             }
 
-            tvMsg.setText("OK");
+                Retrofit retrofit = new Retrofit.Builder().baseUrl("https://hippo.azurewebsites.net/").addConverterFactory(GsonConverterFactory.create()).build();
+                ApiLogin apiLogin = retrofit.create(ApiLogin.class);
+                Call<Boolean> call = apiLogin.getObject(email,senha);
+
+                Callback<Boolean> callbackCalculadora = new Callback<Boolean>() {
+                    @Override
+                    public void onResponse(Call<Boolean> call, Response<Boolean> response) {
+                        Boolean login = response.body();
+
+                        if(response.isSuccessful()){
+                            tvMsg.setText("OK");
+                        }else{
+                            if (response.code()==401) {
+                                tvMsg.setText("false");
+                            }
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<Boolean> call, Throwable t) {
+                        t.printStackTrace();
+                    }
+                };
+                call.enqueue(callbackCalculadora);
             }
         };
         btnEnviar.setOnClickListener(listener);
