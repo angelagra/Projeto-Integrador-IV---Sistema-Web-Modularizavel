@@ -1,3 +1,4 @@
+
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -13,10 +14,10 @@
         android:layout_height="43dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="28dp"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.378"
+        app:layout_constraintHorizontal_bias="0.324"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Nome do Produto" />
@@ -25,26 +26,22 @@
         android:id="@+id/tvDescricao"
         android:layout_width="321dp"
         android:layout_height="125dp"
+        android:layout_marginBottom="60dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="276dp"
         android:text=" "
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu consequat nisl. Fusce suscipit aliquam massa. Fusce sit amet nunc ut nisl dignissim scelerisque. Suspendisse aliquet tortor sed dignissim sollicitudin. Sed convallis lorem vel egestas maximus. Phasellus elementum varius ipsum et lacinia. Nulla in pellentesque sapien." />
 
     <ImageView
         android:id="@+id/imgProduto"
         android:layout_width="143dp"
         android:layout_height="109dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:src="@android:drawable/btn_dialog"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.092"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvNomeProduto" />
 
@@ -52,23 +49,22 @@
         android:id="@+id/tvCategoria"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginEnd="144dp"
+        android:layout_marginTop="16dp"
         android:text="Categoria"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.065"
-        app:layout_constraintStart_toEndOf="@+id/imgProduto"
-        tools:layout_editor_absoluteY="93dp" />
+        app:layout_constraintTop_toBottomOf="@+id/tvNomeProduto" />
 
     <Button
         android:id="@+id/btnRetira"
         android:layout_width="33dp"
         android:layout_height="35dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
         android:text="-"
-        app:layout_constraintTop_toBottomOf="@+id/tvCategoria"
-        tools:layout_editor_absoluteX="187dp" />
+        app:layout_constraintStart_toEndOf="@+id/imgProduto"
+        app:layout_constraintTop_toBottomOf="@+id/tvCategoria" />
 
     <TextView
         android:id="@+id/textView5"
@@ -78,38 +74,38 @@
         android:layout_marginStart="8dp"
         android:text="0"
         app:layout_constraintEnd_toStartOf="@+id/btnAdicione"
-        app:layout_constraintHorizontal_bias="0.142"
         app:layout_constraintStart_toEndOf="@+id/btnRetira"
-        tools:layout_editor_absoluteY="130dp" />
+        tools:layout_editor_absoluteY="131dp" />
 
     <Button
         android:id="@+id/btnAdicione"
         android:layout_width="35dp"
         android:layout_height="36dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginTop="16dp"
         android:text="+"
-        tools:layout_editor_absoluteX="239dp"
-        tools:layout_editor_absoluteY="122dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCategoria" />
 
     <TextView
         android:id="@+id/tvPreco"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginEnd="152dp"
+        android:layout_marginTop="16dp"
         android:text="R$: 10,00"
-        app:layout_constraintStart_toEndOf="@+id/imgProduto"
-        tools:layout_editor_absoluteY="175dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRetira" />
 
     <TextView
         android:id="@+id/tvDescricaoTitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginBottom="36dp"
+        android:layout_marginStart="32dp"
         android:text="Descrição"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/tvDescricao"
-        app:layout_constraintTop_toBottomOf="@+id/imgProduto"
-        app:layout_constraintVertical_bias="1.0"
-        tools:layout_editor_absoluteX="32dp" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
