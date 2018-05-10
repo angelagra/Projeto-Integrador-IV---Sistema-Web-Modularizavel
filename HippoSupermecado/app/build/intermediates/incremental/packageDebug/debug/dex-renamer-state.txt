@@ -1,4 +1,4 @@
-#Tue May 08 22:09:50 BRT 2018
+#Wed May 09 22:53:42 BRT 2018
 path.1=classes.dex
 path.0=classes.dex
 renamed.5=classes6.dex
@@ -7,12 +7,12 @@ renamed.3=classes4.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex
-base.5=C\:\\Users\\angela.gfpedra1\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\21
-base.4=C\:\\Users\\angela.gfpedra1\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\24
-base.3=C\:\\Users\\angela.gfpedra1\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\23
-base.2=C\:\\Users\\angela.gfpedra1\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\20
-base.1=C\:\\Users\\angela.gfpedra1\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\19
-base.0=C\:\\Users\\angela.gfpedra1\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\22
+base.5=C\:\\Users\\Leidiane\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\28
+base.4=C\:\\Users\\Leidiane\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\25
+base.3=C\:\\Users\\Leidiane\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\27
+base.2=C\:\\Users\\Leidiane\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\30
+base.1=C\:\\Users\\Leidiane\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\26
+base.0=C\:\\Users\\Leidiane\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\29
 path.5=classes.dex
 path.4=classes.dex
 path.3=classes.dex

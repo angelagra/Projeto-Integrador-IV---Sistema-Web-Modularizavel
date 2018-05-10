@@ -19,8 +19,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Destaque fragment = new Destaque();
-        getSupportFragmentManager().beginTransaction().replace(R.id.frag_container, fragment).commit();
+        // -> Iniciando o app com os fragmentos (Destaque & Categorias)
+        // Destaque fragment = new Destaque();
+        // getSupportFragmentManager().beginTransaction().replace(R.id.frag_container, fragment).commit();
 
         // Habilitar os botões do menu.
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         // Binding dos elementos do menu
         navigationView = (NavigationView) findViewById(R.id.navegation_view);
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer);
+
 
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -39,16 +41,24 @@ public class MainActivity extends AppCompatActivity {
 
                 drawerLayout.closeDrawers();
 
-                /*
+                // Login
+                if(menuItem.getItemId() == R.id.action_login){
+                    Login login = new Login();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.frag_container, login).commit();
+                    return true;
+                }
+
+                // Cadastro de Usuário
                 if(menuItem.getItemId() == R.id.action_newUser){
                     CadastroUsuario newUser = new CadastroUsuario();
                     getSupportFragmentManager().beginTransaction().replace(R.id.frag_container, newUser).commit();
                     return true;
                 }
-                */
+
                 return false;
             }
         });
+
 
         actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.openDrawer, R.string.closeDrawer){};
         drawerLayout.setDrawerListener(actionBarDrawerToggle);

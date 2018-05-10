@@ -1,17 +1,17 @@
 #Internal package file, do not edit.
-#Tue May 08 22:09:50 BRT 2018
-2.base=C\:\\Users\\angela.gfpedra1\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\23
+#Tue May 08 22:55:30 BRT 2018
+2.base=C\:\\Users\\Leidiane\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\25
 5.set=DEX
 0.path=classes.dex
 2.baseType=DIRECTORY
-3.base=C\:\\Users\\angela.gfpedra1\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\20
+3.base=C\:\\Users\\Leidiane\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\27
 2.set=DEX
 1.path=classes.dex
-4.base=C\:\\Users\\angela.gfpedra1\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\22
+4.base=C\:\\Users\\Leidiane\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\26
 count=6
 5.baseType=DIRECTORY
 2.path=classes.dex
-5.base=C\:\\Users\\angela.gfpedra1\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\19
+5.base=C\:\\Users\\Leidiane\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\29
 4.set=DEX
 3.path=classes.dex
 3.baseType=DIRECTORY
@@ -19,9 +19,9 @@ count=6
 4.path=classes.dex
 1.baseType=DIRECTORY
 5.path=classes.dex
-0.base=C\:\\Users\\angela.gfpedra1\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\21
+0.base=C\:\\Users\\Leidiane\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\28
 0.baseType=DIRECTORY
 3.set=DEX
-1.base=C\:\\Users\\angela.gfpedra1\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\24
+1.base=C\:\\Users\\Leidiane\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\30
 4.baseType=DIRECTORY
 0.set=DEX

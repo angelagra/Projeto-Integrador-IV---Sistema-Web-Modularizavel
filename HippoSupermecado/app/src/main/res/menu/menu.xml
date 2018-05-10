@@ -3,9 +3,16 @@
 
     <group android:checkableBehavior="single">
         <item
+            android:id="@+id/action_login"
+            android:checked="false"
+            android:icon="@android:drawable/alert_light_frame"
+            android:title="Entrar"
+            />
+
+        <item
             android:id="@+id/action_newUser"
             android:checked="false"
-            android:icon="@android:drawable/ic_menu_preferences"
+            android:icon="@android:drawable/alert_light_frame"
             android:title="Cadastrar Usuário"
             />
     </group>

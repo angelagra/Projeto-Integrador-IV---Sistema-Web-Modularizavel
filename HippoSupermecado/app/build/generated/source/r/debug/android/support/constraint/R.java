@@ -54,12 +54,12 @@ public final class R {
         public static final int layout_optimizationLevel = 0x7f0300e7;
     }
     public static final class id {
-        public static final int all = 0x7f08001d;
-        public static final int basic = 0x7f080021;
-        public static final int chains = 0x7f080033;
-        public static final int none = 0x7f080081;
-        public static final int packed = 0x7f080086;
-        public static final int parent = 0x7f080088;
+        public static final int all = 0x7f08001e;
+        public static final int basic = 0x7f080022;
+        public static final int chains = 0x7f080032;
+        public static final int none = 0x7f080080;
+        public static final int packed = 0x7f080085;
+        public static final int parent = 0x7f080087;
         public static final int spread = 0x7f0800b1;
         public static final int spread_inside = 0x7f0800b2;
         public static final int wrap = 0x7f0800e6;
