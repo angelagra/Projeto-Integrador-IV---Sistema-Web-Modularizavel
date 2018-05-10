@@ -10,6 +10,12 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -54,6 +60,31 @@ public class Endereco extends Fragment {
                 String cidade = etCidade.getText().toString();
                 String pais = etPais.getText().toString();
                 String uf = etUf.getText().toString();
+
+                Retrofit retrofit = new Retrofit.Builder().baseUrl("https://hippo.azurewebsites.net/").addConverterFactory(GsonConverterFactory.create()).build();
+                ApiEndereco apiEndereco  = retrofit.create(ApiEndereco.class);
+                Call<String> call = apiEndereco.getObject(endereco,logradouro,numero,cep,complemento,cidade,pais,uf);
+
+                Callback<String> callbackEndereco = new Callback<String>() {
+                    @Override
+                    public void onResponse(Call<String> call, Response<String> response) {
+                        String endereco = response.body();
+
+                        if(response.isSuccessful()){
+
+                        }else{
+                            if (response.code()==401) {
+
+                            }
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<String> call, Throwable t) {
+                        t.printStackTrace();
+                    }
+                };
+                call.enqueue(callbackEndereco);
 
             }
         };

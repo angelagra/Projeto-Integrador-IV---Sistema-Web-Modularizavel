@@ -11,6 +11,12 @@ import android.widget.TextView;
 
 import com.hipposupermecado.validate.PatternEmail;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
 
 public class CadastroUsuario extends Fragment
 {
@@ -62,6 +68,31 @@ public class CadastroUsuario extends Fragment
                 }
                 // ----------------------------------------------------------------
                 tvMsg.setText("Acesso ao banco OK");
+
+                Retrofit retrofit = new Retrofit.Builder().baseUrl("https://hippo.azurewebsites.net/").addConverterFactory(GsonConverterFactory.create()).build();
+                ApiUsuario apiUsuario  = retrofit.create(ApiUsuario.class);
+                Call<String> call = apiUsuario.getObject(nome,email,senha,confSenha);
+
+                Callback<String> callbackUsuario = new Callback<String>() {
+                    @Override
+                    public void onResponse(Call<String> call, Response<String> response) {
+                        String usuario = response.body();
+
+                        if(response.isSuccessful()){
+
+                        }else{
+                            if (response.code()==401) {
+
+                            }
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<String> call, Throwable t) {
+                        t.printStackTrace();
+                    }
+                };
+                call.enqueue(callbackUsuario);
 
             }
         };

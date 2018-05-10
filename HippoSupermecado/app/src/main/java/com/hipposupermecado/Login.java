@@ -72,7 +72,7 @@ public class Login extends Fragment {
             ApiLogin apiLogin = retrofit.create(ApiLogin.class);
             Call<Boolean> call = apiLogin.getObject(email,senha);
 
-            Callback<Boolean> callbackCalculadora = new Callback<Boolean>() {
+            Callback<Boolean> callbackLogin = new Callback<Boolean>() {
                 @Override
                 public void onResponse(Call<Boolean> call, Response<Boolean> response) {
                     Boolean login = response.body();
@@ -91,7 +91,7 @@ public class Login extends Fragment {
                     t.printStackTrace();
                 }
             };
-            call.enqueue(callbackCalculadora);
+            call.enqueue(callbackLogin);
             }
         };
         btnEnviar.setOnClickListener(listener);
