@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
         actionBarDrawerToggle.syncState();
     }
 
-    public boolean onOptionItemSelected (MenuItem item){
+    public boolean onOptionsItemSelected (MenuItem item){
         if(actionBarDrawerToggle.onOptionsItemSelected(item)){
             return true;
         }
