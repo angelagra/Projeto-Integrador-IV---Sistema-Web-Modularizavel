@@ -6,8 +6,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.TextView;
+import android.widget.Toast;
 
 import com.hipposupermecado.validate.PatternEmail;
 
@@ -21,9 +22,9 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class CadastroUsuario extends Fragment
 {
     // Enviar se o usuário está ativo ou não.
-    private EditText etNome, etEmail, etSenha, etConfirmarSenha;
+    private EditText etNome, etEmail, etCpf, etCelular, etDD, etMM, etAAAA, etSenha, etConfirmarSenha;
     private Button btnSalvar;
-    private TextView tvMsg;
+    private CheckBox cbNewsLetter;
 
 
     @Override
@@ -31,45 +32,97 @@ public class CadastroUsuario extends Fragment
     {
         View view = inflater.inflate(R.layout.fragment_cadastro_usuario, container, false);
 
+        // Binding...
         etNome = (EditText) view.findViewById(R.id.etNome);
         etEmail = (EditText) view.findViewById(R.id.etEmail);
+        etCpf = (EditText) view.findViewById(R.id.etCpf);
+        etCelular = (EditText) view.findViewById(R.id.etCelular);
+        etDD = (EditText) view.findViewById(R.id.etDD);
+        etMM = (EditText) view.findViewById(R.id.etMM);
+        etAAAA = (EditText) view.findViewById(R.id.etAAAA);
         etSenha = (EditText) view.findViewById(R.id.etSenha);
         etConfirmarSenha = (EditText) view.findViewById(R.id.etConfirmarSenha);
         btnSalvar = (Button) view.findViewById(R.id.btnSalvar);
-        tvMsg = (TextView) view.findViewById(R.id.tvMsg);
+        cbNewsLetter = (CheckBox) view.findViewById(R.id.cbNewsLetter);
 
         View.OnClickListener listener = new View.OnClickListener()
         {
             @Override
             public void onClick(View view)
             {
+                // VALIDAÇÕES DE ENTRADA DO APP -----------------------------------
+                String inicio = "O campo ";
+                String fim = "deve ser preenchido";
+                // Nome
                 String nome = etNome.getText().toString();
-                String email = etEmail.getText().toString();
-                String senha = etSenha.getText().toString();
-                String confSenha = etConfirmarSenha.getText().toString();
-
-                PatternEmail pattermEmail = new PatternEmail();
-
-                // VALIDAÇÕES NO APP ----------------------------------------------
-                if(isEmptyForm(nome, email, senha, confSenha)){
-                    // Se algum campo estiver vazio!
-                    tvMsg.setText("Preencher todos os campos");
+                if(isEmptyForm(nome)){
+                    alerta(inicio + "nome " + fim);
                     return;
                 }
-                if(!isEqualsPass(senha, confSenha)){
-                    // Se os valores da senha não são iguais
-                    tvMsg.setText("Os campos de senhas contem valores diferentes");
+                // E-mail
+                PatternEmail pattermEmail = new PatternEmail();
+                String email = etEmail.getText().toString();
+                if(isEmptyForm(email)){
+                    alerta(inicio + "Email " + fim);
                     return;
                 }
                 if(!pattermEmail.isEmail(email)){
-                    // Se o e-mail não seguir o padrão de e-mail.
-                    tvMsg.setText("E-mail inválido");
+                    alerta("Email inválido");
+                    return;
+                }
+                // CPF
+                String cpf = etCpf.getText().toString();
+                if(isEmptyForm(cpf)){
+                    alerta(inicio + "CPF " + fim);
+                    return;
+                }
+                if(cpf.length() != 11){
+                    alerta("O CPF deve conter 11 dígitos");
+                    return;
+                }
+                // Celular
+                String celular = etCelular.getText().toString();
+                if(isEmptyForm(celular)){
+                    alerta(inicio + "Celular " + fim);
+                    return;
+                }
+                // Nascimento
+                String data = "Data de Nascimento inválida";
+                String dia = etDD.getText().toString();
+                String mes = etMM.getText().toString();
+                String ano = etAAAA.getText().toString();
+                if((isEmptyForm(dia) || isEmptyForm(mes)) || isEmptyForm(ano)){
+                    alerta(inicio + "Data de Nascimento " + fim);
+                    return;
+                }
+                if(Integer.getInteger(dia) <= 0 || Integer.getInteger(dia) >= 31){
+                    alerta(data);
+                    return;
+                }
+                if(Integer.getInteger(mes) <= 0 || Integer.getInteger(mes) > 12){
+                    alerta(data);
+                    return;
+                }
+                if(ano.length() != 4){
+                    alerta(data);
+                    return;
+                }
+                // Senha
+                String senha = etSenha.getText().toString();
+                String confSenha = etConfirmarSenha.getText().toString();
+                String validarSenha = "Os campos de senhas dever ser iguais";
+                if( (isEmptyForm(senha) || isEmptyForm(confSenha))  || (!isEqualsPass(senha, confSenha))){
+                    alerta(validarSenha);
                     return;
                 }
                 // ----------------------------------------------------------------
-                tvMsg.setText("Acesso ao banco OK");
 
-                Retrofit retrofit = new Retrofit.Builder().baseUrl("https://hippo.azurewebsites.net/").addConverterFactory(GsonConverterFactory.create()).build();
+                // Conexão com o Banco --------------------------------------------
+                Retrofit retrofit = new Retrofit.Builder()
+                                        .baseUrl("https://hippo.azurewebsites.net/")
+                                        .addConverterFactory(GsonConverterFactory.create())
+                                        .build();
+
                 ApiUsuario apiUsuario  = retrofit.create(ApiUsuario.class);
                 Call<String> call = apiUsuario.getObject(nome,email,senha,confSenha);
 
@@ -82,7 +135,6 @@ public class CadastroUsuario extends Fragment
 
                         }else{
                             if (response.code()==401) {
-
                             }
                         }
                     }
@@ -93,7 +145,7 @@ public class CadastroUsuario extends Fragment
                     }
                 };
                 call.enqueue(callbackUsuario);
-
+                // ----------------------------------------------------------------
             }
         };
         btnSalvar.setOnClickListener(listener);
@@ -101,11 +153,13 @@ public class CadastroUsuario extends Fragment
         return view;
     }
 
-    private boolean isEmptyForm (String nome, String email, String senha, String confSenha) {
-        if((nome.trim().equals("") || email.trim().equals("")) || (senha.trim().equals("") || confSenha.trim().equals("")))
-        {
-            return true;
-        }
+    private void alerta (String msg) {
+        Toast toast = Toast.makeText(CadastroUsuario.super.getContext(), msg, Toast.LENGTH_LONG);
+        toast.show();
+    }
+
+    private boolean isEmptyForm (String val) {
+        if(val.trim().equals("")) { return true; }
         return false;
     }
 

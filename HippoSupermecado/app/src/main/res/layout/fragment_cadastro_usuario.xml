@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context="com.hipposupermecado.CadastroUsuario"
     android:id="@+id/frag_cadastroUser">
+
     <EditText
         android:id="@+id/etNome"
         android:layout_width="350dp"
@@ -18,7 +19,7 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvMsg" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <EditText
         android:id="@+id/etEmail"
@@ -46,7 +47,7 @@
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/etDD" />
 
     <EditText
         android:id="@+id/etConfirmarSenha"
@@ -62,16 +63,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etSenha" />
 
-    <Button
-        android:id="@+id/btnSalvar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="Salvar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
     <TextView
         android:id="@+id/textView3"
         android:layout_width="350dp"
@@ -85,17 +76,94 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tvMsg"
-        android:layout_width="350sp"
+    <EditText
+        android:id="@+id/etCpf"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="10dp"
-        android:textAlignment="center"
+        android:layout_marginTop="8dp"
+        android:maxLength="11"
+        android:ems="10"
+        android:hint="CPF"
+        android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+
+    <EditText
+        android:id="@+id/etCelular"
+        android:layout_width="350dp"
+        android:layout_height="49dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Celular"
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etCpf" />
+
+    <EditText
+        android:id="@+id/etDD"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="DD"
+        android:maxLength="2"
+        android:inputType="date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etCelular" />
+
+    <EditText
+        android:id="@+id/etMM"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="MM"
+        android:maxLength="2"
+        android:inputType="date"
+        app:layout_constraintStart_toEndOf="@+id/etDD"
+        app:layout_constraintTop_toBottomOf="@+id/etCelular" />
+
+    <EditText
+        android:id="@+id/etAAAA"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="AAAA"
+        android:maxLength="4"
+        android:inputType="date"
+        app:layout_constraintStart_toEndOf="@+id/etMM"
+        app:layout_constraintTop_toBottomOf="@+id/etCelular" />
+
+    <CheckBox
+        android:id="@+id/cbNewsLetter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="News Letter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etConfirmarSenha" />
+
+    <Button
+        android:id="@+id/btnSalvar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Salvar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 </android.support.constraint.ConstraintLayout>
 
 
