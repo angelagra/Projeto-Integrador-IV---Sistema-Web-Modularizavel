@@ -14,8 +14,11 @@ import java.sql.SQLException;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriInfo;
 import javax.ws.rs.Consumes;
+import javax.ws.rs.FormParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.GET;
+import static javax.ws.rs.HttpMethod.POST;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PUT;
 import javax.ws.rs.core.MediaType;
@@ -28,7 +31,7 @@ import javax.ws.rs.core.Response;
  *
  * @author dgaraujo
  */
-@Path("/Login")
+@Path("/login")
 public class LoginResource {
     
         private static final String DRIVER = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
@@ -51,19 +54,17 @@ public class LoginResource {
 
     /**
      * Retrieves representation of an instance of Resource.LoginResource
+     * @param password
      * @return an instance of java.lang.String
      */
   
 
-    @GET
-    @Path("/{emailCliente},{senhaCliente}") // em um lugar especifico
-    @Produces(MediaType.APPLICATION_JSON)
-    public Response getJson(
-                   // @PathParam("emailCliente") String emailCliente, Login loginusuario,
-                    //@PathParam("senhaCliente") String senhaCliente, Login senhausuario) throws Exception {
-                    @PathParam("emailCliente") String loginusuario,
-                    @PathParam("senhaCliente") String senhausuario) throws Exception {  
-            
+    @POST
+    //@Path("/{emailCliente},{senhaCliente}")
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response postJson(Login login) throws SQLException, ClassNotFoundException {
+  
+        
         Response response = null;
         Class.forName(DRIVER);   // carregar o driver
         Connection comn =  DriverManager.getConnection(URL, USER, PASS);    
@@ -72,31 +73,32 @@ public class LoginResource {
         
         try(PreparedStatement stmt = comn.prepareStatement(sql)){
             
-           stmt.setString(1,loginusuario);
-           stmt.setString(2,senhausuario);// colocando um valor
+            emailCliente = "daniel@senac.br";
+            senhaCliente = "123mudar";
+            
+            
+           stmt.setString(1,emailCliente);
+           stmt.setString(2,senhaCliente);// colocando um valor
            
             try(ResultSet rs = stmt.executeQuery()){
 
                 if(rs.next()){
-                    //tem o id
-                     //Long id =  rs.getLong("id");
                      String usuario = rs.getString("emailCliente");
                      String senha = rs.getString("senhaCliente");
                
                      Login c = new Login(usuario,senha); //cria a Usuario
 
                      //response = Response.ok(c).build();
+                     
                      response = Response.ok(c)
                              .entity("true")
                              .type(MediaType.APPLICATION_JSON).build();
-             		
+                    		
                 }else{
                     //não tem
                     response = Response.status(Response.Status.UNAUTHORIZED)
                             .entity("false")
                             .type(MediaType.APPLICATION_JSON).build();
-                    
-                 
                 }
            }
         }
@@ -112,13 +114,10 @@ public class LoginResource {
      * PUT method for updating or creating an instance of LoginResource
      * @param content representation for the resource
      */
-    
+
    @PUT
    @Consumes(MediaType.APPLICATION_JSON)
    public void putJson(String content) {
         throw new UnsupportedOperationException();
    }
-     
-        
-
 }
