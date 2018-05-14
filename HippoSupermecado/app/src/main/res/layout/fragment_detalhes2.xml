@@ -22,19 +22,6 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Nome do Produto" />
 
-    <TextView
-        android:id="@+id/tvDescricao"
-        android:layout_width="321dp"
-        android:layout_height="125dp"
-        android:layout_marginBottom="60dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:text=" "
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu consequat nisl. Fusce suscipit aliquam massa. Fusce sit amet nunc ut nisl dignissim scelerisque. Suspendisse aliquet tortor sed dignissim sollicitudin. Sed convallis lorem vel egestas maximus. Phasellus elementum varius ipsum et lacinia. Nulla in pellentesque sapien." />
-
     <ImageView
         android:id="@+id/imgProduto"
         android:layout_width="143dp"
@@ -67,15 +54,17 @@
         app:layout_constraintTop_toBottomOf="@+id/tvCategoria" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/tvQtd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
         android:text="0"
         app:layout_constraintEnd_toStartOf="@+id/btnAdicione"
+        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toEndOf="@+id/btnRetira"
-        tools:layout_editor_absoluteY="131dp" />
+        app:layout_constraintTop_toBottomOf="@+id/tvCategoria" />
 
     <Button
         android:id="@+id/btnAdicione"
@@ -93,7 +82,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="152dp"
         android:layout_marginTop="16dp"
-        android:text="R$: 10,00"
+        android:text="R$: "
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnRetira" />
 
@@ -101,11 +90,42 @@
         android:id="@+id/tvDescricaoTitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="36dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginStart="32dp"
         android:text="Descrição"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/tvDescricao"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="329dp"
+        android:layout_height="197dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.983"
+        tools:layout_editor_absoluteX="29dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvDescricao"
+                android:layout_width="match_parent"
+                android:layout_height="192dp"
+                android:layout_marginBottom="60dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:text=" "
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu consequat nisl. Fusce suscipit aliquam massa. Fusce sit amet nunc ut nisl dignissim scelerisque. Suspendisse aliquet tortor sed dignissim sollicitudin. Sed convallis lorem vel egestas maximus. Phasellus elementum varius ipsum et lacinia. Nulla in pellentesque sapien." />
+        </LinearLayout>
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>

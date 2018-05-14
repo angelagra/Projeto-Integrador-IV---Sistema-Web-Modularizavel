@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.FrameLayout;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -30,7 +31,7 @@ public class ProdutosFragment extends Fragment {
 
     //private TextView txtId;
     private ListView listView;
-    private FrameLayout layoutContainer;
+    private FrameLayout frag_container;
     private ProdutoAdapter adapter;
 
     public ProdutosFragment() {
@@ -65,13 +66,12 @@ public class ProdutosFragment extends Fragment {
                 adapter = new ProdutoAdapter(getContext(), produto);
                 listView.setAdapter(adapter);
 
-                /*listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-                        //Toast.makeText(getContext(), "Clicked product id =" + view.getTag(), Toast.LENGTH_SHORT).show();
 
-                        layoutContainer = (FrameLayout) view.findViewById(R.id.layoutContainer);
-                        ProdutosFragment fragment = new ProdutosFragment();
+                        frag_container = (FrameLayout) view.findViewById(R.id.frag_container);
+                        Detalhes fragment = new Detalhes();
 
                         int idProd = Integer.parseInt(view.getTag().toString());
 
@@ -80,9 +80,9 @@ public class ProdutosFragment extends Fragment {
                         fragment.setArguments(args);
 
 
-                        getFragmentManager().beginTransaction().replace(R.id.layoutContainer, fragment).commit();
+                        getFragmentManager().beginTransaction().replace(R.id.frag_container, fragment).commit();
                     }
-                });*/
+                });
             }
 
             @Override
