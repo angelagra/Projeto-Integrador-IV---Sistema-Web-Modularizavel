@@ -12,7 +12,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class Detalhe implements Serializable {
 
-    private Long id; 
+    private Long id, idCategoria; 
     private String nome;
     private String descricao;
     private Double preco;
@@ -21,12 +21,13 @@ public class Detalhe implements Serializable {
     protected Detalhe() {
     }
 
-    public Detalhe(Long id, String nome, String descricao, Double preco, Double desconto) {
+    public Detalhe(Long id, String nome, String descricao, Double preco, Double desconto, Long idCategoria) {
         this.id = id;
         this.nome = nome;
         this.descricao = descricao;
         this.preco = preco;
         this.desconto = desconto;
+        this.idCategoria = idCategoria;
     }
 
     @XmlAttribute
@@ -56,5 +57,9 @@ public class Detalhe implements Serializable {
         return desconto;
     }
 
+    @XmlAttribute
+    public Long getIdCategoria(){
+        return idCategoria;
+    }
 }
 
