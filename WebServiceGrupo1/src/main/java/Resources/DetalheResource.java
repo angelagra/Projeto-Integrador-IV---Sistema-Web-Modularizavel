@@ -54,8 +54,9 @@ public class DetalheResource {
            String descricao = rs.getString("descProduto");
            Double preco = rs.getDouble("precProduto");
            Double desconto = rs.getDouble("descontoPromocao");
+           Long idCategoria     = rs.getLong("idCategoria"); 
            
-           Detalhe d = new Detalhe(id,nome,descricao,preco,desconto); //cria a categoria
+           Detalhe d = new Detalhe(id,nome,descricao,preco,desconto, idCategoria); //cria a categoria
            detalhes.add(d); // adiciona na lista 
        }
        
@@ -87,8 +88,9 @@ public class DetalheResource {
                     String descricao = rs.getString("descProduto");
                     Double preco = rs.getDouble("precProduto");
                     Double desconto = rs.getDouble("descontoPromocao");
+                    Long idCategoria = rs.getLong("idCategoria");
 
-                    Detalhe d = new Detalhe(idP, nome, descricao, preco,desconto);
+                    Detalhe d = new Detalhe(idP, nome, descricao, preco,desconto,idCategoria );
                     detalhes.add(d);
                     
                 
