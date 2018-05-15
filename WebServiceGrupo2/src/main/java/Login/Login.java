@@ -22,6 +22,7 @@ public class Login implements Serializable {
     private String emailCliente;
     private String senhaCliente;
     private String idcliente;
+    private String nomeCompletoCliente;
     
      protected Login() {
          
@@ -53,7 +54,10 @@ public class Login implements Serializable {
     public String getIdcliente(){
         return idcliente;
     }
-    
+    @XmlElement
+    public String getNomeCompletoCliente(){
+        return nomeCompletoCliente;
+    }
     public String setEmailCliente() {
         return emailCliente;
     }
@@ -64,6 +68,8 @@ public class Login implements Serializable {
     public String setIdcliente(){
         return idcliente;
     }
-    
+    public String setNomeCompletoCliente(){
+        return nomeCompletoCliente;
+    }
     
 }

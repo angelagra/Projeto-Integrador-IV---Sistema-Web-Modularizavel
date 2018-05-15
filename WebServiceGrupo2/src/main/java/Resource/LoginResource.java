@@ -24,6 +24,7 @@ import javax.ws.rs.PUT;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.QueryParam;
+import javax.ws.rs.client.Entity;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
@@ -46,6 +47,7 @@ public class LoginResource {
     private String emailCliente;
     private String senhaCliente;
     private String idcliente;
+    private String nomeCompletoCliente;
     
 
     /**
@@ -69,7 +71,7 @@ public class LoginResource {
         Class.forName(DRIVER);   // carregar o driver
         Connection comn =  DriverManager.getConnection(URL, USER, PASS);    
 
-        String sql = "select emailCliente,senhaCliente,idcliente from Cliente where emailCliente = ? and senhaCliente = ?";
+        String sql = "select emailCliente,senhaCliente,idcliente,nomeCompletoCliente from Cliente where emailCliente = ? and senhaCliente = ?";
         
         try(PreparedStatement stmt = comn.prepareStatement(sql)){
             
@@ -83,14 +85,17 @@ public class LoginResource {
                      String usuario = rs.getString("emailCliente");
                      String senha = rs.getString("senhaCliente");
                      String id = rs.getString("idcliente");
+                     String nome = rs.getString("nomeCompletoCliente");
                
                      Login c = new Login(usuario,senha,id); //cria a Usuario
 
                  
                      response = Response.ok(c)
-                             .entity(id)
+                             .header("Toker", id)
+                             .entity(nome)
                              .type(MediaType.APPLICATION_JSON).build();
-                    		
+               
+                 
                 }else{
                     //não tem
                     response = Response.status(Response.Status.UNAUTHORIZED)
