@@ -23,6 +23,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PUT;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.PathParam;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
@@ -44,6 +45,7 @@ public class LoginResource {
     private UriInfo context;
     private String emailCliente;
     private String senhaCliente;
+    private String idcliente;
     
 
     /**
@@ -60,38 +62,33 @@ public class LoginResource {
   
 
     @POST
-    //@Path("/{emailCliente},{senhaCliente}")
     @Consumes(MediaType.APPLICATION_JSON)
     public Response postJson(Login login) throws SQLException, ClassNotFoundException {
-  
-        
+          
         Response response = null;
         Class.forName(DRIVER);   // carregar o driver
         Connection comn =  DriverManager.getConnection(URL, USER, PASS);    
 
-        String sql = "select emailCliente,senhaCliente from Cliente where emailCliente = ? and senhaCliente = ?";
+        String sql = "select emailCliente,senhaCliente,idcliente from Cliente where emailCliente = ? and senhaCliente = ?";
         
         try(PreparedStatement stmt = comn.prepareStatement(sql)){
             
-            emailCliente = "daniel@senac.br";
-            senhaCliente = "123mudar";
-            
-            
-           stmt.setString(1,emailCliente);
-           stmt.setString(2,senhaCliente);// colocando um valor
+           stmt.setString(1,login.getEmailCliente());
+           stmt.setString(2,login.getSenhaCliente());// colocando um valor
            
+                     
             try(ResultSet rs = stmt.executeQuery()){
 
                 if(rs.next()){
                      String usuario = rs.getString("emailCliente");
                      String senha = rs.getString("senhaCliente");
+                     String id = rs.getString("idcliente");
                
-                     Login c = new Login(usuario,senha); //cria a Usuario
+                     Login c = new Login(usuario,senha,id); //cria a Usuario
 
-                     //response = Response.ok(c).build();
-                     
+                 
                      response = Response.ok(c)
-                             .entity("true")
+                             .entity(id)
                              .type(MediaType.APPLICATION_JSON).build();
                     		
                 }else{
@@ -120,4 +117,5 @@ public class LoginResource {
    public void putJson(String content) {
         throw new UnsupportedOperationException();
    }
+
 }

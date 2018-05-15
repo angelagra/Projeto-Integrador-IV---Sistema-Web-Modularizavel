@@ -35,17 +35,9 @@ and open the template in the editor.
     <form id="form1" name="form1" method="post" action="/webresources/Login/">
       <table width="100%" border="0">
         <tr>
-          <td width="29%" align="right">&nbsp;</td>
-          <td width="20%" align="left">Login.:</td>
-          <td width="1%">&nbsp;</td>
-          <td colspan="2"> Senha.:</td>
         </tr>
         <tr>
-            <td colspan="2" align="right"><input name="LoginUsuario" type="text" id="LoginUsuario" placeholder="Digite seu Login" size="25" /></td>
-          <td><label for="LoginUsuario"></label></td>
-          <td width="22%"><input name="senhaUsuario" type="password" id="senhaUsuario" size="25" placeholder="Digite sua Senha"/></td>
-          <td width="28%"><input type="button" name="button" id="button" value="Acessar" onclick="validalogin()" /></td>
- 
+        
         </tr>
         <tr>
           <td align="right">&nbsp;</td>
@@ -55,13 +47,12 @@ and open the template in the editor.
         </tr>
       </table>
         
-        <b><p align=center> Test RESTFUL Web Services</p></b>
+        <b><p align=center> Web Services</p></b>
         <br>
-        <p align=center> Request: GET https://hippo.azurewebsites.net/WebServiceGrupo2/webresources/Login</p>
-        <p align=center>Retorno do WebService Status: 200 (OK) e Received: true  </p>
+        <p align=center>https://hippo.azurewebsites.net/WebServiceGrupo2/webresources/login</p>
         <br>
-        <p align=center> Request: GET https://hippo.azurewebsites.net/WebServiceGrupo2/webresources/Login/admin,teste?</p>
-        <p align=center>Retorno do WebService Status: 401 (Unauthorized)  e Received: false  </p>
+        <p align=center>JSON: => {"emailCliente":"daniel@senac.br","senhaCliente":"123mudar"}</p>
+      
     </form>
     </body>
 </html>

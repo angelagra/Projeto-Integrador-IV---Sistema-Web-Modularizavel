@@ -21,14 +21,16 @@ public class Login implements Serializable {
     private Long id; 
     private String emailCliente;
     private String senhaCliente;
+    private String idcliente;
     
      protected Login() {
          
     }
     //public Login(Long id, String emailCliente, String NomeUsuario, String senhaCliente) {
-    public Login(String emailCliente,String senhaCliente) {
+    public Login(String emailCliente,String senhaCliente,String idcliente) {
          this.emailCliente = emailCliente;
          this.senhaCliente = senhaCliente;
+         this.idcliente = idcliente;
      }
 
  
@@ -40,11 +42,28 @@ public class Login implements Serializable {
         this.id = id;
     }
     @XmlElement
-    public String getemailCliente() {
+    public String getEmailCliente() {
         return emailCliente;
     }
     @XmlElement
-    public String getsenhaCliente() {
+    public String getSenhaCliente() {
         return senhaCliente;
     }
+    @XmlElement
+    public String getIdcliente(){
+        return idcliente;
+    }
+    
+    public String setEmailCliente() {
+        return emailCliente;
+    }
+    
+    public String setSenhaCliente() {
+        return senhaCliente;
+    }
+    public String setIdcliente(){
+        return idcliente;
+    }
+    
+    
 }

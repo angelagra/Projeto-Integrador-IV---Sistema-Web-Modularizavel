@@ -29,7 +29,7 @@ import javax.ws.rs.core.Response;
  *
  * @author dgaraujo
  */
-@Path("cadastro")
+@Path("/cadastro")
 public class CadastroResource {
     
         private static final String DRIVER = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
