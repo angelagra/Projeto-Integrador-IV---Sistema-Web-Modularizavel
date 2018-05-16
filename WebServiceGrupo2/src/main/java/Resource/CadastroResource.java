@@ -6,6 +6,7 @@
 package Resource;
 
 import Cadastro.Cadastro;
+import static com.sun.org.apache.xalan.internal.lib.ExsltDatetime.date;
 import java.net.URI;
 import java.sql.Connection;
 import java.sql.Date;
@@ -13,6 +14,8 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriInfo;
 import javax.ws.rs.Consumes;
@@ -70,7 +73,7 @@ public class CadastroResource {
                         "senhaCliente, CPFCliente, celularCliente,\n" +
                         "telComercialCliente, telResidencialCliente,\n" +
                         "dtNascCliente, recebeNewsLetter)\n" +
-                        "  VALUES (?, ?, ?,?, ?, ?, ?, (CONVERT(varchar(10), ?, 105)), 1);";
+                        "  VALUES (?, ?, ?,?, ?, ?, ?, (CONVERT(varchar(10), ?, 105)), ?);";
         
         try(PreparedStatement stmt = comn.prepareStatement(sql)){
            stmt.setString(1,cadastro.getNomeCompletoCliente());
@@ -80,45 +83,26 @@ public class CadastroResource {
            stmt.setString(5,cadastro.getCelularCliente());
            stmt.setString(6,cadastro.getTelComercialCliente());
            stmt.setString(7,cadastro.getTelResidencialCliente());
-           stmt.setDate(8,new java.sql.Date(cadastro.getDtNasCliente().getTime()));
+           //stmt.setDate(8,new java.sql.Date(cadastro.getDtNasCliente().getTime()));
+                 
+          java.util.Date today = new java.util.Date();
+          java.sql.Date sqlToday = new java.sql.Date(cadastro.getDtNasCliente());
+          
+          stmt.setDate(8,date.valueOf(cadastro.getDtNasCliente()));
+          
+          ps.setString(8,sqlToday); 
+          
            stmt.setString(9,cadastro.getRecebeNewsLetter());
 
            int n = stmt.executeUpdate();
-            
-           
-           // retorna qual é o endereço id
-            ResultSet rs = stmt.getGeneratedKeys();
-            
-            if(rs.next()){
-                Long id = rs.getLong(1);
-                //cadastro.setId(id);
-                response = Response.created(URI.create("cadastro/" +id)).build();
-            }else{
-                response = Response.status(Response.Status.CONFLICT).build();
-            }
+           stmt.close();
            
         }
-
-       return response;
+          return response;
      
     }
-    
-    /**
-     * Retrieves representation of an instance of Resource.CadastroResource
-     * @return an instance of java.lang.String
-     */
-    /*
-    @GET
-    @Produces(MediaType.APPLICATION_JSON)
-    public String getJson() {
-        //TODO return proper representation object
-        throw new UnsupportedOperationException();
+
+    private Date getCurrentJavaSqlDate() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-    @PUT
-    @Consumes(MediaType.APPLICATION_JSON)
-    public void putJson(String content) {
-    
-    }
-    */
 }

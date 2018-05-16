@@ -34,13 +34,13 @@ public class Cadastro implements Serializable {
          
     }
       public Cadastro(String nomeCompletoCliente,String emailCliente,
-                      String senhaCliente,String CPFCliente,String celularCliente,String telComercialCliente,
+                      String senhaCliente,String CpfCliente,String celularCliente,String telComercialCliente,
                       String telResidencialCliente,Date dtNasCliente,String recebeNewsLetter) {
           
          this.nomeCompletoCliente = nomeCompletoCliente;
          this.emailCliente = emailCliente;
          this.senhaCliente = senhaCliente;
-         this.cpfCliente = CPFCliente;
+         this.cpfCliente = cpfCliente;
          this.celularCliente = celularCliente;
          this.telComercialCliente = telComercialCliente;
          this.telResidencialCliente = telResidencialCliente;
@@ -92,8 +92,8 @@ public class Cadastro implements Serializable {
         return cpfCliente;
     }
 
-    public void setCpfCliente(String CPFCliente) {
-        this.cpfCliente = CPFCliente;
+    public void setCpfCliente(String cpfCliente) {
+        this.cpfCliente = cpfCliente;
     }
 
     public String getCelularCliente() {
@@ -127,6 +127,8 @@ public class Cadastro implements Serializable {
     public void setRecebeNewsLetter(String recebeNewsLetter) {
         this.recebeNewsLetter = recebeNewsLetter;
     }
+
+
     
   
 }  
