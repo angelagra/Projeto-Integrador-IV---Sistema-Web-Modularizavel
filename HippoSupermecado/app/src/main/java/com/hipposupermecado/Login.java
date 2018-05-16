@@ -10,10 +10,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.hipposupermecado.validate.PatternEmail;
 
@@ -26,9 +28,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class Login extends Fragment {
 
     private EditText etEmail, etSenha;
-    private TextView tvMsg;
     private Button btnEnviar, btnCadastrar;
-    private RadioButton rbLembreDeMim;
+    private CheckBox cbLembreDeMim;
     private boolean isOk = false;
 
     // verificar se já esta salvo os dados da cliente.
@@ -41,8 +42,7 @@ public class Login extends Fragment {
         btnCadastrar = (Button) view.findViewById(R.id.btnCadastrar);
         etEmail = (EditText) view.findViewById(R.id.etEmail);
         etSenha = (EditText) view.findViewById(R.id.etSenha);
-        tvMsg = (TextView) view.findViewById(R.id.tvMsg);
-        rbLembreDeMim = (RadioButton) view.findViewById(R.id.rbLembreDeMim);
+        cbLembreDeMim = (CheckBox) view.findViewById(R.id.cbLembreDeMim);
 
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
@@ -54,18 +54,18 @@ public class Login extends Fragment {
             PatternEmail pattermEmail = new PatternEmail();
 
             if(isEmpty(email, senha)){
-                tvMsg.setText("Preencher os campos");
+                alerta("Preencher os campos");
                 return;
             }
 
             if(!pattermEmail.isEmail(email)){
-                tvMsg.setText("E-mail inválido");
+                alerta("E-mail inválido");
                 return;
             }
 
-            if(rbLembreDeMim.isChecked()){
+            if(cbLembreDeMim.isChecked()){
                 isOk = true;
-                tvMsg.setText("Salvar info user");
+                alerta("Salvar info user");
             }
 
             Retrofit retrofit = new Retrofit.Builder().baseUrl("https://hippo.azurewebsites.net/").addConverterFactory(GsonConverterFactory.create()).build();
@@ -78,10 +78,8 @@ public class Login extends Fragment {
                     Boolean login = response.body();
 
                     if(response.isSuccessful()){
-                        tvMsg.setText("OK");
                     }else{
                         if (response.code()==401) {
-                            tvMsg.setText("false");
                         }
                     }
                 }
@@ -105,6 +103,11 @@ public class Login extends Fragment {
         btnCadastrar.setOnClickListener(listenerCadastro);
 
         return view;
+    }
+
+    private void alerta (String msg) {
+        Toast toast = Toast.makeText(Login.super.getContext(), msg, Toast.LENGTH_LONG);
+        toast.show();
     }
 
     private boolean isEmpty (String email,String senha) {
