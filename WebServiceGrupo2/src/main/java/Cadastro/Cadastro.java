@@ -24,58 +24,109 @@ public class Cadastro implements Serializable {
      private Date dtNasCliente;
      private String emailCliente;
      private String senhaCliente;
-     private String CPFCliente;
+     private String cpfCliente;
      private String celularCliente;
+     private String telComercialCliente;
+     private String telResidencialCliente;
      private String recebeNewsLetter;
      
     protected Cadastro() {
          
     }
-      public Cadastro(String nomeCompletoCliente,Date dtNasCliente,String emailCliente,
-              String senhaCliente,String CPFCliente,String celularCliente,String recebeNewsLetter) {
+      public Cadastro(String nomeCompletoCliente,String emailCliente,
+                      String senhaCliente,String CPFCliente,String celularCliente,String telComercialCliente,
+                      String telResidencialCliente,Date dtNasCliente,String recebeNewsLetter) {
           
          this.nomeCompletoCliente = nomeCompletoCliente;
-         this.dtNasCliente = dtNasCliente;
          this.emailCliente = emailCliente;
          this.senhaCliente = senhaCliente;
-         this.CPFCliente = CPFCliente;
+         this.cpfCliente = CPFCliente;
          this.celularCliente = celularCliente;
+         this.telComercialCliente = telComercialCliente;
+         this.telResidencialCliente = telResidencialCliente;
+         this.dtNasCliente = dtNasCliente;
          this.recebeNewsLetter = recebeNewsLetter;
      }
-    
-    @XmlAttribute
-     public Long getId() {
+
+    public Long getId() {
         return id;
     }
-     public void setId(Long id) {
+
+    public void setId(Long id) {
         this.id = id;
     }
-    @XmlElement
-    public String getnomeCompletoCliente() {
+
+    public String getNomeCompletoCliente() {
         return nomeCompletoCliente;
     }
-    @XmlElement
-    public Date getdtNasCliente() {
+
+    public void setNomeCompletoCliente(String nomeCompletoCliente) {
+        this.nomeCompletoCliente = nomeCompletoCliente;
+    }
+
+    public Date getDtNasCliente() {
         return dtNasCliente;
     }
-    @XmlElement
-    public String getemailCliente() {
+
+    public void setDtNasCliente(Date dtNasCliente) {
+        this.dtNasCliente = dtNasCliente;
+    }
+
+    public String getEmailCliente() {
         return emailCliente;
     }
-    @XmlElement
-    public String getsenhaCliente() {
+
+    public void setEmailCliente(String emailCliente) {
+        this.emailCliente = emailCliente;
+    }
+
+    public String getSenhaCliente() {
         return senhaCliente;
     }
-    @XmlElement
-    public String getCPFCliente() {
-        return CPFCliente;
+
+    public void setSenhaCliente(String senhaCliente) {
+        this.senhaCliente = senhaCliente;
     }
-    @XmlElement
-    public String getcelularCliente() {
+
+    public String getCpfCliente() {
+        return cpfCliente;
+    }
+
+    public void setCpfCliente(String CPFCliente) {
+        this.cpfCliente = CPFCliente;
+    }
+
+    public String getCelularCliente() {
         return celularCliente;
     }
-    @XmlElement
-    public String getrecebeNewsLetter() {
+
+    public void setCelularCliente(String celularCliente) {
+        this.celularCliente = celularCliente;
+    }
+
+    public String getTelComercialCliente() {
+        return telComercialCliente;
+    }
+
+    public void setTelComercialCliente(String telComercialCliente) {
+        this.telComercialCliente = telComercialCliente;
+    }
+
+    public String getTelResidencialCliente() {
+        return telResidencialCliente;
+    }
+
+    public void setTelResidencialCliente(String telResidencialCliente) {
+        this.telResidencialCliente = telResidencialCliente;
+    }
+
+    public String getRecebeNewsLetter() {
         return recebeNewsLetter;
     }
-}
+
+    public void setRecebeNewsLetter(String recebeNewsLetter) {
+        this.recebeNewsLetter = recebeNewsLetter;
+    }
+    
+  
+}  

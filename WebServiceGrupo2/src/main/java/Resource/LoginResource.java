@@ -6,6 +6,7 @@
 package Resource;
 
 import Login.Login;
+import Login.LoginEnv;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -65,6 +66,7 @@ public class LoginResource {
 
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
     public Response postJson(Login login) throws SQLException, ClassNotFoundException {
           
         Response response = null;
@@ -87,12 +89,13 @@ public class LoginResource {
                      String id = rs.getString("idcliente");
                      String nome = rs.getString("nomeCompletoCliente");
                
-                     Login c = new Login(usuario,senha,id); //cria a Usuario
-
-                 
-                     response = Response.ok(c)
-                             .header("Toker", id)
-                             .entity(nome)
+                    Login c = new Login(usuario,senha,id,nome); //cria a Usuario
+                    
+                    LoginEnv envia = new LoginEnv(id,nome);
+                    
+                    response = Response.status(Response.Status.OK)
+                             //.header("Toker", id)
+                             .entity(envia)
                              .type(MediaType.APPLICATION_JSON).build();
                
                  

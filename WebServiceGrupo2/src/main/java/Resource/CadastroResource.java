@@ -56,8 +56,8 @@ public class CadastroResource {
     }
 
     @POST
-    //@Path("/{nomeCompletoCliente},{emailCliente},{senhaCliente},{CPFCliente},{celularCliente},{telComercialCliente},{telResidencialCliente},{dtNascCliente},{recebeNewsLetter}")
     @Consumes(MediaType.APPLICATION_JSON) // vai consumi um Json
+    @Produces(MediaType.APPLICATION_JSON)
     public Response postcadastro(Cadastro cadastro) throws SQLException, ClassNotFoundException {
     
         Response response = null; 
@@ -70,20 +70,21 @@ public class CadastroResource {
                         "senhaCliente, CPFCliente, celularCliente,\n" +
                         "telComercialCliente, telResidencialCliente,\n" +
                         "dtNascCliente, recebeNewsLetter)\n" +
-                        "  VALUES (?, ?, ?,?, ?, NULL, NULL, (CONVERT(varchar(10), ?, 105)), 1);";
+                        "  VALUES (?, ?, ?,?, ?, ?, ?, (CONVERT(varchar(10), ?, 105)), 1);";
         
         try(PreparedStatement stmt = comn.prepareStatement(sql)){
-           stmt.setString(1,nomeCompletoCliente);
-           stmt.setString(2,emailCliente);
-           stmt.setString(3,senhaCliente);
-           stmt.setString(4,CPFCliente);
-           stmt.setString(5,celularCliente);
-           stmt.setString(6,telComercialCliente);
-           stmt.setString(7,telResidencialCliente);
-           stmt.setDate(8,new java.sql.Date(dtNascCliente.getTime()));
-           stmt.setString(9,recebeNewsLetter);
+           stmt.setString(1,cadastro.getNomeCompletoCliente());
+           stmt.setString(2,cadastro.getEmailCliente());
+           stmt.setString(3,cadastro.getSenhaCliente());
+           stmt.setString(4,cadastro.getCpfCliente());
+           stmt.setString(5,cadastro.getCelularCliente());
+           stmt.setString(6,cadastro.getTelComercialCliente());
+           stmt.setString(7,cadastro.getTelResidencialCliente());
+           stmt.setDate(8,new java.sql.Date(cadastro.getDtNasCliente().getTime()));
+           stmt.setString(9,cadastro.getRecebeNewsLetter());
 
            int n = stmt.executeUpdate();
+            
            
            // retorna qual é o endereço id
             ResultSet rs = stmt.getGeneratedKeys();
