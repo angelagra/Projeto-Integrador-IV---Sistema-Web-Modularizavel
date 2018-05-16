@@ -80,8 +80,8 @@
         android:id="@+id/tvPreco"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="164dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginEnd="152dp"
+        android:layout_marginTop="16dp"
         android:text="R$: "
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnRetira" />
@@ -127,15 +127,5 @@
                 tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu consequat nisl. Fusce suscipit aliquam massa. Fusce sit amet nunc ut nisl dignissim scelerisque. Suspendisse aliquet tortor sed dignissim sollicitudin. Sed convallis lorem vel egestas maximus. Phasellus elementum varius ipsum et lacinia. Nulla in pellentesque sapien." />
         </LinearLayout>
     </ScrollView>
-
-    <ImageButton
-        android:id="@+id/btnComprar"
-        android:layout_width="43dp"
-        android:layout_height="36dp"
-        android:layout_marginEnd="56dp"
-        android:layout_marginTop="28dp"
-        android:src="@android:drawable/ic_input_add"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnAdicione" />
 
 </android.support.constraint.ConstraintLayout>
