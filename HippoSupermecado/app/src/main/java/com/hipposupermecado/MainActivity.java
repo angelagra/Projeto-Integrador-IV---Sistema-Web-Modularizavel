@@ -1,5 +1,6 @@
 package com.hipposupermecado;
 
+import android.content.Intent;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -61,6 +62,15 @@ public class MainActivity extends AppCompatActivity {
                     getSupportFragmentManager().beginTransaction().replace(R.id.frag_container, newEnd).commit();
                     return true;
                 }
+
+                //QR CODe
+                if(menuItem.getItemId() == R.id.qrCode){
+                    Intent intent = new Intent(MainActivity.this, QRCode.class);
+                    startActivity(intent);
+
+                    return true;
+                }
+
 
                 return false;
             }
