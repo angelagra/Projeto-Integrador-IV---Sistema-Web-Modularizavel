@@ -55,6 +55,13 @@ public class MainActivity extends AppCompatActivity {
                     return true;
                 }
 
+                // Endereço
+                if(menuItem.getItemId() == R.id.action_endereco){
+                    Endereco newEnd = new Endereco();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.frag_container, newEnd).commit();
+                    return true;
+                }
+
                 return false;
             }
         });
@@ -63,6 +70,14 @@ public class MainActivity extends AppCompatActivity {
         actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.openDrawer, R.string.closeDrawer){};
         drawerLayout.setDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
+    }
+
+    @Override
+    public void onBackPressed (){
+        // -> Trata o botão voltar do celular.
+        // -> Redireciona para a home do app (Destaque e Categorias).
+        Destaque fragment = new Destaque();
+        getSupportFragmentManager().beginTransaction().replace(R.id.frag_container, fragment).commit();
     }
 
     public boolean onOptionsItemSelected (MenuItem item){
