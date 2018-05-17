@@ -15,6 +15,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriInfo;
@@ -51,6 +52,8 @@ public class CadastroResource {
     private String telResidencialCliente;
     private Date dtNascCliente;
     private String recebeNewsLetter;
+    
+    SimpleDateFormat sdf = new SimpleDateFormat("dd/mm/YYYY");
 
     /**
      * Creates a new instance of CadastroResource
@@ -61,9 +64,10 @@ public class CadastroResource {
     @POST
     @Consumes(MediaType.APPLICATION_JSON) // vai consumi um Json
     @Produces(MediaType.APPLICATION_JSON)
-    public Response postcadastro(Cadastro cadastro) throws SQLException, ClassNotFoundException {
+    public Response postcadastro(Cadastro cadastro) throws SQLException, ClassNotFoundException, ParseException {
     
         Response response = null; 
+        
      
         Class.forName(DRIVER);   // carregar o driver
         Connection comn =  DriverManager.getConnection(URL, USER, PASS);    
@@ -76,6 +80,7 @@ public class CadastroResource {
                         "  VALUES (?, ?, ?,?, ?, ?, ?, (CONVERT(varchar(10), ?, 105)), ?);";
         
         try(PreparedStatement stmt = comn.prepareStatement(sql)){
+                 
            stmt.setString(1,cadastro.getNomeCompletoCliente());
            stmt.setString(2,cadastro.getEmailCliente());
            stmt.setString(3,cadastro.getSenhaCliente());
@@ -83,26 +88,33 @@ public class CadastroResource {
            stmt.setString(5,cadastro.getCelularCliente());
            stmt.setString(6,cadastro.getTelComercialCliente());
            stmt.setString(7,cadastro.getTelResidencialCliente());
-           //stmt.setDate(8,new java.sql.Date(cadastro.getDtNasCliente().getTime()));
-                 
-          java.util.Date today = new java.util.Date();
-          java.sql.Date sqlToday = new java.sql.Date(cadastro.getDtNasCliente());
-          
-          stmt.setDate(8,date.valueOf(cadastro.getDtNasCliente()));
-          
-          ps.setString(8,sqlToday); 
-          
+           stmt.setDate(8,new java.sql.Date(cadastro.getDtNasCliente().getTime()));
            stmt.setString(9,cadastro.getRecebeNewsLetter());
-
+ 
            int n = stmt.executeUpdate();
-           stmt.close();
            
+           if( n > 0){
+               response = Response.status(Response.Status.OK)
+                       .type(MediaType.APPLICATION_JSON).build();
+           
+           }else{
+                response = Response.status(Response.Status.FOUND)
+                       .type(MediaType.APPLICATION_JSON).build();
+           }
+           
+           stmt.close();
+           comn.close();
+           
+           
+           
+           
+        } catch (Exception ex) {
+            System.err.println("Database: Erro no Insert");
+            ex.printStackTrace();
         }
           return response;
      
     }
 
-    private Date getCurrentJavaSqlDate() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+
 }

@@ -8,6 +8,7 @@ package Cadastro;
 
 import java.io.Serializable;
 import java.sql.Date;
+import java.text.SimpleDateFormat;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -30,6 +31,10 @@ public class Cadastro implements Serializable {
      private String telResidencialCliente;
      private String recebeNewsLetter;
      
+     
+  // SimpleDateFormat format = new SimpleDateFormat(pattern);
+   
+    
     protected Cadastro() {
          
     }
@@ -66,6 +71,7 @@ public class Cadastro implements Serializable {
 
     public Date getDtNasCliente() {
         return dtNasCliente;
+    
     }
 
     public void setDtNasCliente(Date dtNasCliente) {

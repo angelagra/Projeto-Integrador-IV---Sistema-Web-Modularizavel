@@ -1,5 +1,6 @@
 Login\Login.class
 Resource\LoginResource.class
 Cadastro\Cadastro.class
+Login\LoginEnv.class
 Configuracao\Configuracao.class
 Resource\CadastroResource.class
