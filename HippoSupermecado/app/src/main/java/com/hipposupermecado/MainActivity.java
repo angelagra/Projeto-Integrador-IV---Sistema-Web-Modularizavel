@@ -1,10 +1,13 @@
 package com.hipposupermecado;
 
 import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -75,7 +78,9 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 //QR CODe
+
                 if(menuItem.getItemId() == R.id.qrCode){
+
                     Intent intent = new Intent(MainActivity.this, QRCode.class);
                     startActivityForResult(intent,0);
 
@@ -101,26 +106,32 @@ public class MainActivity extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction().replace(R.id.frag_container, fragment).commit();
     }
 
+    // QR CODE
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
         if(requestCode == 1){
             if(resultCode == Activity.RESULT_OK){
 
-                String id = data.getStringExtra("id");
+                final String id = data.getStringExtra("id");
                 if(id != null) {
 
-                   int idConvertido = Integer.parseInt(id);
+                   final int idConvertido = Integer.parseInt(id);
 
                     Retrofit retrofit = new Retrofit.Builder().baseUrl("http://hippo4sem.azurewebsites.net/").addConverterFactory(GsonConverterFactory.create()).build();
-                    ApiProduto apiProduto = retrofit.create(ApiProduto.class);
+                    final ApiProduto apiProduto = retrofit.create(ApiProduto.class);
                     Call<List<Produto>> call = apiProduto.getDetalhe(idConvertido);
 
                     call.enqueue(new Callback<List<Produto>>() {
                         @Override
                         public void onResponse(Call<List<Produto>> call, Response<List<Produto>> response) {
-                            List<Produto> categoria = response.body();
+                            List<Produto> produto = response.body();
                                 // abrir o fragmento do produto e setar
+                            Detalhes detalhe = new Detalhes();
+
+
+                            getSupportFragmentManager().beginTransaction().replace(R.id.frag_container, detalhe).commit();
+
                         }
 
                         @Override
@@ -130,7 +141,23 @@ public class MainActivity extends AppCompatActivity {
                     });
                 }else{
                     // fazer verificação se não encontrar o id, mandando uma menssagem
+                   /* AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                    builder.setTitle("QR Inválido,Tente Novamente");
+                    builder.setCancelable(false);
 
+                    DialogInterface.OnClickListener listener =  new DialogInterface.OnClickListener(){
+
+                        public void onClick(DialogInterface dialogInterface, int i){
+                            scannerView.resumeCameraPreview(rh); // quando voltar a escanner e se achar o qrCode volta a executar
+
+                            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(result.getText()));
+                            startActivity(intent);
+                        }
+                    };
+                    builder.setPositiveButton("OK",listener);
+
+                    AlertDialog dialog =  builder.create(); // cria o dialogo
+                    dialog.show(); // aparece*/
                 }
 
             }
