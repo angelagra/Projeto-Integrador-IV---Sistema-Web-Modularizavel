@@ -1,18 +1,33 @@
 package com.hipposupermecado;
 
 import android.Manifest;
+import android.app.Activity;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.FrameLayout;
 import android.widget.Toast;
 import android.support.v4.app.Fragment;
 import com.google.zxing.Result;
+import com.hipposupermecado.Adapter.CategoriaAdapter;
+import com.hipposupermecado.Model.Categoria;
+import com.hipposupermecado.Model.Produto;
+
+import java.util.List;
 
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class QRCode extends AppCompatActivity{
 
@@ -50,28 +65,17 @@ public class QRCode extends AppCompatActivity{
         super.onResume();
 
         final ZXingScannerView.ResultHandler resultHandler = new ZXingScannerView.ResultHandler() {
+
             @Override
             public void handleResult(Result result) {
 
-                AlertDialog.Builder builder = new AlertDialog.Builder(QRCode.this);
+              Intent intent = new Intent();
+              intent.putExtra("id", result.getText());
 
-                builder.setTitle("Encontrado");
-                builder.setMessage(result.getText());
-                builder.setCancelable(false);
+              setResult(Activity.RESULT_OK, intent);
+              finish();
 
-                final ZXingScannerView.ResultHandler rh = this;
 
-                DialogInterface.OnClickListener listener = new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        sccanerView.resumeCameraPreview(rh);
-                    }
-                };
-
-                builder.setPositiveButton("OK", listener);
-
-                AlertDialog dialog = builder.create();
-                dialog.show();
             }
         };
 

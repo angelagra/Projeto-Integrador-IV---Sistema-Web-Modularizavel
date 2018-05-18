@@ -1,5 +1,6 @@
 package com.hipposupermecado;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
@@ -7,6 +8,16 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+
+import com.hipposupermecado.Model.Produto;
+
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -66,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
                 //QR CODe
                 if(menuItem.getItemId() == R.id.qrCode){
                     Intent intent = new Intent(MainActivity.this, QRCode.class);
-                    startActivity(intent);
+                    startActivityForResult(intent,0);
 
                     return true;
                 }
@@ -88,6 +99,44 @@ public class MainActivity extends AppCompatActivity {
         // -> Redireciona para a home do app (Destaque e Categorias).
         Destaque fragment = new Destaque();
         getSupportFragmentManager().beginTransaction().replace(R.id.frag_container, fragment).commit();
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        if(requestCode == 1){
+            if(resultCode == Activity.RESULT_OK){
+
+                String id = data.getStringExtra("id");
+                if(id != null) {
+
+                   int idConvertido = Integer.parseInt(id);
+
+                    Retrofit retrofit = new Retrofit.Builder().baseUrl("http://hippo4sem.azurewebsites.net/").addConverterFactory(GsonConverterFactory.create()).build();
+                    ApiProduto apiProduto = retrofit.create(ApiProduto.class);
+                    Call<List<Produto>> call = apiProduto.getDetalhe(idConvertido);
+
+                    call.enqueue(new Callback<List<Produto>>() {
+                        @Override
+                        public void onResponse(Call<List<Produto>> call, Response<List<Produto>> response) {
+                            List<Produto> categoria = response.body();
+                                // abrir o fragmento do produto e setar
+                        }
+
+                        @Override
+                        public void onFailure(Call<List<Produto>> call, Throwable t) {
+
+                        }
+                    });
+                }else{
+                    // fazer verificação se não encontrar o id, mandando uma menssagem
+
+                }
+
+            }
+        }
+
+
     }
 
     public boolean onOptionsItemSelected (MenuItem item){
