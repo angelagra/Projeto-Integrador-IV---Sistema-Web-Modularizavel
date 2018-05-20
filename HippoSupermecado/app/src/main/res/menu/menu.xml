@@ -23,12 +23,6 @@
             android:title="Cadastrar Endereço"
             />
 
-        <item
-            android:id="@+id/qrCode"
-            android:checked="false"
-            android:icon="@android:drawable/alert_light_frame"
-            android:title="QR Code"
-            />
     </group>
 
 </menu>
