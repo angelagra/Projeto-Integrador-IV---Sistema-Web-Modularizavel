@@ -52,7 +52,7 @@ public class CategoriasFragment extends Fragment {
         call.enqueue(new Callback<List<Categoria>>() {
             @Override
             public void onResponse(Call<List<Categoria>> call, Response<List<Categoria>> response) {
-                List<Categoria> categoria = response.body();
+                final List<Categoria> categoria = response.body();
 
                 adapter = new CategoriaAdapter(getContext(), categoria);
                 listView.setAdapter(adapter);
@@ -68,6 +68,7 @@ public class CategoriasFragment extends Fragment {
 
                         Bundle args = new Bundle();
                         args.putInt("id", idProd);
+                        args.putString("nome", categoria.get(position).getNome());
                         fragment.setArguments(args);
 
 

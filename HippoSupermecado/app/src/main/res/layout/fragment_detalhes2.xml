@@ -15,7 +15,9 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="28dp"
+        android:textAlignment="viewStart"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.324"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,9 +28,11 @@
         android:id="@+id/imgProduto"
         android:layout_width="143dp"
         android:layout_height="109dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:src="@android:drawable/btn_dialog"
+        app:layout_constraintEnd_toStartOf="@+id/tvCategoria"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvNomeProduto" />
 
@@ -36,10 +40,10 @@
         android:id="@+id/tvCategoria"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="144dp"
+        android:layout_marginEnd="168dp"
         android:layout_marginTop="16dp"
         android:text="Categoria"
-        android:textSize="15sp"
+        android:textSize="10sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvNomeProduto" />
 
@@ -80,10 +84,15 @@
         android:id="@+id/tvPreco"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="152dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
         android:text="R$: "
+        android:textColor="@color/viewfinder_laser"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnRetira" />
 
     <TextView
@@ -94,6 +103,7 @@
         android:layout_marginStart="32dp"
         android:text="Descrição"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/scrollView2"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -102,11 +112,14 @@
         android:layout_width="329dp"
         android:layout_height="197dp"
         android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.983"
-        tools:layout_editor_absoluteX="29dp">
+        app:layout_constraintVertical_bias="0.983">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -127,5 +140,18 @@
                 tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu consequat nisl. Fusce suscipit aliquam massa. Fusce sit amet nunc ut nisl dignissim scelerisque. Suspendisse aliquet tortor sed dignissim sollicitudin. Sed convallis lorem vel egestas maximus. Phasellus elementum varius ipsum et lacinia. Nulla in pellentesque sapien." />
         </LinearLayout>
     </ScrollView>
+
+    <Button
+        android:id="@+id/btnAddCarrinho"
+        android:layout_width="187dp"
+        android:layout_height="39dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="Comprar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPreco" />
 
 </android.support.constraint.ConstraintLayout>

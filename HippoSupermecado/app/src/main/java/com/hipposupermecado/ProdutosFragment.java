@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.FrameLayout;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.hipposupermecado.Adapter.ProdutoAdapter;
@@ -28,6 +29,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 public class ProdutosFragment extends Fragment {
 
+    private TextView tvTitle;
 
     //private TextView txtId;
     private ListView listView;
@@ -46,18 +48,23 @@ public class ProdutosFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_produtos, container, false);
 
         listView = view.findViewById(R.id.listView);
+        tvTitle = view.findViewById(R.id.tvTitle);
 
         int id = 0;
+        String nomeCat = null;
         Bundle bundle = this.getArguments();
         if (bundle != null) {
             id = bundle.getInt("id");
+            nomeCat = bundle.getString("nome");
         }
 
+        tvTitle.setText(nomeCat.toString());
 
         Retrofit retrofit = new Retrofit.Builder().baseUrl("http://hippo4sem.azurewebsites.net/").addConverterFactory(GsonConverterFactory.create()).build();
         ApiCategoria apiCategoria = retrofit.create(ApiCategoria.class);
         Call<List<Produto>> call = apiCategoria.getProdutos(id);
 
+        final String finalNomeCat = nomeCat;
         call.enqueue(new Callback<List<Produto>>() {
             @Override
             public void onResponse(Call<List<Produto>> call, Response<List<Produto>> response2) {
@@ -77,6 +84,7 @@ public class ProdutosFragment extends Fragment {
 
                         Bundle args = new Bundle();
                         args.putInt("id", idProd);
+                        args.putString("nomeCategoria", finalNomeCat);
                         fragment.setArguments(args);
 
 

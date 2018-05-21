@@ -1,6 +1,7 @@
 package com.hipposupermecado.Adapter;
 
 import android.content.Context;
+import android.graphics.Paint;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -47,11 +48,20 @@ public class ProdutoAdapter extends BaseAdapter {
         TextView txtPreco = (TextView) v.findViewById(R.id.txtPreco);
         TextView txtDesconto = (TextView) v.findViewById(R.id.txtDesconto);
 
-
         txtNome.setText(listaProduto.get(position).getNome());
         // txtCategoria.setText(listaProduto.get(position).getCategoria());
-        txtPreco.setText(String.valueOf(listaProduto.get(position).getPreco()));
-        txtDesconto.setText(String.valueOf(listaProduto.get(position).getDesconto()));
+
+        if(listaProduto.get(position).getDesconto() != 0) {
+            txtDesconto.setText(String.format("De: %.2f", listaProduto.get(position).getPreco()));
+            txtDesconto.setPaintFlags(txtDesconto.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+
+            double precoDesconto = listaProduto.get(position).getPreco() - listaProduto.get(position).getDesconto();
+            txtPreco.setText(String.format("Por: R$ %.2f", precoDesconto));
+        }
+        else {
+            txtDesconto.setText("");
+            txtPreco.setText(String.format("Por: R$ %.2f", listaProduto.get(position).getPreco()));
+        }
 
         v.setTag(listaProduto.get(position).getId());
 

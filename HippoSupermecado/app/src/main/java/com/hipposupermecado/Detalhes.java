@@ -6,10 +6,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.hipposupermecado.Model.CarrinhoSingleton;
 import com.hipposupermecado.Model.Produto;
 
 import java.util.List;
@@ -30,6 +32,9 @@ public class Detalhes extends Fragment {
     private TextView tvQtd;
     private Button btnAdicione;
     private TextView tvPreco;
+    private Button btnAddCarrinho;
+
+    private FrameLayout frag_container;
 
     private int qtd = 0;
 
@@ -53,12 +58,18 @@ public class Detalhes extends Fragment {
         tvQtd = (TextView) view.findViewById(R.id.tvQtd);
         btnAdicione = (Button) view.findViewById(R.id.btnAdicione);
         tvPreco = (TextView) view.findViewById(R.id.tvPreco);
+        btnAddCarrinho = (Button) view.findViewById(R.id.btnAddCarrinho);
+        final Produto[] prod = new Produto[1];
 
         int id = 0;
+        String nomeCat= null;
         Bundle bundle = this.getArguments();
         if (bundle != null) {
             id = bundle.getInt("id");
+            nomeCat = bundle.getString("nomeCategoria");
         }
+
+        tvCategoria.setText(nomeCat.toString());
 
         Retrofit retrofit = new Retrofit.Builder().baseUrl("http://hippo4sem.azurewebsites.net/").addConverterFactory(GsonConverterFactory.create()).build();
         ApiProduto apiProduto = retrofit.create(ApiProduto.class);
@@ -70,8 +81,16 @@ public class Detalhes extends Fragment {
                 List<Produto> produto = response2.body();
 
                 tvNomeProduto.setText(produto.get(0).getNome());
-                tvPreco.setText("R$ " + String.valueOf(produto.get(0).getPreco()));
+                tvPreco.setText(String.format("R$ %.2f", produto.get(0).getPreco() - produto.get(0).getDesconto()));
                 tvDescricao.setText(produto.get(0).getDescricao());
+
+                prod[0] = new Produto(produto.get(0).getId(),
+                        produto.get(0).getNome(),
+                        produto.get(0).getDescricao(),
+                        produto.get(0).getPreco(),
+                        produto.get(0).getDesconto(),
+                        produto.get(0).getQtdMinEstoque(),
+                        produto.get(0).getCategoria());
 
             }
 
@@ -102,6 +121,18 @@ public class Detalhes extends Fragment {
             }
         };
         btnRetira.setOnClickListener(sub);
+
+        View.OnClickListener addCarrinho = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                CarrinhoSingleton.getInstance().setProduto(prod[0]);
+
+                frag_container = (FrameLayout) view.findViewById(R.id.frag_container);
+                CarrinhoFragment fragment = new CarrinhoFragment();
+                getFragmentManager().beginTransaction().replace(R.id.frag_container, fragment).commit();
+            }
+        };
+        btnAddCarrinho.setOnClickListener(addCarrinho);
 
         return view;
     }
