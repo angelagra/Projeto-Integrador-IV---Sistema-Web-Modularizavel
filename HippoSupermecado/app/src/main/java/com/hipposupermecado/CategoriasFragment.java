@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.FrameLayout;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.hipposupermecado.Adapter.CategoriaAdapter;
@@ -32,6 +33,7 @@ public class CategoriasFragment extends Fragment {
     private CategoriaAdapter adapter;
     private ListView listView;
     private FrameLayout frag_container;
+    private ProgressBar loadProgress;
 
     public CategoriasFragment() {
         // Required empty public constructor
@@ -44,6 +46,7 @@ public class CategoriasFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_categorias, container, false);
 
         listView = view.findViewById(R.id.listView);
+        loadProgress = (ProgressBar) view.findViewById(R.id.progressBar);
 
         Retrofit retrofit = new Retrofit.Builder().baseUrl("http://hippo4sem.azurewebsites.net/").addConverterFactory(GsonConverterFactory.create()).build();
         ApiCategoria apiCategoria = retrofit.create(ApiCategoria.class);
@@ -56,6 +59,8 @@ public class CategoriasFragment extends Fragment {
 
                 adapter = new CategoriaAdapter(getContext(), categoria);
                 listView.setAdapter(adapter);
+
+                loadProgress.setVisibility(View.GONE);
 
                 listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override

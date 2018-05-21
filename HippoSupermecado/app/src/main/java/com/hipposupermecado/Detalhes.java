@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,6 +34,7 @@ public class Detalhes extends Fragment {
     private Button btnAdicione;
     private TextView tvPreco;
     private Button btnAddCarrinho;
+    private ProgressBar loadProgress;
 
     private FrameLayout frag_container;
 
@@ -59,6 +61,7 @@ public class Detalhes extends Fragment {
         btnAdicione = (Button) view.findViewById(R.id.btnAdicione);
         tvPreco = (TextView) view.findViewById(R.id.tvPreco);
         btnAddCarrinho = (Button) view.findViewById(R.id.btnAddCarrinho);
+        loadProgress = (ProgressBar) view.findViewById(R.id.progressBar);
         final Produto[] prod = new Produto[1];
 
         int id = 0;
@@ -83,6 +86,8 @@ public class Detalhes extends Fragment {
                 tvNomeProduto.setText(produto.get(0).getNome());
                 tvPreco.setText(String.format("R$ %.2f", produto.get(0).getPreco() - produto.get(0).getDesconto()));
                 tvDescricao.setText(produto.get(0).getDescricao());
+
+                loadProgress.setVisibility(View.GONE);
 
                 prod[0] = new Produto(produto.get(0).getId(),
                         produto.get(0).getNome(),

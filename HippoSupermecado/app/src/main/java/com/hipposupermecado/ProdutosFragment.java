@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.FrameLayout;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,6 +31,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class ProdutosFragment extends Fragment {
 
     private TextView tvTitle;
+    private ProgressBar loadProgress;
 
     //private TextView txtId;
     private ListView listView;
@@ -49,6 +51,7 @@ public class ProdutosFragment extends Fragment {
 
         listView = view.findViewById(R.id.listView);
         tvTitle = view.findViewById(R.id.tvTitle);
+        loadProgress = (ProgressBar) view.findViewById(R.id.progressBar);
 
         int id = 0;
         String nomeCat = null;
@@ -72,6 +75,8 @@ public class ProdutosFragment extends Fragment {
 
                 adapter = new ProdutoAdapter(getContext(), produto);
                 listView.setAdapter(adapter);
+
+                loadProgress.setVisibility(View.GONE);
 
                 listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
