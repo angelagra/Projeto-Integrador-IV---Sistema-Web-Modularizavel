@@ -39,7 +39,7 @@ public class Cadastro implements Serializable {
          
     }
       public Cadastro(String nomeCompletoCliente,String emailCliente,
-                      String senhaCliente,String CpfCliente,String celularCliente,String telComercialCliente,
+                      String senhaCliente,String cpfCliente,String celularCliente,String telComercialCliente,
                       String telResidencialCliente,Date dtNasCliente,String recebeNewsLetter) {
           
          this.nomeCompletoCliente = nomeCompletoCliente;

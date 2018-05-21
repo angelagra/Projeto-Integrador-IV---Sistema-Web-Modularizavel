@@ -64,14 +64,12 @@ public class CadastroResource {
     @POST
     @Consumes(MediaType.APPLICATION_JSON) // vai consumi um Json
     @Produces(MediaType.APPLICATION_JSON)
-    public Response postcadastro(Cadastro cadastro) throws SQLException, ClassNotFoundException, ParseException {
+    public Response postCadastro(Cadastro cadastro) throws SQLException, ClassNotFoundException, ParseException {
     
         Response response = null; 
         
      
         Class.forName(DRIVER);   // carregar o driver
-        Connection comn =  DriverManager.getConnection(URL, USER, PASS);    
-
         String sql = "INSERT\n" +
                         "INTO cliente (nomeCompletoCliente, emailCliente,\n" +
                         "senhaCliente, CPFCliente, celularCliente,\n" +
@@ -79,7 +77,9 @@ public class CadastroResource {
                         "dtNascCliente, recebeNewsLetter)\n" +
                         "  VALUES (?, ?, ?,?, ?, ?, ?, (CONVERT(varchar(10), ?, 105)), ?);";
         
-        try(PreparedStatement stmt = comn.prepareStatement(sql)){
+        try(Connection comn =  DriverManager.getConnection(URL, USER, PASS);
+                PreparedStatement stmt = comn.prepareStatement(sql)){
+            DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
                  
            stmt.setString(1,cadastro.getNomeCompletoCliente());
            stmt.setString(2,cadastro.getEmailCliente());
@@ -88,7 +88,7 @@ public class CadastroResource {
            stmt.setString(5,cadastro.getCelularCliente());
            stmt.setString(6,cadastro.getTelComercialCliente());
            stmt.setString(7,cadastro.getTelResidencialCliente());
-           stmt.setDate(8,new java.sql.Date(cadastro.getDtNasCliente().getTime()));
+           stmt.setString(8,df.format(cadastro.getDtNasCliente()));
            stmt.setString(9,cadastro.getRecebeNewsLetter());
  
            int n = stmt.executeUpdate();
@@ -96,21 +96,12 @@ public class CadastroResource {
            if( n > 0){
                response = Response.status(Response.Status.OK)
                        .type(MediaType.APPLICATION_JSON).build();
-           
-           }else{
-                response = Response.status(Response.Status.FOUND)
-                       .type(MediaType.APPLICATION_JSON).build();
            }
-           
-           stmt.close();
-           comn.close();
-           
-           
-           
-           
         } catch (Exception ex) {
             System.err.println("Database: Erro no Insert");
             ex.printStackTrace();
+            response = Response.status(Response.Status.INTERNAL_SERVER_ERROR)
+                       .type(MediaType.APPLICATION_JSON).build();
         }
           return response;
      
