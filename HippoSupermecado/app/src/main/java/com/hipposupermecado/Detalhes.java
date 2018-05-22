@@ -15,6 +15,7 @@ import android.widget.Toast;
 import com.hipposupermecado.Model.CarrinhoSingleton;
 import com.hipposupermecado.Model.Produto;
 
+import java.net.SocketTimeoutException;
 import java.util.List;
 
 import retrofit2.Call;
@@ -101,7 +102,11 @@ public class Detalhes extends Fragment {
 
             @Override
             public void onFailure(Call<List<Produto>> call, Throwable t) {
-                Toast.makeText(getContext(), t.getMessage(), Toast.LENGTH_SHORT).show();
+                if (t instanceof SocketTimeoutException) {
+                    //Toast.makeText(getContext(), "Deu ruim!", Toast.LENGTH_SHORT).show();
+                    Erro fragment = new Erro();
+                    getFragmentManager().beginTransaction().replace(R.id.frag_container, fragment).commit();
+                }
             }
         });
 

@@ -1,6 +1,9 @@
 package com.hipposupermecado;
 
 
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -15,6 +18,7 @@ import android.widget.Toast;
 import com.hipposupermecado.Adapter.CategoriaAdapter;
 import com.hipposupermecado.Model.Categoria;
 
+import java.net.SocketTimeoutException;
 import java.util.List;
 
 import retrofit2.Call;
@@ -48,47 +52,63 @@ public class CategoriasFragment extends Fragment {
         listView = view.findViewById(R.id.listView);
         loadProgress = (ProgressBar) view.findViewById(R.id.progressBar);
 
-        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://hippo4sem.azurewebsites.net/").addConverterFactory(GsonConverterFactory.create()).build();
-        ApiCategoria apiCategoria = retrofit.create(ApiCategoria.class);
-        Call<List<Categoria>> call = apiCategoria.getCategorias();
+        if(isNetworkAvailable()) {
+            Retrofit retrofit = new Retrofit.Builder().baseUrl("http://hippo4sem.azurewebsites.net/").addConverterFactory(GsonConverterFactory.create()).build();
+            ApiCategoria apiCategoria = retrofit.create(ApiCategoria.class);
+            Call<List<Categoria>> call = apiCategoria.getCategorias();
 
-        call.enqueue(new Callback<List<Categoria>>() {
-            @Override
-            public void onResponse(Call<List<Categoria>> call, Response<List<Categoria>> response) {
-                final List<Categoria> categoria = response.body();
+            call.enqueue(new Callback<List<Categoria>>() {
+                @Override
+                public void onResponse(Call<List<Categoria>> call, Response<List<Categoria>> response) {
+                    final List<Categoria> categoria = response.body();
 
-                adapter = new CategoriaAdapter(getContext(), categoria);
-                listView.setAdapter(adapter);
+                    adapter = new CategoriaAdapter(getContext(), categoria);
+                    listView.setAdapter(adapter);
 
-                loadProgress.setVisibility(View.GONE);
+                    loadProgress.setVisibility(View.GONE);
 
-                listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+                    listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                        @Override
+                        public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
 
-                        frag_container = (FrameLayout) view.findViewById(R.id.frag_container);
-                        ProdutosFragment fragment = new ProdutosFragment();
+                            frag_container = (FrameLayout) view.findViewById(R.id.frag_container);
+                            ProdutosFragment fragment = new ProdutosFragment();
 
-                        int idProd = Integer.parseInt(view.getTag().toString());
+                            int idProd = Integer.parseInt(view.getTag().toString());
 
-                        Bundle args = new Bundle();
-                        args.putInt("id", idProd);
-                        args.putString("nome", categoria.get(position).getNome());
-                        fragment.setArguments(args);
+                            Bundle args = new Bundle();
+                            args.putInt("id", idProd);
+                            args.putString("nome", categoria.get(position).getNome());
+                            fragment.setArguments(args);
 
 
+                            getFragmentManager().beginTransaction().replace(R.id.frag_container, fragment).commit();
+                        }
+                    });
+                }
+
+                @Override
+                public void onFailure(Call<List<Categoria>> call, Throwable t) {
+
+                    if(t instanceof SocketTimeoutException) {
+                        //Toast.makeText(getContext(), "Deu ruim!", Toast.LENGTH_SHORT).show();
+                        Erro fragment = new Erro();
                         getFragmentManager().beginTransaction().replace(R.id.frag_container, fragment).commit();
                     }
-                });
-            }
-
-            @Override
-            public void onFailure(Call<List<Categoria>> call, Throwable t) {
-                Toast.makeText(getContext(), t.getMessage(), Toast.LENGTH_SHORT).show();
-            }
-        });
+                }
+            });
+        }
+        else {
+            NoInternet fragment = new NoInternet();
+            getFragmentManager().beginTransaction().replace(R.id.frag_container, fragment).commit();
+        }
 
         return view;
     }
-
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    }
 }
