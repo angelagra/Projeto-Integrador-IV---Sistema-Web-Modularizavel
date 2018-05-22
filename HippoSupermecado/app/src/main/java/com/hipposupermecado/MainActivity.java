@@ -1,7 +1,10 @@
 package com.hipposupermecado;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -9,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.hipposupermecado.Model.Produto;
 
@@ -33,8 +37,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // -> Iniciando o app com os fragmentos (Destaque & Categorias)
-        Destaque fragment = new Destaque();
-        getSupportFragmentManager().beginTransaction().replace(R.id.frag_container, fragment).commit();
+        if(isNetworkAvailable()) {
+            Destaque fragment = new Destaque();
+            getSupportFragmentManager().beginTransaction().replace(R.id.frag_container, fragment).commit();
+        }
+        else {
+            NoInternet fragment = new NoInternet();
+            getSupportFragmentManager().beginTransaction().replace(R.id.frag_container, fragment).commit();
+        }
+
 
         // Habilitar os botões do menu.
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -174,5 +185,12 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu (Menu menu){
         getMenuInflater().inflate(R.menu.mini_menu, menu);
         return true;
+    }
+
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
 }
