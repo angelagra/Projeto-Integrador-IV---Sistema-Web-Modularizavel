@@ -23,5 +23,6 @@
         android:checked="false"
         android:icon="@android:drawable/alert_light_frame"
         android:title="Novo Endereço"
+        app:showAsAction="never"
         />
 </menu>

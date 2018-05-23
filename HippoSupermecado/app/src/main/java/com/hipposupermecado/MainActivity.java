@@ -105,16 +105,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // QR CODE
+    // QR CODE
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
-        if(requestCode == 1){
+        if(requestCode == 0){
             if(resultCode == Activity.RESULT_OK){
 
                 final String id = data.getStringExtra("id");
-                if(id != null) {
+                if(!id.equals(null) && !id.equals("")) {
 
-                   final int idConvertido = Integer.parseInt(id);
+                    final int idConvertido = Integer.parseInt(id);
 
                     Retrofit retrofit = new Retrofit.Builder().baseUrl("http://hippo4sem.azurewebsites.net/").addConverterFactory(GsonConverterFactory.create()).build();
                     final ApiProduto apiProduto = retrofit.create(ApiProduto.class);
@@ -124,12 +125,18 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void onResponse(Call<List<Produto>> call, Response<List<Produto>> response) {
                             List<Produto> produto = response.body();
-                                // abrir o fragmento do produto e setar
-                            Detalhes detalhe = new Detalhes();
+                            // abrir o fragmento do produto e setar
+                            Detalhes fragment = new Detalhes();
+
+                            int idProd = idConvertido;
+
+                            Bundle args = new Bundle();
+                            args.putInt("id", idProd);
+                            args.putString("nomeCategoria", "");// colocar nome da categoria
+                            fragment.setArguments(args);
 
 
-                            getSupportFragmentManager().beginTransaction().replace(R.id.frag_container, detalhe).commit();
-
+                            getSupportFragmentManager().beginTransaction().replace(R.id.frag_container, fragment).commit();
                         }
 
                         @Override
@@ -137,31 +144,12 @@ public class MainActivity extends AppCompatActivity {
 
                         }
                     });
-                } else {
-                    // fazer verificação se não encontrar o id, mandando uma menssagem
-                   /* AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-                    builder.setTitle("QR Inválido,Tente Novamente");
-                    builder.setCancelable(false);
-
-                    DialogInterface.OnClickListener listener =  new DialogInterface.OnClickListener(){
-
-                        public void onClick(DialogInterface dialogInterface, int i){
-                            scannerView.resumeCameraPreview(rh); // quando voltar a escanner e se achar o qrCode volta a executar
-
-                            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(result.getText()));
-                            startActivity(intent);
-                        }
-                    };
-                    builder.setPositiveButton("OK",listener);
-
-                    AlertDialog dialog =  builder.create(); // cria o dialogo
-                    dialog.show(); // aparece*/
+                }else{
+                    showMessage("ERRO", "QR-Code Invalido");
                 }
 
             }
         }
-
-
     }
 
     public boolean onOptionsItemSelected (MenuItem item){
@@ -205,5 +193,16 @@ public class MainActivity extends AppCompatActivity {
                 = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
         return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    }
+
+    private void showMessage(String titulo, String mensagem){
+        android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(MainActivity.this);
+        builder.setTitle(titulo);
+        builder.setMessage(mensagem);
+        builder.setCancelable(false);// impede de fechar em qualquer outro lugar a não ser o OK
+        builder.setPositiveButton("OK",null );
+
+        android.support.v7.app.AlertDialog dialog =  builder.create();
+        dialog.show();//mostra o dialogo na tela
     }
 }

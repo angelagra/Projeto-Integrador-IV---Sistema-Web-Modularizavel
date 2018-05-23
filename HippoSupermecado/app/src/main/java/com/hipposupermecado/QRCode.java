@@ -69,10 +69,10 @@ public class QRCode extends AppCompatActivity{
             @Override
             public void handleResult(Result result) {
                 Intent intent = new Intent();
-              intent.putExtra("id", result.getText());
+                intent.putExtra("id", result.getText().replaceAll("H",""));
 
-              setResult(Activity.RESULT_OK, intent);
-              finish();
+                setResult(Activity.RESULT_OK, intent);
+                finish();
 
 
             }
