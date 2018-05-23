@@ -133,6 +133,10 @@ public class CadastroUsuario extends Fragment
 
                         if(response.isSuccessful()){
 
+                            // Direcionar para o cadastro de endereço.
+                            Endereco endereco = new Endereco();
+                            getFragmentManager().beginTransaction().replace(R.id.frag_container, endereco).commit();
+                            return;
                         }else{
                             if (response.code()==401) {
                             }

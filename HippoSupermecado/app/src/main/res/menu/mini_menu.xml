@@ -5,12 +5,23 @@
     >
 
     <item
+        android:id="@+id/action_cart"
+        android:icon="@android:drawable/ic_input_add"
+        android:title="Carrinho"
+        app:showAsAction="always"
+        />
+
+    <item
         android:id="@+id/action_qrCode"
         android:title="QR Code"
         android:icon="@android:drawable/ic_input_get"
         app:showAsAction="never"
-        >
+        />
 
-    </item>
-
+    <item
+        android:id="@+id/action_endereco"
+        android:checked="false"
+        android:icon="@android:drawable/alert_light_frame"
+        android:title="Novo Endereço"
+        />
 </menu>

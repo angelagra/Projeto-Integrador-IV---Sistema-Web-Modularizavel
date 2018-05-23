@@ -12,7 +12,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import com.hipposupermecado.Model.Produto;
 
@@ -80,10 +79,10 @@ public class MainActivity extends AppCompatActivity {
                     return true;
                 }
 
-                // Endereço
-                if(menuItem.getItemId() == R.id.action_endereco){
-                    Endereco newEnd = new Endereco();
-                    getSupportFragmentManager().beginTransaction().replace(R.id.frag_container, newEnd).commit();
+                // Finalizar Compra
+                if(menuItem.getItemId() == R.id.action_finalizar){
+                    Checkout newCheckout = new Checkout();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.frag_container, newCheckout).commit();
                     return true;
                 }
 
@@ -168,10 +167,24 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected (MenuItem item){
         int id = item.getItemId();
 
+        // Carrinho
+        if(id == R.id.action_cart){
+            CarrinhoFragment cart = new CarrinhoFragment();
+            getSupportFragmentManager().beginTransaction().replace(R.id.frag_container, cart).commit();
+            return true;
+        }
+
         // QR Code
         if(id == R.id.action_qrCode){
             Intent intent = new Intent(MainActivity.this, QRCode.class);
             startActivityForResult(intent,0);
+            return true;
+        }
+
+        // Endereço
+        if(id == R.id.action_endereco) {
+            Endereco newEnd = new Endereco();
+            getSupportFragmentManager().beginTransaction().replace(R.id.frag_container, newEnd).commit();
             return true;
         }
 

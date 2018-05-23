@@ -17,10 +17,10 @@
             />
 
         <item
-            android:id="@+id/action_endereco"
+            android:id="@+id/action_finalizar"
             android:checked="false"
-            android:icon="@android:drawable/alert_light_frame"
-            android:title="Cadastrar Endereço"
+            android:icon="@android:drawable/edit_text"
+            android:title="Finalizar Compra"
             />
 
     </group>

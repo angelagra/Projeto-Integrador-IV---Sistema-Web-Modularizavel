@@ -80,6 +80,7 @@ public class Login extends Fragment {
                     if(response.isSuccessful()){
                     }else{
                         if (response.code()==401) {
+
                         }
                     }
                 }
@@ -97,7 +98,8 @@ public class Login extends Fragment {
         View.OnClickListener listenerCadastro = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Passar para cadastro de usuário
+            CadastroUsuario cdUsuario = new CadastroUsuario();
+            getFragmentManager().beginTransaction().replace(R.id.frag_container, cdUsuario).commit();
             }
         };
         btnCadastrar.setOnClickListener(listenerCadastro);
