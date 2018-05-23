@@ -6,7 +6,7 @@
 
     <item
         android:id="@+id/action_cart"
-        android:icon="@android:drawable/ic_input_add"
+        android:icon="@drawable/cart"
         android:title="Carrinho"
         app:showAsAction="always"
         />
@@ -14,15 +14,15 @@
     <item
         android:id="@+id/action_qrCode"
         android:title="QR Code"
-        android:icon="@android:drawable/ic_input_get"
-        app:showAsAction="never"
+        android:icon="@drawable/qrcode"
+        app:showAsAction="always"
         />
 
     <item
         android:id="@+id/action_endereco"
         android:checked="false"
-        android:icon="@android:drawable/alert_light_frame"
+        android:icon="@drawable/endereco"
         android:title="Novo Endereço"
-        app:showAsAction="never"
+        app:showAsAction="collapseActionView"
         />
 </menu>

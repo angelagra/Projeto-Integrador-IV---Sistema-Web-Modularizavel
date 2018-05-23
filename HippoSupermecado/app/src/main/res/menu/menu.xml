@@ -5,21 +5,21 @@
         <item
             android:id="@+id/action_login"
             android:checked="false"
-            android:icon="@android:drawable/alert_light_frame"
+            android:icon="@drawable/user"
             android:title="Entrar"
             />
 
         <item
             android:id="@+id/action_newUser"
             android:checked="false"
-            android:icon="@android:drawable/alert_light_frame"
+            android:icon="@drawable/newuser"
             android:title="Cadastrar Usuário"
             />
 
         <item
             android:id="@+id/action_finalizar"
             android:checked="false"
-            android:icon="@android:drawable/edit_text"
+            android:icon="@drawable/finalizarcompra"
             android:title="Finalizar Compra"
             />
 
