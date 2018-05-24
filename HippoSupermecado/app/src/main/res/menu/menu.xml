@@ -23,6 +23,14 @@
             android:title="Finalizar Compra"
             />
 
+        <item
+            android:id="@+id/action_sobre"
+            android:checked="false"
+            android:icon="@drawable/finalizarcompra"
+            android:title="Sobre Nós"
+            />
+
+
     </group>
 
 </menu>
