@@ -108,7 +108,7 @@
                 android:id="@+id/imageView8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/Saulo" />
+                android:src="@drawable/saulo" />
 
             <TextView
                 android:id="@+id/textView15"
@@ -147,7 +147,7 @@
                 android:id="@+id/imageView11"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/Mark" />
+                android:src="@drawable/mark" />
 
             <TextView
                 android:id="@+id/textView18"

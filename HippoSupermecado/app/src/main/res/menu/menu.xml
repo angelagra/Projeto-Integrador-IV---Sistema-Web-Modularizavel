@@ -29,8 +29,6 @@
             android:icon="@drawable/finalizarcompra"
             android:title="Sobre Nós"
             />
-
-
     </group>
 
 </menu>

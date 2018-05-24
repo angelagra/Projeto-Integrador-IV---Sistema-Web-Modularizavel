@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
+import android.widget.Toast;
 
 public class TermoDeServico extends AppCompatActivity {
     private RadioButton radioTermo;
@@ -19,38 +20,31 @@ public class TermoDeServico extends AppCompatActivity {
         radioTermo = findViewById(R.id.radioTermo);
         btnTermo = findViewById(R.id.btnTermo);
 
-
-        SharedPreferences sp1 = getSharedPreferences("radioTermo",MODE_PRIVATE);
-        Boolean termo = sp1.getBoolean("checked",true);
+        SharedPreferences sp = getSharedPreferences("radioTermo",MODE_PRIVATE);
+        Boolean termo = sp.getBoolean("checked", false);
+        final SharedPreferences.Editor editor =  sp.edit();
 
         if(termo){
             Intent intent = new Intent(TermoDeServico.this,MainActivity.class);
             startActivity(intent);
         }
-        SharedPreferences sp = getSharedPreferences("radioTermo",MODE_PRIVATE);
-        SharedPreferences.Editor editor =  sp.edit();
-        editor.putBoolean("checked", true);
-
-
 
         View.OnClickListener listener = new View.OnClickListener() {
 
             public void onClick(View v) {
                 if (radioTermo.isChecked()) {
-                    SharedPreferences sp = getSharedPreferences("radioTermo",MODE_PRIVATE);
-                    SharedPreferences.Editor editor =  sp.edit();
                     editor.putBoolean("checked", true);
                     editor.apply();
 
                     Intent intent = new Intent(TermoDeServico.this,MainActivity.class);
                     startActivity(intent);
+                } else {
+                    Toast toast = Toast.makeText(TermoDeServico.this, "Infelizmente você não concorda com os nosso termos. Estamos fechando o Aplicativo.", Toast.LENGTH_LONG);
+                    toast.show();
+                    finish();
                 }
-
             }
         };
-
         btnTermo.setOnClickListener(listener);
-
-
     }
 }
