@@ -86,6 +86,12 @@ public class MainActivity extends AppCompatActivity {
                     return true;
                 }
 
+                if(menuItem.getItemId() == R.id.action_sobre){
+                    QuemSomos quemSomos = new QuemSomos();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.frag_container, quemSomos).commit();
+                    return true;
+                }
+
                 return false;
             }
         });
