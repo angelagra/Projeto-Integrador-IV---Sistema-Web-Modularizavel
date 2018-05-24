@@ -17,6 +17,8 @@ import android.widget.Toast;
 
 import com.hipposupermecado.Model.CarrinhoSingleton;
 import com.hipposupermecado.Model.Produto;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 
 import java.net.SocketTimeoutException;
 import java.util.List;
@@ -89,6 +91,12 @@ public class Detalhes extends Fragment {
             @Override
             public void onResponse(Call<List<Produto>> call, Response<List<Produto>> response2) {
                 List<Produto> produto = response2.body();
+
+                String valor = String.valueOf(produto.get(0).getId());
+                String url = "https://hippo4sem.azurewebsites.net/4A/GetImagem?id="+valor+"&w=70";
+                ImageLoader imageLoader = ImageLoader.getInstance();imageLoader.init(ImageLoaderConfiguration.createDefault(getActivity()));
+                imageLoader.displayImage(url, imgProduto);
+
 
                 tvNomeProduto.setText(produto.get(0).getNome());
 
