@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle" >
-    <solid android:color="@android:color/white" />
-    <stroke android:width="3dip" android:color="@color/viewfinder_laser"/>
+    <solid android:color="@color/detailBody" />
+    <!--<stroke android:width="5dip" android:color="@color/viewfinder_laser"/>-->
 </shape>

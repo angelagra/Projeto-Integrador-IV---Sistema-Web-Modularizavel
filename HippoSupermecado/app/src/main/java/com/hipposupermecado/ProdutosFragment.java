@@ -76,6 +76,7 @@ public class ProdutosFragment extends Fragment {
 
                 adapter = new ProdutoAdapter(getContext(), produto);
                 listView.setAdapter(adapter);
+                listView.setDivider(null);
 
                 loadProgress.setVisibility(View.GONE);
 

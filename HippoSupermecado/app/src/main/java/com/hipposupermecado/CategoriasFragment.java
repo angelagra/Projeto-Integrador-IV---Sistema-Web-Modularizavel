@@ -64,6 +64,7 @@ public class CategoriasFragment extends Fragment {
 
                     adapter = new CategoriaAdapter(getContext(), categoria);
                     listView.setAdapter(adapter);
+                    listView.setDivider(null);
 
                     loadProgress.setVisibility(View.GONE);
 
