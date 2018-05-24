@@ -1,12 +1,15 @@
 package com.hipposupermecado;
 
+import android.graphics.Paint;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -33,9 +36,11 @@ public class Detalhes extends Fragment {
     private Button btnRetira;
     private TextView tvQtd;
     private Button btnAdicione;
+    private TextView txtDesconto;
     private TextView tvPreco;
-    private Button btnAddCarrinho;
     private ProgressBar loadProgress;
+
+    private FloatingActionButton fab;
 
     private FrameLayout frag_container;
 
@@ -51,18 +56,19 @@ public class Detalhes extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         //return inflater.inflate(R.layout.fragment_detalhes2, container, false);
-        View view = inflater.inflate(R.layout.fragment_detalhes2, container, false);
+        View view = inflater.inflate(R.layout.detalhes_layout, container, false);
 
         tvNomeProduto = (TextView) view.findViewById(R.id.tvNomeProduto);
         tvDescricao = (TextView) view.findViewById(R.id.tvDescricao);
         imgProduto = (ImageView) view.findViewById(R.id.imgProduto);
         tvCategoria = (TextView) view.findViewById(R.id.tvCategoria);
-        btnRetira = (Button) view.findViewById(R.id.btnRetira);
-        tvQtd = (TextView) view.findViewById(R.id.tvQtd);
-        btnAdicione = (Button) view.findViewById(R.id.btnAdicione);
+        //btnRetira = (Button) view.findViewById(R.id.btnRetira);
+        //tvQtd = (TextView) view.findViewById(R.id.tvQtd);
+        //btnAdicione = (Button) view.findViewById(R.id.btnAdicione);
+        txtDesconto = (TextView) view.findViewById(R.id.txtDesconto);
         tvPreco = (TextView) view.findViewById(R.id.tvPreco);
-        btnAddCarrinho = (Button) view.findViewById(R.id.btnAddCarrinho);
         loadProgress = (ProgressBar) view.findViewById(R.id.progressBar);
+        fab = view.findViewById(R.id.fabAddCarrinho);
         final Produto[] prod = new Produto[1];
 
         int id = 0;
@@ -85,6 +91,11 @@ public class Detalhes extends Fragment {
                 List<Produto> produto = response2.body();
 
                 tvNomeProduto.setText(produto.get(0).getNome());
+
+                if(produto.get(0).getDesconto() != 0) {
+                    txtDesconto.setText(String.format("R$ %.2f", produto.get(0).getPreco()));
+                    txtDesconto.setPaintFlags(txtDesconto.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+                }
                 tvPreco.setText(String.format("R$ %.2f", produto.get(0).getPreco() - produto.get(0).getDesconto()));
                 tvDescricao.setText(produto.get(0).getDescricao());
 
@@ -110,7 +121,7 @@ public class Detalhes extends Fragment {
             }
         });
 
-        View.OnClickListener add = new View.OnClickListener() {
+        /*View.OnClickListener add = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 qtd++;
@@ -130,7 +141,7 @@ public class Detalhes extends Fragment {
                 tvQtd.setText(String.valueOf(qtd));
             }
         };
-        btnRetira.setOnClickListener(sub);
+        btnRetira.setOnClickListener(sub);*/
 
         View.OnClickListener addCarrinho = new View.OnClickListener() {
             @Override
@@ -142,7 +153,7 @@ public class Detalhes extends Fragment {
                 getFragmentManager().beginTransaction().replace(R.id.frag_container, fragment).commit();
             }
         };
-        btnAddCarrinho.setOnClickListener(addCarrinho);
+        fab.setOnClickListener(addCarrinho);
 
         return view;
     }

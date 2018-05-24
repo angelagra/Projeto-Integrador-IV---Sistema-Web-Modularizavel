@@ -52,7 +52,7 @@ public class ProdutoAdapter extends BaseAdapter {
         // txtCategoria.setText(listaProduto.get(position).getCategoria());
 
         if(listaProduto.get(position).getDesconto() != 0) {
-            txtDesconto.setText(String.format("De: %.2f", listaProduto.get(position).getPreco()));
+            txtDesconto.setText(String.format("De: R$ %.2f", listaProduto.get(position).getPreco()));
             txtDesconto.setPaintFlags(txtDesconto.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
 
             double precoDesconto = listaProduto.get(position).getPreco() - listaProduto.get(position).getDesconto();
