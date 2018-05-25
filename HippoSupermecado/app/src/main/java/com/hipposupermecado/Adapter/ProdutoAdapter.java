@@ -5,10 +5,14 @@ import android.graphics.Paint;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.hipposupermecado.Model.Produto;
 import com.hipposupermecado.R;
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 
 import java.util.List;
 
@@ -47,9 +51,22 @@ public class ProdutoAdapter extends BaseAdapter {
         // TextView txtCategoria = (TextView) v.findViewById(R.id.txtCategoria);
         TextView txtPreco = (TextView) v.findViewById(R.id.txtPreco);
         TextView txtDesconto = (TextView) v.findViewById(R.id.txtDesconto);
+        ImageView imgProduto = (ImageView) v.findViewById(R.id.imgProduto);
 
         txtNome.setText(listaProduto.get(position).getNome());
         // txtCategoria.setText(listaProduto.get(position).getCategoria());
+
+
+        String valor = String.valueOf(listaProduto.get(position).getId());
+        String url = "https://hippo4sem.azurewebsites.net/4A/GetImagem?id="+valor+"&w=250";
+        ImageLoader imageLoader = ImageLoader.getInstance();imageLoader.init(ImageLoaderConfiguration.createDefault(mContext));
+        DisplayImageOptions options = new DisplayImageOptions.Builder()
+                //Colocar imagem de loading .gif ou img -- .showImageOnLoading(R.drawable.loading)
+                .showImageForEmptyUri(R.drawable.no_image)
+                .showImageOnFail(R.drawable.no_image)
+                .cacheInMemory(true)
+                .build();
+        imageLoader.displayImage(url, imgProduto, options);
 
         if(listaProduto.get(position).getDesconto() != 0) {
             txtDesconto.setText(String.format("De: R$ %.2f", listaProduto.get(position).getPreco()));
