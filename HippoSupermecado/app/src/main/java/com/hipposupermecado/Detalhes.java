@@ -94,7 +94,7 @@ public class Detalhes extends Fragment {
                 List<Produto> produto = response2.body();
 
                 String valor = String.valueOf(produto.get(0).getId());
-                String url = "https://hippo4sem.azurewebsites.net/4A/GetImagem?id="+valor+"&w=70";
+                String url = "https://hippo4sem.azurewebsites.net/4A/GetImagem?id="+valor+"&w=250";
                 ImageLoader imageLoader = ImageLoader.getInstance();
                 DisplayImageOptions options = new DisplayImageOptions.Builder()
                         //Colocar imagem de loading .gif ou img -- .showImageOnLoading(R.drawable.loading)

@@ -58,7 +58,7 @@ public class ProdutoAdapter extends BaseAdapter {
 
 
         String valor = String.valueOf(listaProduto.get(position).getId());
-        String url = "https://hippo4sem.azurewebsites.net/4A/GetImagem?id="+valor+"&w=70";
+        String url = "https://hippo4sem.azurewebsites.net/4A/GetImagem?id="+valor+"&w=250";
         ImageLoader imageLoader = ImageLoader.getInstance();imageLoader.init(ImageLoaderConfiguration.createDefault(mContext));
         DisplayImageOptions options = new DisplayImageOptions.Builder()
                 //Colocar imagem de loading .gif ou img -- .showImageOnLoading(R.drawable.loading)
