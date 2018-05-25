@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import com.hipposupermecado.Model.CarrinhoSingleton;
 import com.hipposupermecado.Model.Produto;
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 
@@ -93,9 +94,20 @@ public class Detalhes extends Fragment {
                 List<Produto> produto = response2.body();
 
                 String valor = String.valueOf(produto.get(0).getId());
-                String url = "https://hippo4sem.azurewebsites.net/4A/GetImagem?id="+valor+"&w=70";
-                ImageLoader imageLoader = ImageLoader.getInstance();imageLoader.init(ImageLoaderConfiguration.createDefault(getActivity()));
-                imageLoader.displayImage(url, imgProduto);
+                String url = "https://hippo4sem.azurewebsites.net/4A/GetImagem?id="+valor+"&w=250";
+                ImageLoader imageLoader = ImageLoader.getInstance();
+                DisplayImageOptions options = new DisplayImageOptions.Builder()
+                        //Colocar imagem de loading .gif ou img -- .showImageOnLoading(R.drawable.loading)
+                        .showImageForEmptyUri(R.drawable.no_image)
+                        .showImageOnFail(R.drawable.no_image)
+                        .cacheInMemory(true)
+                        .build();
+
+
+                imageLoader.init(ImageLoaderConfiguration.createDefault(getActivity()));
+
+
+                imageLoader.displayImage(url, imgProduto,options);
 
 
                 tvNomeProduto.setText(produto.get(0).getNome());
