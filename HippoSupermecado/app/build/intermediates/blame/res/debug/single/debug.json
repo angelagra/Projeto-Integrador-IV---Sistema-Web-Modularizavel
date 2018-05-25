@@ -964,6 +964,10 @@
         "source": "C:\\Users\\Saulo Sinesio\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\af5de812ca6f0c21bfeaa78596ade4b2\\res\\layout\\abc_action_bar_up_container.xml"
     },
     {
+        "merged": "C:\\Users\\Saulo Sinesio\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\res\\merged\\debug\\drawable_markinho.png.flat",
+        "source": "C:\\Users\\Saulo Sinesio\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\src\\main\\res\\drawable\\markinho.png"
+    },
+    {
         "merged": "C:\\Users\\Saulo Sinesio\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_menu_item_action_area.xml.flat",
         "source": "C:\\Users\\Saulo Sinesio\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\51b1f38cd745c0283c2d2eac746e88d7\\res\\layout\\design_menu_item_action_area.xml"
     },
@@ -1584,6 +1588,10 @@
         "source": "C:\\Users\\Saulo Sinesio\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\af5de812ca6f0c21bfeaa78596ade4b2\\res\\drawable\\abc_seekbar_thumb_material.xml"
     },
     {
+        "merged": "C:\\Users\\Saulo Sinesio\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\res\\merged\\debug\\drawable_saulinho.png.flat",
+        "source": "C:\\Users\\Saulo Sinesio\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\src\\main\\res\\drawable\\saulinho.png"
+    },
+    {
         "merged": "C:\\Users\\Saulo Sinesio\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_categorias.xml.flat",
         "source": "C:\\Users\\Saulo Sinesio\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\src\\main\\res\\layout\\fragment_categorias.xml"
     },
@@ -1628,6 +1636,10 @@
         "source": "C:\\Users\\Saulo Sinesio\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\af5de812ca6f0c21bfeaa78596ade4b2\\res\\drawable-xhdpi-v4\\abc_list_longpressed_holo.9.png"
     },
     {
+        "merged": "C:\\Users\\Saulo Sinesio\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\res\\merged\\debug\\drawable_semrede.png.flat",
+        "source": "C:\\Users\\Saulo Sinesio\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\src\\main\\res\\drawable\\semrede.png"
+    },
+    {
         "merged": "C:\\Users\\Saulo Sinesio\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_scrubber_primary_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\Saulo Sinesio\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\af5de812ca6f0c21bfeaa78596ade4b2\\res\\drawable-xhdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png"
     },
@@ -1642,6 +1654,10 @@
     {
         "merged": "C:\\Users\\Saulo Sinesio\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\res\\merged\\debug\\drawable_hippo2.png.flat",
         "source": "C:\\Users\\Saulo Sinesio\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\src\\main\\res\\drawable\\hippo2.png"
+    },
+    {
+        "merged": "C:\\Users\\Saulo Sinesio\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\res\\merged\\debug\\drawable_quemsomos.png.flat",
+        "source": "C:\\Users\\Saulo Sinesio\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\src\\main\\res\\drawable\\quemsomos.png"
     },
     {
         "merged": "C:\\Users\\Saulo Sinesio\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\res\\merged\\debug\\layout_select_dialog_item_material.xml.flat",
