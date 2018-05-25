@@ -9,28 +9,26 @@
 
     <TextView
         android:id="@+id/txtCarrinho"
-        android:layout_width="260dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="32dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:gravity="center"
         android:text="Seu carrinho está vazio! Pressione voltar e adicione algum produto!"
+        android:textColor="@color/colorPrimary"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgCarrinho"
-        app:layout_constraintVertical_bias="0.262" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/imgCarrinho"
-        android:layout_width="173dp"
-        android:layout_height="139dp"
+        android:layout_width="143dp"
+        android:layout_height="110dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="150dp"
         android:src="@drawable/ic_cart_empty"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"

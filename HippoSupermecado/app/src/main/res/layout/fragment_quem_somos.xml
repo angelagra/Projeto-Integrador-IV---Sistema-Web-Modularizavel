@@ -47,6 +47,7 @@
                 android:layout_marginTop="8dp"
                 android:text="Aplicativo desenvolvido para Projeto Integrador IV - Curso Tecnologia em Sistemas para Internet - Centro Universitário Senac"
                 android:textAlignment="center"
+                android:textColor="@color/colorAccent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView3" />
@@ -60,6 +61,7 @@
                 android:layout_marginTop="8dp"
                 android:text="Integrantes:"
                 android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
                 android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -76,7 +78,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Angela Ferreira"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent" />
 
             <ImageView
                 android:id="@+id/imageView6"
@@ -89,7 +92,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Daniel Guimarães"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent" />
 
             <ImageView
                 android:id="@+id/imageView7"
@@ -102,7 +106,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Joan Santos"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent" />
 
             <ImageView
                 android:id="@+id/imageView8"
@@ -115,7 +120,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Saulo Sinesio"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent" />
 
             <ImageView
                 android:id="@+id/imageView9"
@@ -128,7 +134,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Leonardo Rodrigues"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent" />
 
             <ImageView
                 android:id="@+id/imageView10"
@@ -141,7 +148,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Guilherme Santos"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent" />
 
             <ImageView
                 android:id="@+id/imageView11"
@@ -154,7 +162,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Mark"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent" />
 
             <ImageView
                 android:id="@+id/imageView12"
@@ -167,7 +176,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Manuel"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent" />
 
 
         </LinearLayout>

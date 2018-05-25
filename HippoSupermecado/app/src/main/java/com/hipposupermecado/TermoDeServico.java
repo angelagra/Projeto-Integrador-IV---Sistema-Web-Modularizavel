@@ -32,17 +32,17 @@ public class TermoDeServico extends AppCompatActivity {
         View.OnClickListener listener = new View.OnClickListener() {
 
             public void onClick(View v) {
-                if (radioTermo.isChecked()) {
-                    editor.putBoolean("checked", true);
-                    editor.apply();
+            if (radioTermo.isChecked()) {
+                editor.putBoolean("checked", true);
+                editor.apply();
 
-                    Intent intent = new Intent(TermoDeServico.this,MainActivity.class);
-                    startActivity(intent);
-                } else {
-                    Toast toast = Toast.makeText(TermoDeServico.this, "Infelizmente você não concorda com os nosso termos. Estamos fechando o Aplicativo.", Toast.LENGTH_LONG);
-                    toast.show();
-                    finish();
-                }
+                Intent intent = new Intent(TermoDeServico.this,MainActivity.class);
+                startActivity(intent);
+            } else {
+                Toast toast = Toast.makeText(TermoDeServico.this, "Infelizmente você não concorda com os nosso termos. Estamos fechando o Aplicativo.", Toast.LENGTH_LONG);
+                toast.show();
+                finish();
+            }
             }
         };
         btnTermo.setOnClickListener(listener);
