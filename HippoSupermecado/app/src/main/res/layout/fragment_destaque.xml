@@ -7,19 +7,19 @@
     tools:context="com.hipposupermecado.Destaque">
 
 
-    <TextView
-        android:id="@+id/tvQtd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ViewFlipper
+        android:id="@+id/slider"
+        android:layout_width="382dp"
+        android:layout_height="204dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
-        android:text="Destaque"
-        android:textAlignment="center"
-        android:textSize="30sp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"></ViewFlipper>
 
     <FrameLayout
         android:id="@+id/layoutContainer"
