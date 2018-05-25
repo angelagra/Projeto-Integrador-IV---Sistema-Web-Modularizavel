@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.hipposupermecado.Model.Produto;
 import com.hipposupermecado.R;
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 
@@ -59,7 +60,13 @@ public class ProdutoAdapter extends BaseAdapter {
         String valor = String.valueOf(listaProduto.get(position).getId());
         String url = "https://hippo4sem.azurewebsites.net/4A/GetImagem?id="+valor+"&w=70";
         ImageLoader imageLoader = ImageLoader.getInstance();imageLoader.init(ImageLoaderConfiguration.createDefault(mContext));
-        imageLoader.displayImage(url, imgProduto);
+        DisplayImageOptions options = new DisplayImageOptions.Builder()
+                //Colocar imagem de loading .gif ou img -- .showImageOnLoading(R.drawable.loading)
+                .showImageForEmptyUri(R.drawable.no_image)
+                .showImageOnFail(R.drawable.no_image)
+                .cacheInMemory(true)
+                .build();
+        imageLoader.displayImage(url, imgProduto, options);
 
         if(listaProduto.get(position).getDesconto() != 0) {
             txtDesconto.setText(String.format("De: R$ %.2f", listaProduto.get(position).getPreco()));
