@@ -4,6 +4,11 @@ public class UsuarioLogado {
 
     private Long id = null;
     private String nome = null;
+    private boolean estaLogado = false;
+
+    public boolean getEstaLogado() { return estaLogado; }
+
+    public void setEstaLogado(boolean estaLogado) { this.estaLogado = estaLogado; }
 
     public Long getId() {
         return id;

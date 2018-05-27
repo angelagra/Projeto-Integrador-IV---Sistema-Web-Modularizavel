@@ -12,8 +12,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.hipposupermecado.Model.Produto;
+import com.hipposupermecado.Model.UsuarioSingleton;
 
 import java.util.List;
 
@@ -29,11 +31,14 @@ public class MainActivity extends AppCompatActivity {
     private NavigationView navigationView;
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle actionBarDrawerToggle;
+    private TextView tvMenuNome;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        tvMenuNome =findViewById(R.id.tvMenuNome);
 
         // -> Iniciando o app com os fragmentos (Destaque & Categorias)
         if(isNetworkAvailable()) {
@@ -43,6 +48,10 @@ public class MainActivity extends AppCompatActivity {
         else {
             NoInternet fragment = new NoInternet();
             getSupportFragmentManager().beginTransaction().replace(R.id.frag_container, fragment).commit();
+        }
+
+        if(UsuarioSingleton.getInstance().usuarioLogado.getNome() != null){
+            tvMenuNome.setText("Olá " + UsuarioSingleton.getInstance().usuarioLogado.getNome());
         }
 
 

@@ -56,10 +56,10 @@ public final class R {
     public static final class id {
         public static final int all = 0x7f080024;
         public static final int basic = 0x7f080028;
-        public static final int chains = 0x7f08003b;
-        public static final int none = 0x7f08009b;
-        public static final int packed = 0x7f0800a0;
-        public static final int parent = 0x7f0800a2;
+        public static final int chains = 0x7f08003a;
+        public static final int none = 0x7f08009a;
+        public static final int packed = 0x7f08009f;
+        public static final int parent = 0x7f0800a1;
         public static final int spread = 0x7f0800d4;
         public static final int spread_inside = 0x7f0800d5;
         public static final int wrap = 0x7f08011b;

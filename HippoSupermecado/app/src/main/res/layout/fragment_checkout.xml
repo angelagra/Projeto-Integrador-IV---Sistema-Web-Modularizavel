@@ -85,7 +85,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <RadioButton
-            android:id="@+id/btnEndereco"
+            android:id="@+id/rbEndereco"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
