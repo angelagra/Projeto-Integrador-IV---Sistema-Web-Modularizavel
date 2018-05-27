@@ -95,4 +95,3 @@ public class EnderecoModel {
         this.complemento = complemento;
     }
 }
-
