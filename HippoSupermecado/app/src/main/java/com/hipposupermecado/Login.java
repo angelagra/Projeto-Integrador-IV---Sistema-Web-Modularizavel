@@ -17,6 +17,7 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.hipposupermecado.Model.LoginModel;
 import com.hipposupermecado.validate.PatternEmail;
 
 import retrofit2.Call;
@@ -47,50 +48,49 @@ public class Login extends Fragment {
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-            //Realizar a verificação e envio do Login e setar a mensagem no show Dialog se necessário.
-            String email = etEmail.getText().toString();
-            String senha = etSenha.getText().toString();
+                //Realizar a verificação e envio do Login e setar a mensagem no show Dialog se necessário.
+                String email = etEmail.getText().toString();
+                String senha = etSenha.getText().toString();
 
-            PatternEmail pattermEmail = new PatternEmail();
+                PatternEmail pattermEmail = new PatternEmail();
 
-            if(isEmpty(email, senha)){
-                alerta("Preencher os campos");
-                return;
-            }
+                if(isEmpty(email, senha)){
+                    alerta("Preencher os campos");
+                    return;
+                }
 
-            if(!pattermEmail.isEmail(email)){
-                alerta("E-mail inválido");
-                return;
-            }
+                if(!pattermEmail.isEmail(email)){
+                    alerta("E-mail inválido");
+                    return;
+                }
 
-            if(cbLembreDeMim.isChecked()){
-                isOk = true;
-                alerta("Salvar info user");
-            }
+                if(cbLembreDeMim.isChecked()){
+                    isOk = true;
+                    alerta("Salvar info user");
+                }
 
-            Retrofit retrofit = new Retrofit.Builder().baseUrl("https://hippo.azurewebsites.net/").addConverterFactory(GsonConverterFactory.create()).build();
-            ApiLogin apiLogin = retrofit.create(ApiLogin.class);
-            Call<Boolean> call = apiLogin.getObject(email,senha);
+                Retrofit retrofit = new Retrofit.Builder().baseUrl("https://hippo.azurewebsites.net/").addConverterFactory(GsonConverterFactory.create()).build();
+                ApiLogin apiLogin = retrofit.create(ApiLogin.class);
+                LoginModel login = new LoginModel(email,senha);
+                Call<LoginModel> call = apiLogin.getLogin(login);
 
-            Callback<Boolean> callbackLogin = new Callback<Boolean>() {
-                @Override
-                public void onResponse(Call<Boolean> call, Response<Boolean> response) {
-                    Boolean login = response.body();
-
-                    if(response.isSuccessful()){
-                    }else{
-                        if (response.code()==401) {
-
+                Callback<LoginModel> callbackLogin = new Callback<LoginModel>() {
+                    @Override
+                    public void onResponse(Call<LoginModel> call, Response<LoginModel> response){
+                        LoginModel login = response.body();
+                        if(login.getAction()){
+                            alerta("Login realizado");
+                        }else{
+                            alerta("Erro ao realizar o login");
                         }
                     }
-                }
 
-                @Override
-                public void onFailure(Call<Boolean> call, Throwable t) {
-                    t.printStackTrace();
-                }
-            };
-            call.enqueue(callbackLogin);
+                    @Override
+                    public void onFailure(Call<LoginModel> call, Throwable t) {
+                        t.printStackTrace();
+                    }
+                };
+                call.enqueue(callbackLogin);
             }
         };
         btnEnviar.setOnClickListener(listener);
@@ -98,8 +98,8 @@ public class Login extends Fragment {
         View.OnClickListener listenerCadastro = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-            CadastroUsuario cdUsuario = new CadastroUsuario();
-            getFragmentManager().beginTransaction().replace(R.id.frag_container, cdUsuario).commit();
+                CadastroUsuario cdUsuario = new CadastroUsuario();
+                getFragmentManager().beginTransaction().replace(R.id.frag_container, cdUsuario).commit();
             }
         };
         btnCadastrar.setOnClickListener(listenerCadastro);
