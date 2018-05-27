@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.hipposupermecado.Model.EnderecoModel;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -83,27 +85,31 @@ public class Endereco extends Fragment {
                     return;
                 }
 
+
                 // Banco de Dados
                 Retrofit retrofit = new Retrofit.Builder().baseUrl("https://hippo.azurewebsites.net/").addConverterFactory(GsonConverterFactory.create()).build();
                 ApiEndereco apiEndereco  = retrofit.create(ApiEndereco.class);
-                Call<String> call = apiEndereco.getObject(endereco,logradouro,numero,cep,complemento,cidade,pais,uf);
+                final EnderecoModel enderecoApi = new EnderecoModel(endereco,logradouro,numero,cep,cidade,pais,uf,complemento);
+                Call<EnderecoModel> call = apiEndereco.getEndereco(enderecoApi);
 
-                Callback<String> callbackEndereco = new Callback<String>() {
+                Callback<EnderecoModel> callbackEndereco = new Callback<EnderecoModel>() {
                     @Override
-                    public void onResponse(Call<String> call, Response<String> response) {
-                        String endereco = response.body();
+                    public void onResponse(Call<EnderecoModel> call, Response<EnderecoModel> response) {
+                        EnderecoModel enderecoModel = response.body();
 
                         if(response.isSuccessful()){
+                            if(enderecoModel.getAction()){
 
-                        }else{
-                            if (response.code()== 401) {
+                            }else{
 
                             }
+                        }else{
+
                         }
                     }
 
                     @Override
-                    public void onFailure(Call<String> call, Throwable t) {
+                    public void onFailure(Call<EnderecoModel> call, Throwable t) {
                         t.printStackTrace();
                     }
                 };

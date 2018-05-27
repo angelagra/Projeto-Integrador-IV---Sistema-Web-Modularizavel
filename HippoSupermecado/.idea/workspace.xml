@@ -28,22 +28,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Login.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Login.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/hipposupermecado/Login.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="957">
-              <caret line="116" column="22" lean-forward="false" selection-start-line="116" selection-start-column="22" selection-end-line="116" selection-end-column="22" />
-              <folding>
-                <element signature="e#2483#5378#0" expanded="true" />
-                <element signature="e#5377#5378#0" expanded="true" />
-                <element signature="e#5485#5801#0" expanded="true" />
-                <element signature="e#5800#5801#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="226">
+              <caret line="164" column="121" lean-forward="true" selection-start-line="164" selection-start-column="121" selection-end-line="164" selection-end-column="121" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Checkout.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Checkout.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/hipposupermecado/Checkout.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="561">
@@ -2108,12 +2103,12 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/menu_cabecalho.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/hipposupermecado/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/hipposupermecado/Model/UsuarioLogado.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/hipposupermecado/Login.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/hipposupermecado/Checkout.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/hipposupermecado/Login.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="1641" />
     <option name="y" value="-20" />
     <option name="width" value="1616" />
@@ -2356,7 +2351,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2900,23 +2895,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/hipposupermecado/Login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="957">
-          <caret line="116" column="22" lean-forward="false" selection-start-line="116" selection-start-column="22" selection-end-line="116" selection-end-column="22" />
-          <folding>
-            <element signature="e#2483#5378#0" expanded="true" />
-            <element signature="e#5377#5378#0" expanded="true" />
-            <element signature="e#5485#5801#0" expanded="true" />
-            <element signature="e#5800#5801#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/hipposupermecado/Checkout.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
           <caret line="44" column="13" lean-forward="true" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/hipposupermecado/Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="164" column="121" lean-forward="true" selection-start-line="164" selection-start-column="121" selection-end-line="164" selection-end-column="121" />
           <folding />
         </state>
       </provider>

@@ -4,18 +4,23 @@ package com.hipposupermecado.Model;
  * Created by Joan on 09/05/2018.
  */
 
-public class Endereço {
-    private String endereco, logradouro,numero,cep,complemento,cidade,pais,uf;
+public class EnderecoModel {
+    private String endereco, logradouro,numero,cep,cidade,pais,uf,complemento;
+    private Boolean action;
 
-    public Endereço(String endereco, String logradouro, String numero, String cep, String complemento, String cidade, String pais, String uf) {
+    public EnderecoModel(String endereco, String logradouro, String numero, String cep, String cidade, String pais, String uf,String complemento) {
         this.endereco = endereco;
         this.logradouro = logradouro;
         this.numero = numero;
         this.cep = cep;
-        this.complemento = complemento;
         this.cidade = cidade;
         this.pais = pais;
         this.uf = uf;
+        this.complemento = complemento;
+    }
+
+    public EnderecoModel(Boolean action){
+        this.action = action;
     }
 
     public String getEndereco() {
@@ -50,14 +55,6 @@ public class Endereço {
         this.cep = cep;
     }
 
-    public String getComplemento() {
-        return complemento;
-    }
-
-    public void setComplemento(String complemento) {
-        this.complemento = complemento;
-    }
-
     public String getCidade() {
         return cidade;
     }
@@ -80,6 +77,22 @@ public class Endereço {
 
     public void setUf(String uf) {
         this.uf = uf;
+    }
+
+    public Boolean getAction() {
+        return action;
+    }
+
+    public void setAction(Boolean action) {
+        this.action = action;
+    }
+
+    public String getComplemento() {
+        return complemento;
+    }
+
+    public void setComplemento(String complemento) {
+        this.complemento = complemento;
     }
 }
 

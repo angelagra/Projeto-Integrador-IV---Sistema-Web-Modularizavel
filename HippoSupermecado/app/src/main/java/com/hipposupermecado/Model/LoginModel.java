@@ -1,15 +1,16 @@
 package com.hipposupermecado.Model;
 
-/**
- * Created by Joan on 09/05/2018.
- */
-
 public class LoginModel {
     private String email, senha;
+    private Boolean action;
 
     public LoginModel(String email,String senha){
         this.email = email;
         this.senha = senha;
+    }
+
+    public LoginModel(Boolean action){
+        this.action = action;
     }
 
     public String getEmail() {
@@ -27,4 +28,8 @@ public class LoginModel {
     public void setSenha(String senha) {
         this.senha = senha;
     }
+
+    public Boolean getAction() {return action;}
+
+    public void setAction(Boolean action) {this.action = action;}
 }
