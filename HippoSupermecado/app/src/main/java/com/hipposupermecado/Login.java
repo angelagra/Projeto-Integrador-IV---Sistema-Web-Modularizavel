@@ -68,26 +68,32 @@ public class Login extends Fragment {
                     isOk = true;
                     alerta("Salvar info user");
                 }
-
+                LoginModel login = new LoginModel(email,senha);
                 Retrofit retrofit = new Retrofit.Builder().baseUrl("https://hippo.azurewebsites.net/").addConverterFactory(GsonConverterFactory.create()).build();
                 ApiLogin apiLogin = retrofit.create(ApiLogin.class);
-                LoginModel login = new LoginModel(email,senha);
                 Call<LoginModel> call = apiLogin.getLogin(login);
 
                 Callback<LoginModel> callbackLogin = new Callback<LoginModel>() {
                     @Override
                     public void onResponse(Call<LoginModel> call, Response<LoginModel> response){
-                        LoginModel login = response.body();
-                        if(login.getAction()){
-                            alerta("Login realizado");
-                        }else{
-                            alerta("Erro ao realizar o login");
+
+                        if(response.isSuccessful()){
+                            alerta("Faz algo aqui se der certo");
+                            try{
+                                LoginModel loginResponse = response.body();
+                                if(loginResponse != null){
+                                    alerta("Faz algo aqui se der certo");
+                                }
+                            }catch (Exception e){
+                                alerta("Faz algo aqui se os dados estiverem incorretos");
+                            }
                         }
                     }
 
                     @Override
                     public void onFailure(Call<LoginModel> call, Throwable t) {
                         t.printStackTrace();
+                        alerta("Tente novamente mais tarde!");
                     }
                 };
                 call.enqueue(callbackLogin);

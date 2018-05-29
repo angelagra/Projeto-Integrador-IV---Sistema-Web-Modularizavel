@@ -9,7 +9,6 @@ import retrofit2.http.POST;
 
 
 public interface ApiLogin {
-    @POST("/WebServiceGrupoII/webresources/Login/login")
-    @FormUrlEncoded
+    @POST("/WebServiceGrupoII/webresources/login")
     Call<LoginModel> getLogin(@Body LoginModel login);
 }

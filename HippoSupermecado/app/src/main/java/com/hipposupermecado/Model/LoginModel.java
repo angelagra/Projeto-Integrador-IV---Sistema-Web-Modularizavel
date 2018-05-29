@@ -1,8 +1,9 @@
 package com.hipposupermecado.Model;
 
 public class LoginModel {
-    private String email, senha;
+    private String email, senha,nome;
     private Boolean action;
+    private Long id;
 
     public LoginModel(String email,String senha){
         this.email = email;
@@ -32,5 +33,21 @@ public class LoginModel {
     public Boolean getAction() {return action;}
 
     public void setAction(Boolean action) {this.action = action;}
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 }
 //commit
