@@ -26,7 +26,7 @@ public class Destaque extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_destaque, container, false);
 
-        int imagens[] = {R.drawable.angela, R.drawable.daniel, R.drawable.guilherme};
+        int imagens[] = {R.drawable.slider1, R.drawable.slider2, R.drawable.slider3};
 
         layoutContainer = (FrameLayout) view.findViewById(R.id.layoutContainer);
         slider = view.findViewById(R.id.slider);

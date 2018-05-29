@@ -82,7 +82,8 @@ public class Detalhes extends Fragment {
             nomeCat = bundle.getString("nomeCategoria");
         }
 
-        tvCategoria.setText(nomeCat.toString());
+        if(nomeCat != null)
+            tvCategoria.setText(nomeCat.toString());
 
         Retrofit retrofit = new Retrofit.Builder().baseUrl("http://hippo4sem.azurewebsites.net/").addConverterFactory(GsonConverterFactory.create()).build();
         ApiProduto apiProduto = retrofit.create(ApiProduto.class);
