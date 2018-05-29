@@ -18,6 +18,8 @@ public class CarrinhoSingleton {
         this.produto.add(produto);
     }
 
+    public void deleteProduto(int i) {this.produto.remove(i);}
+
     public static CarrinhoSingleton getInstance() {
         return INSTANCE;
     }
