@@ -9,12 +9,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.FrameLayout;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
+import com.hipposupermecado.Model.Carrinho;
 import com.hipposupermecado.Model.CarrinhoSingleton;
 import com.hipposupermecado.Model.Produto;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
@@ -36,9 +35,9 @@ public class Detalhes extends Fragment {
     private TextView tvDescricao;
     private ImageView imgProduto;
     private TextView tvCategoria;
-    private Button btnRetira;
+    private Button btnSubQtd;
     private TextView tvQtd;
-    private Button btnAdicione;
+    private Button btnAddQtd;
     private TextView txtDesconto;
     private TextView tvPreco;
     private ProgressBar loadProgress;
@@ -47,7 +46,8 @@ public class Detalhes extends Fragment {
 
     private FrameLayout frag_container;
 
-    private int qtd = 0;
+    private int qtd = 1;
+    private Carrinho prod;
 
     public Detalhes() {
         // Required empty public constructor
@@ -65,14 +65,13 @@ public class Detalhes extends Fragment {
         tvDescricao = (TextView) view.findViewById(R.id.tvDescricao);
         imgProduto = (ImageView) view.findViewById(R.id.imgProduto);
         tvCategoria = (TextView) view.findViewById(R.id.tvCategoria);
-        //btnRetira = (Button) view.findViewById(R.id.btnRetira);
-        //tvQtd = (TextView) view.findViewById(R.id.tvQtd);
-        //btnAdicione = (Button) view.findViewById(R.id.btnAdicione);
+        btnSubQtd = (Button) view.findViewById(R.id.btnSubQtd);
+        tvQtd = (TextView) view.findViewById(R.id.tvQtdProdutos);
+        btnAddQtd = (Button) view.findViewById(R.id.btnAddQtd);
         txtDesconto = (TextView) view.findViewById(R.id.txtDesconto);
         tvPreco = (TextView) view.findViewById(R.id.tvPreco);
         loadProgress = (ProgressBar) view.findViewById(R.id.progressBar);
         fab = view.findViewById(R.id.fabAddCarrinho);
-        final Produto[] prod = new Produto[1];
 
         int id = 0;
         String nomeCat= null;
@@ -122,14 +121,11 @@ public class Detalhes extends Fragment {
 
                 loadProgress.setVisibility(View.GONE);
 
-                prod[0] = new Produto(produto.get(0).getId(),
+                prod = new Carrinho(produto.get(0).getId(),
                         produto.get(0).getNome(),
-                        produto.get(0).getDescricao(),
                         produto.get(0).getPreco(),
                         produto.get(0).getDesconto(),
-                        produto.get(0).getQtdMinEstoque(),
-                        produto.get(0).getCategoria());
-
+                        qtd);
             }
 
             @Override
@@ -142,32 +138,33 @@ public class Detalhes extends Fragment {
             }
         });
 
-        /*View.OnClickListener add = new View.OnClickListener() {
+        View.OnClickListener add = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 qtd++;
                 tvQtd.setText(String.valueOf(qtd));
             }
         };
-        btnAdicione.setOnClickListener(add);
+        btnAddQtd.setOnClickListener(add);
 
         View.OnClickListener sub = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 qtd--;
 
-                if (qtd < 0)
-                    qtd = 0;
+                if (qtd < 1)
+                    qtd = 1;
 
                 tvQtd.setText(String.valueOf(qtd));
             }
         };
-        btnRetira.setOnClickListener(sub);*/
+        btnSubQtd.setOnClickListener(sub);
 
         View.OnClickListener addCarrinho = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                CarrinhoSingleton.getInstance().setProduto(prod[0]);
+                prod.setQtd(qtd);
+                CarrinhoSingleton.getInstance().setProduto(prod);
 
                 frag_container = (FrameLayout) view.findViewById(R.id.frag_container);
                 CarrinhoFragment fragment = new CarrinhoFragment();

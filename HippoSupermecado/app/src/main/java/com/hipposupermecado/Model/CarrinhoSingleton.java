@@ -7,14 +7,14 @@ import java.util.List;
 public class CarrinhoSingleton {
     private static final CarrinhoSingleton INSTANCE = new CarrinhoSingleton();
 
-    private List<Produto> produto = new ArrayList<Produto>();
+    private List<Carrinho> produto = new ArrayList<Carrinho>();
     private CarrinhoSingleton() {}
 
-    public List<Produto> getProdutos() {
+    public List<Carrinho> getProdutos() {
         return produto;
     }
 
-    public void setProduto(Produto produto) {
+    public void setProduto(Carrinho produto) {
         this.produto.add(produto);
     }
 

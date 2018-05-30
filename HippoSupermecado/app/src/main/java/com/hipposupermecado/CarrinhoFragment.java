@@ -12,7 +12,9 @@ import android.widget.FrameLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.hipposupermecado.Adapter.CarrinhoAdapter;
 import com.hipposupermecado.Adapter.ProdutoAdapter;
+import com.hipposupermecado.Model.Carrinho;
 import com.hipposupermecado.Model.CarrinhoSingleton;
 import com.hipposupermecado.Model.Produto;
 
@@ -27,7 +29,7 @@ public class CarrinhoFragment extends Fragment {
     private TextView tvValorTotal;
     private ListView listView;
     private FrameLayout frag_container;
-    private ProdutoAdapter adapter;
+    private CarrinhoAdapter adapter;
     private Button btnFinalizarCompra, btnContinuarComprando;
 
     public CarrinhoFragment() {
@@ -47,9 +49,9 @@ public class CarrinhoFragment extends Fragment {
         double valorTotal = 0;
 
         listView = view.findViewById(R.id.listView);
-        List<Produto> produto = CarrinhoSingleton.getInstance().getProdutos();
+        List<Carrinho> produto = CarrinhoSingleton.getInstance().getProdutos();
 
-        adapter = new ProdutoAdapter(getContext(), produto);
+        adapter = new CarrinhoAdapter(getContext(), produto);
         listView.setAdapter(adapter);
         listView.setDivider(null);
 
@@ -72,7 +74,7 @@ public class CarrinhoFragment extends Fragment {
         });
 
         for(int i = 0; i < produto.size(); i++) {
-            valorTotal += produto.get(i).getPreco() - produto.get(i).getDesconto();
+            valorTotal += (produto.get(i).getPreco() - produto.get(i).getDesconto()) * produto.get(i).getQtd();
         }
         tvValorTotal.setText(String.format("R$ %.2f", valorTotal));
 
