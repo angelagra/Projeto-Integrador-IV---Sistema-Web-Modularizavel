@@ -11,7 +11,9 @@ import retrofit2.http.Path;
 
 
 public interface ApiEndereco {
-    @FormUrlEncoded
     @POST("/WebServiceGrupoII/webresources/endereco/insert")
+    Call<EnderecoModel> insertEndereco(@Body EnderecoModel endereco);
+
+    @POST("/WebServiceGrupoII/webresources/endereco/get")
     Call<EnderecoModel> getEndereco(@Body EnderecoModel endereco);
 }

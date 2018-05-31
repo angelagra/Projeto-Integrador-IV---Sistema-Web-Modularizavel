@@ -5,78 +5,92 @@ package com.hipposupermecado.Model;
  */
 
 public class EnderecoModel {
-    private String endereco, logradouro,numero,cep,cidade,pais,uf,complemento;
+    private String nomeEndereco, logradouroEndereco,numeroEndereco,cepEndereco,cidadeEndereco,paisEndereco,UFEndereco,complementoEndereco;
     private Boolean action;
+    private Long id;
 
-    public EnderecoModel(String endereco, String logradouro, String numero, String cep, String cidade, String pais, String uf,String complemento) {
-        this.endereco = endereco;
-        this.logradouro = logradouro;
-        this.numero = numero;
-        this.cep = cep;
-        this.cidade = cidade;
-        this.pais = pais;
-        this.uf = uf;
-        this.complemento = complemento;
+    public EnderecoModel(String nomeEndereco, String logradouroEndereco, String numeroEndereco, String cepEndereco, String cidadeEndereco, String paisEndereco, String uf,String complemento,Long id) {
+        this.nomeEndereco = nomeEndereco;
+        this.logradouroEndereco = logradouroEndereco;
+        this.numeroEndereco = numeroEndereco;
+        this.cepEndereco = cepEndereco;
+        this.cidadeEndereco = cidadeEndereco;
+        this.paisEndereco = paisEndereco;
+        this.UFEndereco = uf;
+        this.complementoEndereco = complemento;
+        this.id = id;
     }
 
-    public EnderecoModel(Boolean action){
-        this.action = action;
+    public Long getId() {
+        return id;
     }
 
-    public String getEndereco() {
-        return endereco;
+    public void setId(Long id) {
+        this.id = id;
     }
 
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
+    public String getNomeEndereco() {
+        return nomeEndereco;
     }
 
-    public String getLogradouro() {
-        return logradouro;
+    public void setNomeEndereco(String nomeEndereco) {
+        this.nomeEndereco = nomeEndereco;
     }
 
-    public void setLogradouro(String logradouro) {
-        this.logradouro = logradouro;
+    public String getLogradouroEndereco() {
+        return logradouroEndereco;
     }
 
-    public String getNumero() {
-        return numero;
+    public void setLogradouroEndereco(String logradouroEndereco) {
+        this.logradouroEndereco = logradouroEndereco;
     }
 
-    public void setNumero(String numero) {
-        this.numero = numero;
+    public String getNumeroEndereco() {
+        return numeroEndereco;
     }
 
-    public String getCep() {
-        return cep;
+    public void setNumeroEndereco(String numeroEndereco) {
+        this.numeroEndereco = numeroEndereco;
     }
 
-    public void setCep(String cep) {
-        this.cep = cep;
+    public String getCepEndereco() {
+        return cepEndereco;
     }
 
-    public String getCidade() {
-        return cidade;
+    public void setCepEndereco(String cepEndereco) {
+        this.cepEndereco = cepEndereco;
     }
 
-    public void setCidade(String cidade) {
-        this.cidade = cidade;
+    public String getCidadeEndereco() {
+        return cidadeEndereco;
     }
 
-    public String getPais() {
-        return pais;
+    public void setCidadeEndereco(String cidadeEndereco) {
+        this.cidadeEndereco = cidadeEndereco;
     }
 
-    public void setPais(String pais) {
-        this.pais = pais;
+    public String getPaisEndereco() {
+        return paisEndereco;
     }
 
-    public String getUf() {
-        return uf;
+    public void setPaisEndereco(String paisEndereco) {
+        this.paisEndereco = paisEndereco;
     }
 
-    public void setUf(String uf) {
-        this.uf = uf;
+    public String getUFEndereco() {
+        return UFEndereco;
+    }
+
+    public void setUFEndereco(String UFEndereco) {
+        this.UFEndereco = UFEndereco;
+    }
+
+    public String getComplementoEndereco() {
+        return complementoEndereco;
+    }
+
+    public void setComplementoEndereco(String complementoEndereco) {
+        this.complementoEndereco = complementoEndereco;
     }
 
     public Boolean getAction() {
@@ -85,13 +99,5 @@ public class EnderecoModel {
 
     public void setAction(Boolean action) {
         this.action = action;
-    }
-
-    public String getComplemento() {
-        return complemento;
-    }
-
-    public void setComplemento(String complemento) {
-        this.complemento = complemento;
     }
 }

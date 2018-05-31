@@ -19,10 +19,14 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+import static android.content.Context.MODE_PRIVATE;
+
 public class Endereco extends Fragment {
 
     private EditText etEndereco, etLogradouro, etNumero, etCep, etComplemento, etCidade, etUf, etPais;
-    private Button btEnviar;
+    private Button btEnviarEnd;
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor;
 
     @Override
     public View onCreateView(final LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -36,7 +40,7 @@ public class Endereco extends Fragment {
         etCidade = (EditText) view.findViewById(R.id.etCidade);
         etPais = (EditText) view.findViewById(R.id.etPais);
         etUf = (EditText) view.findViewById(R.id.etUf);
-        btEnviar = (Button) view.findViewById(R.id.btEnviar);
+        btEnviarEnd = (Button) view.findViewById(R.id.btEnviarEnd);
 
         if (!UsuarioSingleton.getInstance().usuarioLogado.getEstaLogado()) {
             Toast toast = Toast.makeText(Endereco.super.getContext(), "É necessário estar logado para cadastrar um endereço", Toast.LENGTH_LONG);
@@ -45,9 +49,11 @@ public class Endereco extends Fragment {
             Login fragment = new Login();
             getFragmentManager().beginTransaction().replace(R.id.frag_container, fragment).commit();
         } else {
-            View.OnClickListener listener = new View.OnClickListener() {
+
+            View.OnClickListener listenerSend = new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+
                 String inicio = "o campo";
                 String fim = "deve ser preenchido";
                 // Endereço
@@ -97,8 +103,11 @@ public class Endereco extends Fragment {
                 // Banco de Dados
                 Retrofit retrofit = new Retrofit.Builder().baseUrl("https://hippo.azurewebsites.net/").addConverterFactory(GsonConverterFactory.create()).build();
                 ApiEndereco apiEndereco  = retrofit.create(ApiEndereco.class);
-                final EnderecoModel enderecoApi = new EnderecoModel(endereco,logradouro,numero,cep,cidade,pais,uf,complemento);
-                Call<EnderecoModel> call = apiEndereco.getEndereco(enderecoApi);
+                    sharedPreferences = getActivity().getSharedPreferences("hippoSave", MODE_PRIVATE);
+                    editor = sharedPreferences.edit();
+                    Long id = sharedPreferences.getLong("id",0);
+                    final EnderecoModel enderecoApi = new EnderecoModel(endereco,logradouro,numero,cep,cidade,pais,uf,complemento,id);
+                Call<EnderecoModel> call = apiEndereco.insertEndereco(enderecoApi);
 
                 Callback<EnderecoModel> callbackEndereco = new Callback<EnderecoModel>() {
                     @Override
@@ -107,13 +116,12 @@ public class Endereco extends Fragment {
 
                         if(response.isSuccessful()){
                             if(enderecoModel.getAction()){
-
                                 // Tela Home
                                 Destaque fragment = new Destaque();
                                 getFragmentManager().beginTransaction().replace(R.id.frag_container, fragment).commit();
                             }else{
+                                alerta("Erro ao inserir o endereço");
                             }
-                        }else{
                         }
                     }
 
@@ -125,7 +133,8 @@ public class Endereco extends Fragment {
                 call.enqueue(callbackEndereco);
                 }
             };
-            btEnviar.setOnClickListener(listener);
+
+            btEnviarEnd.setOnClickListener(listenerSend);
         }
 
         // Inflate the layout for this fragment
