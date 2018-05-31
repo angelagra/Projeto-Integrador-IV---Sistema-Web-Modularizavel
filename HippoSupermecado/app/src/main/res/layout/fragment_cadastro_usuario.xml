@@ -115,7 +115,7 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="DD"
-        android:inputType="number"
+        android:inputType="date"
         android:maxLength="2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etCelular" />
@@ -129,7 +129,7 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="MM"
-        android:inputType="number"
+        android:inputType="date"
         android:maxLength="2"
         app:layout_constraintEnd_toStartOf="@+id/etAAAA"
         app:layout_constraintStart_toEndOf="@+id/etDD"
@@ -143,7 +143,7 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="AAAA"
-        android:inputType="number"
+        android:inputType="date"
         android:maxLength="4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etCelular" />
