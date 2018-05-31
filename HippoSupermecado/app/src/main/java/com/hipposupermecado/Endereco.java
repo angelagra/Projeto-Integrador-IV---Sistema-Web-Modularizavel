@@ -1,5 +1,6 @@
 package com.hipposupermecado;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -10,6 +11,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.hipposupermecado.Model.EnderecoModel;
+import com.hipposupermecado.Model.UsuarioSingleton;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -36,9 +38,16 @@ public class Endereco extends Fragment {
         etUf = (EditText) view.findViewById(R.id.etUf);
         btEnviar = (Button) view.findViewById(R.id.btEnviar);
 
-        View.OnClickListener listener = new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        if (!UsuarioSingleton.getInstance().usuarioLogado.getEstaLogado()) {
+            Toast toast = Toast.makeText(Endereco.super.getContext(), "É necessário estar logado para cadastrar um endereço", Toast.LENGTH_LONG);
+            toast.show();
+            // Tela Home
+            Login fragment = new Login();
+            getFragmentManager().beginTransaction().replace(R.id.frag_container, fragment).commit();
+        } else {
+            View.OnClickListener listener = new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
                 String inicio = "o campo";
                 String fim = "deve ser preenchido";
                 // Endereço
@@ -85,7 +94,6 @@ public class Endereco extends Fragment {
                     return;
                 }
 
-
                 // Banco de Dados
                 Retrofit retrofit = new Retrofit.Builder().baseUrl("https://hippo.azurewebsites.net/").addConverterFactory(GsonConverterFactory.create()).build();
                 ApiEndereco apiEndereco  = retrofit.create(ApiEndereco.class);
@@ -100,11 +108,12 @@ public class Endereco extends Fragment {
                         if(response.isSuccessful()){
                             if(enderecoModel.getAction()){
 
+                                // Tela Home
+                                Destaque fragment = new Destaque();
+                                getFragmentManager().beginTransaction().replace(R.id.frag_container, fragment).commit();
                             }else{
-
                             }
                         }else{
-
                         }
                     }
 
@@ -114,9 +123,10 @@ public class Endereco extends Fragment {
                     }
                 };
                 call.enqueue(callbackEndereco);
-            }
-        };
-        btEnviar.setOnClickListener(listener);
+                }
+            };
+            btEnviar.setOnClickListener(listener);
+        }
 
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_endereco, container, false);

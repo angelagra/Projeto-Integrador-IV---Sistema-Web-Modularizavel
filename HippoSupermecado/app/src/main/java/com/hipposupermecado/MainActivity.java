@@ -3,6 +3,7 @@ package com.hipposupermecado;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.support.design.widget.NavigationView;
@@ -38,7 +39,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        tvMenuNome =findViewById(R.id.tvMenuNome);
+        // Criando Shared Preferences.
+        SharedPreferences sharedPreferences = getSharedPreferences("hippoSave", MODE_PRIVATE);
+        if (sharedPreferences.getLong("id", 0) != 0){
+            UsuarioSingleton.getInstance().usuarioLogado.setEstaLogado(true);
+        }
+
+        tvMenuNome = findViewById(R.id.tvMenuNome);
 
         // -> Iniciando o app com os fragmentos (Destaque & Categorias)
         if(isNetworkAvailable()) {
@@ -119,7 +126,6 @@ public class MainActivity extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction().replace(R.id.frag_container, fragment).commit();
     }
 
-    // QR CODE
     // QR CODE
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {

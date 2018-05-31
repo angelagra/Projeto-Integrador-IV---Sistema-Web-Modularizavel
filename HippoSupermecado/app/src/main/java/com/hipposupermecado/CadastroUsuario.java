@@ -10,6 +10,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.hipposupermecado.Model.Usuario;
 import com.hipposupermecado.validate.PatternEmail;
 
 import retrofit2.Call;
@@ -54,14 +55,14 @@ public class CadastroUsuario extends Fragment
                 String inicio = "O campo ";
                 String fim = "deve ser preenchido";
                 // Nome
-                String nome = etNome.getText().toString();
+                final String nome = etNome.getText().toString();
                 if(isEmptyForm(nome)){
                     alerta(inicio + "nome " + fim);
                     return;
                 }
                 // E-mail
                 PatternEmail pattermEmail = new PatternEmail();
-                String email = etEmail.getText().toString();
+                final String email = etEmail.getText().toString();
                 if(isEmptyForm(email)){
                     alerta(inicio + "Email " + fim);
                     return;
@@ -108,8 +109,8 @@ public class CadastroUsuario extends Fragment
                     return;
                 }
                 // Senha
-                String senha = etSenha.getText().toString();
-                String confSenha = etConfirmarSenha.getText().toString();
+                final String senha = etSenha.getText().toString();
+                final String confSenha = etConfirmarSenha.getText().toString();
                 String validarSenha = "Os campos de senhas dever ser iguais";
                 if( (isEmptyForm(senha) || isEmptyForm(confSenha))  || (!isEqualsPass(senha, confSenha))){
                     alerta(validarSenha);
@@ -118,11 +119,7 @@ public class CadastroUsuario extends Fragment
                 // ----------------------------------------------------------------
 
                 // Conexão com o Banco --------------------------------------------
-                Retrofit retrofit = new Retrofit.Builder()
-                                        .baseUrl("https://hippo.azurewebsites.net/")
-                                        .addConverterFactory(GsonConverterFactory.create())
-                                        .build();
-
+                Retrofit retrofit = new Retrofit.Builder().baseUrl("https://hippo.azurewebsites.net/").addConverterFactory(GsonConverterFactory.create()).build();
                 ApiUsuario apiUsuario  = retrofit.create(ApiUsuario.class);
                 Call<String> call = apiUsuario.getObject(nome,email,senha,confSenha);
 
@@ -132,10 +129,9 @@ public class CadastroUsuario extends Fragment
                         String usuario = response.body();
 
                         if(response.isSuccessful()){
-
                             // Direcionar para o cadastro de endereço.
-                            Endereco endereco = new Endereco();
-                            getFragmentManager().beginTransaction().replace(R.id.frag_container, endereco).commit();
+                            Login login = new Login();
+                            getFragmentManager().beginTransaction().replace(R.id.frag_container, login).commit();
                             return;
                         }else{
                             if (response.code()==401) {
@@ -173,5 +169,4 @@ public class CadastroUsuario extends Fragment
         }
         return false;
     }
-
 }
