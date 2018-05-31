@@ -88,7 +88,6 @@ public class CadastroUsuario extends Fragment
                     return;
                 }
                 // Nascimento
-                String data = "Data de Nascimento inválida";
                 String dia = etDD.getText().toString();
                 String mes = etMM.getText().toString();
                 String ano = etAAAA.getText().toString();
@@ -96,18 +95,20 @@ public class CadastroUsuario extends Fragment
                     alerta(inicio + "Data de Nascimento " + fim);
                     return;
                 }
-                if(Integer.getInteger(dia) <= 0 || Integer.getInteger(dia) >= 31){
-                    alerta(data);
+                if(Integer.parseInt(dia) <= 0 || Integer.parseInt(dia) >= 31){
+                    alerta("Data de Nascimento inválida");
                     return;
                 }
-                if(Integer.getInteger(mes) <= 0 || Integer.getInteger(mes) > 12){
-                    alerta(data);
+                if(Integer.parseInt(mes) <= 0 || Integer.parseInt(mes) > 12){
+                    alerta("Data de Nascimento inválida");
                     return;
                 }
                 if(ano.length() != 4){
-                    alerta(data);
+                    alerta("Data de Nascimento inválida");
                     return;
                 }
+                String data = "" + dia + mes + ano;
+
                 // Senha
                 final String senha = etSenha.getText().toString();
                 final String confSenha = etConfirmarSenha.getText().toString();
@@ -148,6 +149,7 @@ public class CadastroUsuario extends Fragment
                 // ----------------------------------------------------------------
             }
         };
+
         btnSalvar.setOnClickListener(listener);
 
         return view;

@@ -103,10 +103,12 @@ public class Endereco extends Fragment {
                 // Banco de Dados
                 Retrofit retrofit = new Retrofit.Builder().baseUrl("https://hippo.azurewebsites.net/").addConverterFactory(GsonConverterFactory.create()).build();
                 ApiEndereco apiEndereco  = retrofit.create(ApiEndereco.class);
-                    sharedPreferences = getActivity().getSharedPreferences("hippoSave", MODE_PRIVATE);
-                    editor = sharedPreferences.edit();
-                    Long id = sharedPreferences.getLong("id",0);
-                    final EnderecoModel enderecoApi = new EnderecoModel(endereco,logradouro,numero,cep,cidade,pais,uf,complemento,id);
+
+                sharedPreferences = getActivity().getSharedPreferences("hippoSave", MODE_PRIVATE);
+                editor = sharedPreferences.edit();
+                Long id = sharedPreferences.getLong("id",0);
+                final EnderecoModel enderecoApi = new EnderecoModel(endereco,logradouro,numero,cep,cidade,pais,uf,complemento,id);
+
                 Call<EnderecoModel> call = apiEndereco.insertEndereco(enderecoApi);
 
                 Callback<EnderecoModel> callbackEndereco = new Callback<EnderecoModel>() {
