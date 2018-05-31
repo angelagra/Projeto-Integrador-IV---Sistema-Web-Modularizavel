@@ -10,7 +10,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.hipposupermecado.Model.Usuario;
+import com.hipposupermecado.Model.Cadastro;
 import com.hipposupermecado.validate.PatternEmail;
 
 import retrofit2.Call;
@@ -108,6 +108,7 @@ public class CadastroUsuario extends Fragment
                     alerta(data);
                     return;
                 }
+                String dataval = ano+mes+dia;
                 // Senha
                 final String senha = etSenha.getText().toString();
                 final String confSenha = etConfirmarSenha.getText().toString();
@@ -116,19 +117,23 @@ public class CadastroUsuario extends Fragment
                     alerta(validarSenha);
                     return;
                 }
+                String telcomercial = null;
+                String telresidencial = null;
                 // ----------------------------------------------------------------
 
                 // Conexão com o Banco --------------------------------------------
                 Retrofit retrofit = new Retrofit.Builder().baseUrl("https://hippo.azurewebsites.net/").addConverterFactory(GsonConverterFactory.create()).build();
-                ApiUsuario apiUsuario  = retrofit.create(ApiUsuario.class);
-                Call<String> call = apiUsuario.getObject(nome,email,senha,confSenha);
+                ApiCadastro apiCadastro  = retrofit.create(ApiCadastro.class);
+                Cadastro cadastro = new Cadastro(email,senha,nome,cpf,celular,telcomercial,telresidencial,dataval,"1");
+                Call<Cadastro> call = apiCadastro.insertCadastro(cadastro);
 
-                Callback<String> callbackUsuario = new Callback<String>() {
+                Callback<Cadastro> callbackCadastro = new Callback<Cadastro>() {
                     @Override
-                    public void onResponse(Call<String> call, Response<String> response) {
-                        String usuario = response.body();
+                    public void onResponse(Call<Cadastro> call, Response<Cadastro> response) {
+                        Cadastro cadastroRes = response.body();
 
                         if(response.isSuccessful()){
+
                             // Direcionar para o cadastro de endereço.
                             Login login = new Login();
                             getFragmentManager().beginTransaction().replace(R.id.frag_container, login).commit();
@@ -140,11 +145,11 @@ public class CadastroUsuario extends Fragment
                     }
 
                     @Override
-                    public void onFailure(Call<String> call, Throwable t) {
+                    public void onFailure(Call<Cadastro> call, Throwable t) {
                         t.printStackTrace();
                     }
                 };
-                call.enqueue(callbackUsuario);
+                call.enqueue(callbackCadastro);
                 // ----------------------------------------------------------------
             }
         };
