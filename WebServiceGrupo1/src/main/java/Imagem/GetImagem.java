@@ -30,17 +30,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.ws.rs.core.Response;
 
-/**
- *
- * @author leonardo.prodrigues6
- */
 @WebServlet(name = "GetImagem", urlPatterns = {"/GetImagem"})
 public class GetImagem extends HttpServlet {
 
-      private static final String DRIVER = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
+    private static final String DRIVER = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
     private static final String URL = "jdbc:sqlserver://hippo-pi.database.windows.net;database=hippo";
     private static final String USER = "TSI";
     private static final String PASS = "SistemasInternet123";
+    
     private static Connection getConnection() throws ClassNotFoundException, SQLException {
         Class.forName(DRIVER);
         return DriverManager.getConnection(URL, USER, PASS);
@@ -48,11 +45,9 @@ public class GetImagem extends HttpServlet {
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-    
+
          URL url = null;
-        
-     
+
         String id = request.getParameter("id");
         Integer width = Integer.parseInt(request.getParameter("w"));
         
@@ -60,13 +55,7 @@ public class GetImagem extends HttpServlet {
         try {
             Connection conn = getConnection();
             PreparedStatement stmt = conn.prepareStatement("select imagem from Produto where idProduto  = ?");
-            
-          
-           
-        
-            
-            
-            
+
             stmt.setLong(1, lId.longValue());
             ResultSet rs = stmt.executeQuery();
             
@@ -102,7 +91,7 @@ public class GetImagem extends HttpServlet {
         try {
             BufferedImage originalImage = ImageIO.read(imagem);
 
-             int w = originalImage.getWidth();
+            int w = originalImage.getWidth();
             int h = originalImage.getHeight();
 
             float razao = (float)w/ (float)h;
@@ -120,47 +109,6 @@ public class GetImagem extends HttpServlet {
         } catch (Exception e) {
             e.printStackTrace();
         }
-            return dimg;
-            
+            return dimg;     
     }
-    
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
-    /**
-     * Handles the HTTP <code>GET</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
-    }
-
-    /**
-     * Handles the HTTP <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
-    }
-
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
-    @Override
-    public String getServletInfo() {
-        return "Short description";
-    }// </editor-fold>
-
 }
