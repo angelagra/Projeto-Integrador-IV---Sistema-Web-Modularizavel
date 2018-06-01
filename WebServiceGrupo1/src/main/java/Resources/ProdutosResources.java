@@ -37,13 +37,13 @@ public class ProdutosResources {
             List<Produtos> produtos = new ArrayList<>();
             
             while(rs.next()){
-                Long id          = rs.getLong("idProduto");
-                String nome      = rs.getString("nomeProduto");
+                Long id = rs.getLong("idProduto");
+                String nome = rs.getString("nomeProduto");
                 String descricao = rs.getString("descProduto");
-                double preco     = rs.getDouble("precProduto");
-                double desconto  = rs.getDouble("descontoPromocao");
-                int estoque      = rs.getInt("qtdMinEstoque");
-                Long categoria   =  rs.getLong("idCategoria");
+                double preco = rs.getDouble("precProduto");
+                double desconto = rs.getDouble("descontoPromocao");
+                int estoque = rs.getInt("qtdMinEstoque");
+                Long categoria =  rs.getLong("idCategoria");
 
                 Produtos p = new Produtos(id, nome, descricao, preco, desconto, estoque,categoria);
                 produtos.add(p);
@@ -56,6 +56,15 @@ public class ProdutosResources {
         }
         return response;
         
+    }
+    
+    @GET
+    @Path("/{id}")
+    @Produces("application/json")
+    public Response getProduto(@PathParam("id") Long id) {
+        Response response = null;
+
+        return response;
     }
     
     private static Connection getConnection() throws ClassNotFoundException, SQLException{

@@ -15,6 +15,7 @@ public class Produtos implements Serializable {
     private double preco, desconto;
     private int qtdMinEstoque;
     private Long categoria;
+    //private   imagem;
     
     protected Produtos(){
         
