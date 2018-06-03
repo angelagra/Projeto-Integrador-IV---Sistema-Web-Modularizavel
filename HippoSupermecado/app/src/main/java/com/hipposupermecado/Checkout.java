@@ -1,5 +1,6 @@
 package com.hipposupermecado;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -12,16 +13,33 @@ import android.widget.Toast;
 
 import com.hipposupermecado.Model.Carrinho;
 import com.hipposupermecado.Model.CarrinhoSingleton;
+import com.hipposupermecado.Model.CheckoutModel;
+import com.hipposupermecado.Model.EnderecoModel;
 import com.hipposupermecado.Model.Produto;
 import com.hipposupermecado.Model.UsuarioSingleton;
 
 import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
+import static android.content.Context.MODE_PRIVATE;
 
 public class Checkout extends Fragment {
 
     private RadioButton rbCartao, rbBoleto, rbEndereco;
     private TextView tvTotal;
     private Button btnFinalizar;
+    private String nomeEndereco;
+    private Long idEndereco;
+    private Long idUsuarioShared;
+    private String idPagamento = "1";
+    private Long idPedido;
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -38,6 +56,39 @@ public class Checkout extends Fragment {
         String usuarioLogadoNome = UsuarioSingleton.getInstance().usuarioLogado.getNome();
         Long usuarioLogadoId = UsuarioSingleton.getInstance().usuarioLogado.getId();
 
+
+        //Retrofit obter Endereco
+        sharedPreferences = getActivity().getSharedPreferences("hippoSave", MODE_PRIVATE);
+        editor = sharedPreferences.edit();
+        idUsuarioShared = sharedPreferences.getLong("id",0);
+
+        EnderecoModel enderecoModel = new EnderecoModel(idUsuarioShared);
+        Retrofit retrofit = new Retrofit.Builder().baseUrl("https://hippo.azurewebsites.net/").addConverterFactory(GsonConverterFactory.create()).build();
+        ApiEndereco apiEndereco  = retrofit.create(ApiEndereco.class);
+        Call<EnderecoModel> call = apiEndereco.getEndereco(enderecoModel);
+
+        Callback<EnderecoModel> callbackEndereco = new Callback<EnderecoModel>() {
+            @Override
+            public void onResponse(Call<EnderecoModel> call, Response<EnderecoModel> response) {
+                EnderecoModel enderecoRes = response.body();
+
+                if(response.isSuccessful()){
+                    if(enderecoRes.getAction()){
+                        nomeEndereco = enderecoRes.getNomeEndereco();
+                        idEndereco = enderecoRes.getId();
+                    }else{
+                        alerta("Cadastre um endereço!");
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<EnderecoModel> call, Throwable t) {
+                alerta("Erro ao obter endereço!");
+            }
+        };
+        call.enqueue(callbackEndereco);
+
         if (UsuarioSingleton.getInstance().usuarioLogado.getEstaLogado()) {
 
             double valorTtal = 0;
@@ -50,13 +101,46 @@ public class Checkout extends Fragment {
             if( valorTtal > 0) {
                 tvTotal.setText(String.format("%.2f", valorTtal));
 
-                int idPagamento = 1, idUsuario;
+                //idUsuario;
 
                 if (rbCartao.isChecked()) {
-                    idPagamento = 1;
+                    idPagamento = "1";
                 } else if (rbBoleto.isChecked()) {
-                    idPagamento = 2;
+                    idPagamento = "2";
                 }
+
+
+                View.OnClickListener listener = new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+                        CheckoutModel checkoutModel = new CheckoutModel(idUsuarioShared,"4",idPagamento,idEndereco,itemCarrinho);
+                        Retrofit retrofit = new Retrofit.Builder().baseUrl("https://hippo.azurewebsites.net/").addConverterFactory(GsonConverterFactory.create()).build();
+                        ApiCheckout apiCheckout  = retrofit.create(ApiCheckout.class);
+                        Call<CheckoutModel> call = apiCheckout.insertCheckout(checkoutModel);
+
+                        Callback<CheckoutModel> callbackCadastro = new Callback<CheckoutModel>() {
+                            @Override
+                            public void onResponse(Call<CheckoutModel> call, Response<CheckoutModel> response) {
+                                CheckoutModel checkoutRes = response.body();
+                                if(response.isSuccessful()){
+                                    if(checkoutRes.getAction()){
+                                        idPedido = checkoutRes.getIdPedido();
+                                    }else{
+                                        alerta("Pedido não registrado");
+                                    }
+                                }
+                            }
+                            @Override
+                            public void onFailure(Call<CheckoutModel> call, Throwable t) {
+                                alerta("Tente novamente mais tarde");
+                            }
+                        };
+                        call.enqueue(callbackCadastro);
+                    }
+                };
+
+                btnFinalizar.setOnClickListener(listener);
             } else {
                 Toast toast = Toast.makeText(Checkout.super.getContext(), "Carrinho Vazio", Toast.LENGTH_SHORT);
                 toast.show();
@@ -72,5 +156,10 @@ public class Checkout extends Fragment {
         }
 
         return view;
+    }
+
+    private void alerta (String msg) {
+        Toast toast = Toast.makeText(Checkout.super.getContext(), msg, Toast.LENGTH_LONG);
+        toast.show();
     }
 }

@@ -1,5 +1,7 @@
 package com.hipposupermecado.Model;
 
+import com.hipposupermecado.Endereco;
+
 /**
  * Created by Joan on 09/05/2018.
  */
@@ -23,6 +25,10 @@ public class EnderecoModel {
 
     public EnderecoModel(Boolean action){
         this.action = action;
+    }
+
+    public EnderecoModel(Long id){
+        this.id = id;
     }
 
     public Long getId() {
