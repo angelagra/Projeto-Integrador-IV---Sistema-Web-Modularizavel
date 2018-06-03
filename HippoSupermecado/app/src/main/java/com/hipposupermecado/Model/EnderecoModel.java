@@ -21,6 +21,10 @@ public class EnderecoModel {
         this.id = id;
     }
 
+    public EnderecoModel(Boolean action){
+        this.action = action;
+    }
+
     public Long getId() {
         return id;
     }

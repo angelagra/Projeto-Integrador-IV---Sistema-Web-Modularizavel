@@ -106,8 +106,8 @@ public class Endereco extends Fragment {
                     sharedPreferences = getActivity().getSharedPreferences("hippoSave", MODE_PRIVATE);
                     editor = sharedPreferences.edit();
                     Long id = sharedPreferences.getLong("id",0);
-                    final EnderecoModel enderecoApi = new EnderecoModel(endereco,logradouro,numero,cep,cidade,pais,uf,complemento,id);
-                Call<EnderecoModel> call = apiEndereco.insertEndereco(enderecoApi);
+                    EnderecoModel enderecoApi = new EnderecoModel(endereco,logradouro,numero,cep,cidade,pais,uf,complemento,id);
+                    Call<EnderecoModel> call = apiEndereco.insertEndereco(enderecoApi);
 
                 Callback<EnderecoModel> callbackEndereco = new Callback<EnderecoModel>() {
                     @Override

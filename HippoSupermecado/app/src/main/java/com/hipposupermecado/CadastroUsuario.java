@@ -10,7 +10,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.hipposupermecado.Model.Usuario;
+import com.hipposupermecado.Model.CadastroModel;
 import com.hipposupermecado.validate.PatternEmail;
 
 import retrofit2.Call;
@@ -26,6 +26,7 @@ public class CadastroUsuario extends Fragment
     private EditText etNome, etEmail, etCpf, etCelular, etDD, etMM, etAAAA, etSenha, etConfirmarSenha;
     private Button btnSalvar;
     private CheckBox cbNewsLetter;
+    private String newsLetter;
 
 
     @Override
@@ -96,11 +97,11 @@ public class CadastroUsuario extends Fragment
                     alerta(inicio + "Data de Nascimento " + fim);
                     return;
                 }
-                if(Integer.getInteger(dia) <= 0 || Integer.getInteger(dia) >= 31){
+                if(Integer.parseInt(dia) <= 0 || Integer.parseInt(dia) >= 31){
                     alerta(data);
                     return;
                 }
-                if(Integer.getInteger(mes) <= 0 || Integer.getInteger(mes) > 12){
+                if(Integer.parseInt(mes) <= 0 || Integer.parseInt(mes) > 12){
                     alerta(data);
                     return;
                 }
@@ -116,35 +117,45 @@ public class CadastroUsuario extends Fragment
                     alerta(validarSenha);
                     return;
                 }
+                String dataval =ano+mes+dia;
+                String telcomercial = null,telresidencial = null;
+                if(cbNewsLetter.isChecked()){
+                    newsLetter = "1";
+                }else{
+                    newsLetter = "0";
+                }
                 // ----------------------------------------------------------------
 
                 // Conexão com o Banco --------------------------------------------
+                CadastroModel cadastroModel = new CadastroModel(email,senha,nome,cpf,celular,telcomercial,telresidencial,dataval,newsLetter);
                 Retrofit retrofit = new Retrofit.Builder().baseUrl("https://hippo.azurewebsites.net/").addConverterFactory(GsonConverterFactory.create()).build();
-                ApiUsuario apiUsuario  = retrofit.create(ApiUsuario.class);
-                Call<String> call = apiUsuario.getObject(nome,email,senha,confSenha);
+                ApiCadastro apiCadastro  = retrofit.create(ApiCadastro.class);
+                Call<CadastroModel> call = apiCadastro.insertCadastro(cadastroModel);
 
-                Callback<String> callbackUsuario = new Callback<String>() {
+                Callback<CadastroModel> callbackCadastro = new Callback<CadastroModel>() {
                     @Override
-                    public void onResponse(Call<String> call, Response<String> response) {
-                        String usuario = response.body();
+                    public void onResponse(Call<CadastroModel> call, Response<CadastroModel> response) {
+                        CadastroModel cadastroRes = response.body();
 
                         if(response.isSuccessful()){
-                            // Direcionar para o cadastro de endereço.
-                            Login login = new Login();
-                            getFragmentManager().beginTransaction().replace(R.id.frag_container, login).commit();
-                            return;
-                        }else{
-                            if (response.code()==401) {
+
+                            if(cadastroRes.getAction()){
+                                // Direcionar para o cadastro de endereço.
+                                Login login = new Login();
+                                getFragmentManager().beginTransaction().replace(R.id.frag_container, login).commit();
+                                return;
+                            }else{
+                                alerta("Cadastro não efetuado, tente novamente mais tarde!");
                             }
                         }
                     }
 
                     @Override
-                    public void onFailure(Call<String> call, Throwable t) {
+                    public void onFailure(Call<CadastroModel> call, Throwable t) {
                         t.printStackTrace();
                     }
                 };
-                call.enqueue(callbackUsuario);
+                call.enqueue(callbackCadastro);
                 // ----------------------------------------------------------------
             }
         };

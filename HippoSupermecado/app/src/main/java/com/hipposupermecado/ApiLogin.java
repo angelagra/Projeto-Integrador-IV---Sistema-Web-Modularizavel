@@ -9,6 +9,6 @@ import retrofit2.http.POST;
 
 
 public interface ApiLogin {
-    @POST("/WebServiceGrupoII/webresources/login")
+    @POST("/WebServiceGII/webresources/login")
     Call<LoginModel> getLogin(@Body LoginModel login);
 }
