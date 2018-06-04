@@ -77,7 +77,7 @@ public class Checkout extends Fragment {
                         idEndereco = enderecoRes.getId();
                         rbEndereco.setText(nomeEndereco);
                     }else{
-                        alerta("Cadastre um endereço!");
+                        alerta("Não possui endereço cadastrado. Cadastre um endereço!");
                     }
                 }
             }
@@ -102,13 +102,11 @@ public class Checkout extends Fragment {
                 tvTotal.setText(String.format("%.2f", valorTtal));
 
                 //idUsuario;
-
                 if (rbCartao.isChecked()) {
                     idPagamento = 1;
                 } else if (rbBoleto.isChecked()) {
                     idPagamento = 2;
                 }
-
 
                 View.OnClickListener listener = new View.OnClickListener() {
                     @Override

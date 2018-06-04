@@ -57,7 +57,7 @@ public class Login extends Fragment {
         String nome = sharedPreferences.getString("nome", null);
         Long id = sharedPreferences.getLong("id", 0);
 
-        if (id != 0 && nome != null) {
+        if (id != null && nome != null) {
             UsuarioSingleton.getInstance().usuarioLogado.setNome(nome);
             UsuarioSingleton.getInstance().usuarioLogado.setId(id);
             UsuarioSingleton.getInstance().usuarioLogado.setEstaLogado(true);

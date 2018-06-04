@@ -115,13 +115,17 @@ public class Endereco extends Fragment {
                     public void onResponse(Call<EnderecoModel> call, Response<EnderecoModel> response) {
                         EnderecoModel enderecoModel = response.body();
 
+                        Toast toast = Toast.makeText(Endereco.super.getContext(), "Salvando dados", Toast.LENGTH_SHORT);
+                        toast.show();
+
                         if(response.isSuccessful()){
                             if(enderecoModel.getAction()){
                                 // Tela Home
                                 Destaque fragment = new Destaque();
                                 getFragmentManager().beginTransaction().replace(R.id.frag_container, fragment).commit();
                             }else{
-                                alerta("Erro ao inserir o endereço");
+                                toast = Toast.makeText(Endereco.super.getContext(), "Erro ao inserir o endereço", Toast.LENGTH_LONG);
+                                toast.show();
                             }
                         }
                     }
@@ -131,10 +135,10 @@ public class Endereco extends Fragment {
                         t.printStackTrace();
                     }
                 };
-
                 call.enqueue(callbackEndereco);
             }
         };
+
         btnEndereco.setOnClickListener(listener);
 
         // Inflate the layout for this fragment

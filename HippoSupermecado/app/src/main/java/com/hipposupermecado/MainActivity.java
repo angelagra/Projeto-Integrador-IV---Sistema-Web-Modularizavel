@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.hipposupermecado.Model.Produto;
 import com.hipposupermecado.Model.UsuarioSingleton;
@@ -106,6 +107,23 @@ public class MainActivity extends AppCompatActivity {
                     QuemSomos quemSomos = new QuemSomos();
                     getSupportFragmentManager().beginTransaction().replace(R.id.frag_container, quemSomos).commit();
                     return true;
+                }
+
+                // Sair
+                if(menuItem.getItemId() == R.id.action_sair){
+                    Toast toast = Toast.makeText(MainActivity.this, "Deslogado", Toast.LENGTH_LONG);
+                    toast.show();
+
+                    SharedPreferences sharedPreferences = getSharedPreferences("hippoSave", MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+
+                    editor.remove("id");
+                    editor.remove("nome");
+                    editor.apply();
+
+                    UsuarioSingleton.getInstance().usuarioLogado.setId(null);
+                    UsuarioSingleton.getInstance().usuarioLogado.setNome(null);
+                    UsuarioSingleton.getInstance().usuarioLogado.setEstaLogado(false);
                 }
 
                 return false;

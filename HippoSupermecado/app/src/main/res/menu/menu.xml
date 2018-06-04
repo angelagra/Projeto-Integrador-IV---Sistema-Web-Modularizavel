@@ -29,6 +29,13 @@
             android:icon="@drawable/quemsomos"
             android:title="Sobre Nós"
             />
+
+        <item
+            android:id="@+id/action_sair"
+            android:checked="false"
+            android:icon="@drawable/sair"
+            android:title="Sair"
+            />
     </group>
 
 </menu>
