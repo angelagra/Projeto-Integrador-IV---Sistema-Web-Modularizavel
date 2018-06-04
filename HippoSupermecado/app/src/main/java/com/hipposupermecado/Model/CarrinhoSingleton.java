@@ -15,7 +15,20 @@ public class CarrinhoSingleton {
     }
 
     public void setProduto(Carrinho produto) {
-        this.produto.add(produto);
+        if (!checkProduto(produto))
+            this.produto.add(produto);
+    }
+
+    public boolean checkProduto(Carrinho produto) {
+        boolean add = false;
+        for(int i = 0; i < this.produto.size(); i++) {
+            if(this.produto.get(i).getId() == produto.getId()) {
+                this.produto.get(i).setQtd(this.produto.get(i).getQtd() + produto.getQtd());
+                add = true;
+                break;
+            }
+        }
+        return add;
     }
 
     public void deleteProduto(int i) {this.produto.remove(i);}
