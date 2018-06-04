@@ -78,6 +78,8 @@ public class Checkout extends Fragment {
                         rbEndereco.setText(nomeEndereco);
                     }else{
                         alerta("Não possui endereço cadastrado. Cadastre um endereço!");
+                        Endereco frag = new Endereco();
+                        getFragmentManager().beginTransaction().replace(R.id.frag_container, frag).commit();
                     }
                 }
             }
