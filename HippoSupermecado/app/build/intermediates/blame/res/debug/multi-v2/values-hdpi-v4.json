@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Saulo Sinesio\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hdpi-v4\\values-hdpi-v4.xml",
+            "outputFile": "C:\\Users\\saulo.samarques1\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hdpi-v4\\values-hdpi-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Saulo Sinesio\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\af5de812ca6f0c21bfeaa78596ade4b2\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
+                    "source": "C:\\Users\\saulo.samarques1\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\956e8636150265cee5e706dc849ad6e2\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Saulo Sinesio\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.9.8.aar\\710c9bb5e6666a278d48782ff0071273\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
+                    "source": "C:\\Users\\saulo.samarques1\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.9.8.aar\\ab7598b74e29b2732fa04b01b786b703\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

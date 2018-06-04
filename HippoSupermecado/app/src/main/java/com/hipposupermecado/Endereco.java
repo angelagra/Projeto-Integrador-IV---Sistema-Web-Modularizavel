@@ -24,7 +24,8 @@ import static android.content.Context.MODE_PRIVATE;
 public class Endereco extends Fragment {
 
     private EditText etEndereco, etLogradouro, etNumero, etCep, etComplemento, etCidade, etUf, etPais;
-    private Button btEnviarEnd;
+    private Button btnEndereco;
+
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
 
@@ -40,7 +41,7 @@ public class Endereco extends Fragment {
         etCidade = (EditText) view.findViewById(R.id.etCidade);
         etPais = (EditText) view.findViewById(R.id.etPais);
         etUf = (EditText) view.findViewById(R.id.etUf);
-        btEnviarEnd = (Button) view.findViewById(R.id.btEnviarEnd);
+        btnEndereco = (Button) view.findViewById(R.id.btnEndereco);
 
         if (!UsuarioSingleton.getInstance().usuarioLogado.getEstaLogado()) {
             Toast toast = Toast.makeText(Endereco.super.getContext(), "É necessário estar logado para cadastrar um endereço", Toast.LENGTH_LONG);
@@ -48,11 +49,11 @@ public class Endereco extends Fragment {
             // Tela Home
             Login fragment = new Login();
             getFragmentManager().beginTransaction().replace(R.id.frag_container, fragment).commit();
-        } else {
+        }
 
-            View.OnClickListener listenerSend = new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
+        View.OnClickListener listener = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
                 String inicio = "o campo";
                 String fim = "deve ser preenchido";
@@ -130,15 +131,14 @@ public class Endereco extends Fragment {
                         t.printStackTrace();
                     }
                 };
-                call.enqueue(callbackEndereco);
-                }
-            };
 
-            btEnviarEnd.setOnClickListener(listenerSend);
-        }
+                call.enqueue(callbackEndereco);
+            }
+        };
+        btnEndereco.setOnClickListener(listener);
 
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_endereco, container, false);
+        return view;
     }
 
     private void alerta (String msg) {

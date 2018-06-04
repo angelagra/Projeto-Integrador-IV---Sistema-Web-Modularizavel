@@ -877,10 +877,10 @@ int id basic 0x7f080028
 int id beginning 0x7f080029
 int id blocking 0x7f08002a
 int id bottom 0x7f08002b
-int id btEnviar 0x7f08002c
-int id btnAddQtd 0x7f08002d
-int id btnCadastrar 0x7f08002e
-int id btnContinuarComprando 0x7f08002f
+int id btnAddQtd 0x7f08002c
+int id btnCadastrar 0x7f08002d
+int id btnContinuarComprando 0x7f08002e
+int id btnEndereco 0x7f08002f
 int id btnEnviar 0x7f080030
 int id btnFechar 0x7f080031
 int id btnFinalizar 0x7f080032
