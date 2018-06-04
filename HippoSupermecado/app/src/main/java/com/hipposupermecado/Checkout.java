@@ -15,7 +15,6 @@ import com.hipposupermecado.Model.Carrinho;
 import com.hipposupermecado.Model.CarrinhoSingleton;
 import com.hipposupermecado.Model.CheckoutModel;
 import com.hipposupermecado.Model.EnderecoModel;
-import com.hipposupermecado.Model.Produto;
 import com.hipposupermecado.Model.UsuarioSingleton;
 
 import java.util.List;
@@ -36,7 +35,7 @@ public class Checkout extends Fragment {
     private String nomeEndereco;
     private Long idEndereco;
     private Long idUsuarioShared;
-    private String idPagamento = "1";
+    private int idPagamento = 1;
     private Long idPedido;
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
@@ -76,6 +75,7 @@ public class Checkout extends Fragment {
                     if(enderecoRes.getAction()){
                         nomeEndereco = enderecoRes.getNomeEndereco();
                         idEndereco = enderecoRes.getId();
+                        rbEndereco.setText(nomeEndereco);
                     }else{
                         alerta("Cadastre um endereço!");
                     }
@@ -104,9 +104,9 @@ public class Checkout extends Fragment {
                 //idUsuario;
 
                 if (rbCartao.isChecked()) {
-                    idPagamento = "1";
+                    idPagamento = 1;
                 } else if (rbBoleto.isChecked()) {
-                    idPagamento = "2";
+                    idPagamento = 2;
                 }
 
 
@@ -114,7 +114,11 @@ public class Checkout extends Fragment {
                     @Override
                     public void onClick(View view) {
 
-                        CheckoutModel checkoutModel = new CheckoutModel(idUsuarioShared,"4",idPagamento,idEndereco,itemCarrinho);
+                        List<Carrinho> itemCarrinho = CarrinhoSingleton.getInstance().getProdutos();
+                        int idAplicacao = 2;
+                        int idStatus = 4;
+
+                        CheckoutModel checkoutModel = new CheckoutModel(idUsuarioShared,idStatus,idPagamento,149,idAplicacao,itemCarrinho);
                         Retrofit retrofit = new Retrofit.Builder().baseUrl("https://hippo.azurewebsites.net/").addConverterFactory(GsonConverterFactory.create()).build();
                         ApiCheckout apiCheckout  = retrofit.create(ApiCheckout.class);
                         Call<CheckoutModel> call = apiCheckout.insertCheckout(checkoutModel);

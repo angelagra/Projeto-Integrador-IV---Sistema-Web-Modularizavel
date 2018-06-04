@@ -7,11 +7,12 @@ import java.util.List;
  */
 
 public class CheckoutModel {
-    private Long idCliente,idStatus,idTipoPagto,idEndereco,idAplicacao,idPedido;
-    private List<ItemCarrinho> itemCarrinho;
+    private Long idCliente,idPedido;
+    private int idStatus,idTipoPagto,idAplicacao,idEndereco;
+    private List<Carrinho> itemCarrinho;
     private Boolean action;
 
-    public CheckoutModel(Long idCliente,Long idStatus, Long idTipoPagto, Long idEndereco, Long idAplicacao,List<ItemCarrinho> itemCarrinho) {
+    public CheckoutModel(Long idCliente,int idStatus, int idTipoPagto, int idEndereco, int idAplicacao,List<Carrinho> itemCarrinho) {
         this.idCliente = idCliente;
         this.idStatus = idStatus;
         this.idTipoPagto = idTipoPagto;
@@ -37,35 +38,35 @@ public class CheckoutModel {
         this.idCliente = idCliente;
     }
 
-    public Long getIdStatus() {
+    public int getIdStatus() {
         return idStatus;
     }
 
-    public void setIdStatus(Long idStatus) {
+    public void setIdStatus(int idStatus) {
         this.idStatus = idStatus;
     }
 
-    public Long getIdTipoPagto() {
+    public int getIdTipoPagto() {
         return idTipoPagto;
     }
 
-    public void setIdTipoPagto(Long idTipoPagto) {
+    public void setIdTipoPagto(int idTipoPagto) {
         this.idTipoPagto = idTipoPagto;
     }
 
-    public Long getIdEndereco() {
+    public int getIdEndereco() {
         return idEndereco;
     }
 
-    public void setIdEndereco(Long idEndereco) {
+    public void setIdEndereco(int idEndereco) {
         this.idEndereco = idEndereco;
     }
 
-    public Long getIdAplicacao() {
+    public int getIdAplicacao() {
         return idAplicacao;
     }
 
-    public void setIdAplicacao(Long idAplicacao) {
+    public void setIdAplicacao(int idAplicacao) {
         this.idAplicacao = idAplicacao;
     }
 
@@ -77,11 +78,11 @@ public class CheckoutModel {
         this.idPedido = idPedido;
     }
 
-    public List<ItemCarrinho> getItemCarrinho() {
+    public List<Carrinho> getItemCarrinho() {
         return itemCarrinho;
     }
 
-    public void setItemCarrinho(List<ItemCarrinho> itemCarrinho) {
+    public void setItemCarrinho(List<Carrinho> itemCarrinho) {
         this.itemCarrinho = itemCarrinho;
     }
 
