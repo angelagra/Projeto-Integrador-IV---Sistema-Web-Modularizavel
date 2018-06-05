@@ -108,7 +108,7 @@ public class Login extends Fragment {
                                 }
                             }catch (Exception e){
                                 UsuarioSingleton.getInstance().usuarioLogado.setEstaLogado(false);
-                                alerta("Tivemos algum problema ao logar, por favor tente mais tarde.");
+                                alerta("Tivemos algum problema ao realizar o logar, por favor tente mais tarde.");
                             }
                         }
                     }

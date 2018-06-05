@@ -76,12 +76,12 @@
         "source": "C:\\Users\\saulo.samarques1\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\956e8636150265cee5e706dc849ad6e2\\res\\drawable-xxhdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png"
     },
     {
-        "merged": "C:\\Users\\saulo.samarques1\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_list_focused_holo.9.png.flat",
-        "source": "C:\\Users\\saulo.samarques1\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\956e8636150265cee5e706dc849ad6e2\\res\\drawable-xxhdpi-v4\\abc_list_focused_holo.9.png"
-    },
-    {
         "merged": "C:\\Users\\saulo.samarques1\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_navigation_item_subheader.xml.flat",
         "source": "C:\\Users\\saulo.samarques1\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\aee948964ad5cd50a25b6cdd77214779\\res\\layout\\design_navigation_item_subheader.xml"
+    },
+    {
+        "merged": "C:\\Users\\saulo.samarques1\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_list_focused_holo.9.png.flat",
+        "source": "C:\\Users\\saulo.samarques1\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\956e8636150265cee5e706dc849ad6e2\\res\\drawable-xxhdpi-v4\\abc_list_focused_holo.9.png"
     },
     {
         "merged": "C:\\Users\\saulo.samarques1\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
@@ -124,12 +124,12 @@
         "source": "C:\\Users\\saulo.samarques1\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\956e8636150265cee5e706dc849ad6e2\\res\\drawable-xhdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
     },
     {
-        "merged": "C:\\Users\\saulo.samarques1\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21_design_bottom_sheet_slide_in.xml.flat",
-        "source": "C:\\Users\\saulo.samarques1\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\aee948964ad5cd50a25b6cdd77214779\\res\\anim-v21\\design_bottom_sheet_slide_in.xml"
-    },
-    {
         "merged": "C:\\Users\\saulo.samarques1\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_star_black_48dp.png.flat",
         "source": "C:\\Users\\saulo.samarques1\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\956e8636150265cee5e706dc849ad6e2\\res\\drawable-mdpi-v4\\abc_ic_star_black_48dp.png"
+    },
+    {
+        "merged": "C:\\Users\\saulo.samarques1\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21_design_bottom_sheet_slide_in.xml.flat",
+        "source": "C:\\Users\\saulo.samarques1\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\aee948964ad5cd50a25b6cdd77214779\\res\\anim-v21\\design_bottom_sheet_slide_in.xml"
     },
     {
         "merged": "C:\\Users\\saulo.samarques1\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_list_longpressed_holo.9.png.flat",
@@ -164,12 +164,12 @@
         "source": "C:\\Users\\saulo.samarques1\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\956e8636150265cee5e706dc849ad6e2\\res\\drawable-mdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
     },
     {
-        "merged": "C:\\Users\\saulo.samarques1\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\saulo.samarques1\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\956e8636150265cee5e706dc849ad6e2\\res\\drawable-hdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
-    },
-    {
         "merged": "C:\\Users\\saulo.samarques1\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\res\\merged\\debug\\drawable_notification_icon_background.xml.flat",
         "source": "C:\\Users\\saulo.samarques1\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\c4e5a7883d9aec8d029f8d70afe87148\\res\\drawable\\notification_icon_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\saulo.samarques1\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
+        "source": "C:\\Users\\saulo.samarques1\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\956e8636150265cee5e706dc849ad6e2\\res\\drawable-hdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
     },
     {
         "merged": "C:\\Users\\saulo.samarques1\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-hdpi-v17_abc_ic_menu_cut_mtrl_alpha.png.flat",
@@ -188,12 +188,12 @@
         "source": "C:\\Users\\saulo.samarques1\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\956e8636150265cee5e706dc849ad6e2\\res\\drawable-xhdpi-v4\\abc_ic_star_black_16dp.png"
     },
     {
-        "merged": "C:\\Users\\saulo.samarques1\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_bottom_navigation_item.xml.flat",
-        "source": "C:\\Users\\saulo.samarques1\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\aee948964ad5cd50a25b6cdd77214779\\res\\layout\\design_bottom_navigation_item.xml"
-    },
-    {
         "merged": "C:\\Users\\saulo.samarques1\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_btn_switch_to_on_mtrl_00012.9.png.flat",
         "source": "C:\\Users\\saulo.samarques1\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\956e8636150265cee5e706dc849ad6e2\\res\\drawable-xxhdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png"
+    },
+    {
+        "merged": "C:\\Users\\saulo.samarques1\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_bottom_navigation_item.xml.flat",
+        "source": "C:\\Users\\saulo.samarques1\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\aee948964ad5cd50a25b6cdd77214779\\res\\layout\\design_bottom_navigation_item.xml"
     },
     {
         "merged": "C:\\Users\\saulo.samarques1\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_scrubber_control_off_mtrl_alpha.png.flat",
@@ -236,24 +236,24 @@
         "source": "C:\\Users\\saulo.samarques1\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\956e8636150265cee5e706dc849ad6e2\\res\\drawable-hdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
     },
     {
-        "merged": "C:\\Users\\saulo.samarques1\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_design_ic_visibility.xml.flat",
-        "source": "C:\\Users\\saulo.samarques1\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\aee948964ad5cd50a25b6cdd77214779\\res\\drawable-anydpi-v21\\design_ic_visibility.xml"
+        "merged": "C:\\Users\\saulo.samarques1\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_part_time.xml.flat",
+        "source": "C:\\Users\\saulo.samarques1\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\c4e5a7883d9aec8d029f8d70afe87148\\res\\layout\\notification_template_part_time.xml"
     },
     {
         "merged": "C:\\Users\\saulo.samarques1\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21_notification_template_icon_group.xml.flat",
         "source": "C:\\Users\\saulo.samarques1\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\c4e5a7883d9aec8d029f8d70afe87148\\res\\layout-v21\\notification_template_icon_group.xml"
     },
     {
-        "merged": "C:\\Users\\saulo.samarques1\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_part_time.xml.flat",
-        "source": "C:\\Users\\saulo.samarques1\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\c4e5a7883d9aec8d029f8d70afe87148\\res\\layout\\notification_template_part_time.xml"
-    },
-    {
-        "merged": "C:\\Users\\saulo.samarques1\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_alert_dialog_material.xml.flat",
-        "source": "C:\\Users\\saulo.samarques1\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\956e8636150265cee5e706dc849ad6e2\\res\\layout\\abc_alert_dialog_material.xml"
+        "merged": "C:\\Users\\saulo.samarques1\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_design_ic_visibility.xml.flat",
+        "source": "C:\\Users\\saulo.samarques1\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\aee948964ad5cd50a25b6cdd77214779\\res\\drawable-anydpi-v21\\design_ic_visibility.xml"
     },
     {
         "merged": "C:\\Users\\saulo.samarques1\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_cab_background_top_material.xml.flat",
         "source": "C:\\Users\\saulo.samarques1\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\956e8636150265cee5e706dc849ad6e2\\res\\drawable\\abc_cab_background_top_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\saulo.samarques1\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_alert_dialog_material.xml.flat",
+        "source": "C:\\Users\\saulo.samarques1\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\956e8636150265cee5e706dc849ad6e2\\res\\layout\\abc_alert_dialog_material.xml"
     },
     {
         "merged": "C:\\Users\\saulo.samarques1\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_media_cancel_action.xml.flat",
@@ -304,12 +304,12 @@
         "source": "C:\\Users\\saulo.samarques1\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\aee948964ad5cd50a25b6cdd77214779\\res\\drawable-mdpi-v4\\design_ic_visibility_off.png"
     },
     {
-        "merged": "C:\\Users\\saulo.samarques1\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_action_mode_close_item_material.xml.flat",
-        "source": "C:\\Users\\saulo.samarques1\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\956e8636150265cee5e706dc849ad6e2\\res\\layout\\abc_action_mode_close_item_material.xml"
-    },
-    {
         "merged": "C:\\Users\\saulo.samarques1\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_list_selector_disabled_holo_dark.9.png.flat",
         "source": "C:\\Users\\saulo.samarques1\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\956e8636150265cee5e706dc849ad6e2\\res\\drawable-xhdpi-v4\\abc_list_selector_disabled_holo_dark.9.png"
+    },
+    {
+        "merged": "C:\\Users\\saulo.samarques1\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_action_mode_close_item_material.xml.flat",
+        "source": "C:\\Users\\saulo.samarques1\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\956e8636150265cee5e706dc849ad6e2\\res\\layout\\abc_action_mode_close_item_material.xml"
     },
     {
         "merged": "C:\\Users\\saulo.samarques1\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21_notification_action_tombstone.xml.flat",
@@ -324,12 +324,12 @@
         "source": "C:\\Users\\saulo.samarques1\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\956e8636150265cee5e706dc849ad6e2\\res\\drawable-ldrtl-xhdpi-v17\\abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
-        "merged": "C:\\Users\\saulo.samarques1\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
-        "source": "C:\\Users\\saulo.samarques1\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\956e8636150265cee5e706dc849ad6e2\\res\\drawable-xxxhdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
-    },
-    {
         "merged": "C:\\Users\\saulo.samarques1\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_list_menu_item_radio.xml.flat",
         "source": "C:\\Users\\saulo.samarques1\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\956e8636150265cee5e706dc849ad6e2\\res\\layout\\abc_list_menu_item_radio.xml"
+    },
+    {
+        "merged": "C:\\Users\\saulo.samarques1\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
+        "source": "C:\\Users\\saulo.samarques1\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\956e8636150265cee5e706dc849ad6e2\\res\\drawable-xxxhdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
         "merged": "C:\\Users\\saulo.samarques1\\Documents\\GitHub\\Projeto-Integrador-IV---Sistema-Web-Modularizavel\\HippoSupermecado\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",

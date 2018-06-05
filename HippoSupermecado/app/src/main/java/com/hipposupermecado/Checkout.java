@@ -78,8 +78,8 @@ public class Checkout extends Fragment {
                         rbEndereco.setText(nomeEndereco);
                     }else{
                         alerta("Não possui endereço cadastrado. Cadastre um endereço!");
-                        Endereco frag = new Endereco();
-                        getFragmentManager().beginTransaction().replace(R.id.frag_container, frag).commit();
+                        //Endereco frag = new Endereco();
+                        //getFragmentManager().beginTransaction().replace(R.id.frag_container, frag).commit();
                     }
                 }
             }
@@ -130,6 +130,11 @@ public class Checkout extends Fragment {
                                 if(response.isSuccessful()){
                                     if(checkoutRes.getAction()){
                                         idPedido = checkoutRes.getIdPedido();
+
+                                        alerta("Pedido " + idPedido + " Finalizado com Sucesso!");
+
+                                        Detalhes frag = new Detalhes();
+                                        getFragmentManager().beginTransaction().replace(R.id.frag_container, frag).commit();
                                     }else{
                                         alerta("Pedido não registrado");
                                     }

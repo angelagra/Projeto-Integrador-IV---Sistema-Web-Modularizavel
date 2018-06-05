@@ -51,6 +51,9 @@ public class CadastroUsuario extends Fragment
         if (UsuarioSingleton.getInstance().usuarioLogado.getEstaLogado()) {
             Toast toast = Toast.makeText(CadastroUsuario.super.getContext(), "Você já está logado. Finalize sua conta para cadastar um novo usuário.", Toast.LENGTH_LONG);
             toast.show();
+
+            Destaque fragment = new Destaque();
+            getFragmentManager().beginTransaction().replace(R.id.frag_container, fragment).commit();
         } else {
             View.OnClickListener listener = new View.OnClickListener() {
                 @Override
