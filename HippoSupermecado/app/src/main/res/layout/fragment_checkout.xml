@@ -51,7 +51,7 @@
             android:layout_weight="1"
             android:checked="true"
             android:duplicateParentState="false"
-            android:text="Cadtão de Crédito" />
+            android:text="Cartão de Crédito" />
 
         <RadioButton
             android:id="@+id/rbBoleto"

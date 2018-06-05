@@ -55,43 +55,44 @@ public class Checkout extends Fragment {
         String usuarioLogadoNome = UsuarioSingleton.getInstance().usuarioLogado.getNome();
         Long usuarioLogadoId = UsuarioSingleton.getInstance().usuarioLogado.getId();
 
+        if (UsuarioSingleton.getInstance().usuarioLogado.getEstaLogado()) {
 
-        //Retrofit obter Endereco
-        sharedPreferences = getActivity().getSharedPreferences("hippoSave", MODE_PRIVATE);
-        editor = sharedPreferences.edit();
-        idUsuarioShared = sharedPreferences.getLong("id",0);
+            //Retrofit obter Endereco
+            sharedPreferences = getActivity().getSharedPreferences("hippoSave", MODE_PRIVATE);
+            editor = sharedPreferences.edit();
+            idUsuarioShared = sharedPreferences.getLong("id",0);
 
-        EnderecoModel enderecoModel = new EnderecoModel(idUsuarioShared);
-        Retrofit retrofit = new Retrofit.Builder().baseUrl("https://hippo.azurewebsites.net/").addConverterFactory(GsonConverterFactory.create()).build();
-        ApiEndereco apiEndereco  = retrofit.create(ApiEndereco.class);
-        Call<EnderecoModel> call = apiEndereco.getEndereco(enderecoModel);
+            EnderecoModel enderecoModel = new EnderecoModel(idUsuarioShared);
+            Retrofit retrofit = new Retrofit.Builder().baseUrl("https://hippo.azurewebsites.net/").addConverterFactory(GsonConverterFactory.create()).build();
+            ApiEndereco apiEndereco  = retrofit.create(ApiEndereco.class);
+            Call<EnderecoModel> call = apiEndereco.getEndereco(enderecoModel);
 
-        Callback<EnderecoModel> callbackEndereco = new Callback<EnderecoModel>() {
-            @Override
-            public void onResponse(Call<EnderecoModel> call, Response<EnderecoModel> response) {
-                EnderecoModel enderecoRes = response.body();
+            Callback<EnderecoModel> callbackEndereco = new Callback<EnderecoModel>() {
+                @Override
+                public void onResponse(Call<EnderecoModel> call, Response<EnderecoModel> response) {
+                    EnderecoModel enderecoRes = response.body();
 
-                if(response.isSuccessful()){
-                    if(enderecoRes.getAction()){
-                        nomeEndereco = enderecoRes.getNomeEndereco();
-                        idEndereco = enderecoRes.getId();
-                        rbEndereco.setText(nomeEndereco);
-                    }else{
-                        alerta("Não possui endereço cadastrado. Cadastre um endereço!");
-                        //Endereco frag = new Endereco();
-                        //getFragmentManager().beginTransaction().replace(R.id.frag_container, frag).commit();
+                    if(response.isSuccessful()){
+                        if(enderecoRes.getAction()){
+                            nomeEndereco = enderecoRes.getNomeEndereco();
+                            idEndereco = enderecoRes.getId();
+                            rbEndereco.setText(nomeEndereco);
+                        }else{
+                            Toast toast = Toast.makeText(Checkout.super.getContext(), "Não possui endereço cadastrado. Cadastre um endereço!", Toast.LENGTH_LONG);
+                            toast.show();
+                            Endereco frag = new Endereco();
+                            getFragmentManager().beginTransaction().replace(R.id.frag_container, frag).commit();
+                        }
                     }
                 }
-            }
 
-            @Override
-            public void onFailure(Call<EnderecoModel> call, Throwable t) {
-                alerta("Erro ao obter endereço!");
-            }
-        };
-        call.enqueue(callbackEndereco);
-
-        if (UsuarioSingleton.getInstance().usuarioLogado.getEstaLogado()) {
+                @Override
+                public void onFailure(Call<EnderecoModel> call, Throwable t) {
+                    Toast toast = Toast.makeText(Checkout.super.getContext(), "Erro ao obter endereço!", Toast.LENGTH_LONG);
+                    toast.show();
+                }
+            };
+            call.enqueue(callbackEndereco);
 
             double valorTtal = 0;
             List<Carrinho> produto = CarrinhoSingleton.getInstance().getProdutos();
@@ -133,8 +134,8 @@ public class Checkout extends Fragment {
 
                                         alerta("Pedido " + idPedido + " Finalizado com Sucesso!");
 
-                                        Detalhes frag = new Detalhes();
-                                        getFragmentManager().beginTransaction().replace(R.id.frag_container, frag).commit();
+                                        Destaque fragment = new Destaque();
+                                        getFragmentManager().beginTransaction().replace(R.id.frag_container, fragment).commit();
                                     }else{
                                         alerta("Pedido não registrado");
                                     }
@@ -158,7 +159,7 @@ public class Checkout extends Fragment {
                 getFragmentManager().beginTransaction().replace(R.id.frag_container, frag).commit();
             }
         } else {
-            Toast toast = Toast.makeText(Checkout.super.getContext(), "Para filaziar a compra, deve-se efetuar o login", Toast.LENGTH_LONG);
+            Toast toast = Toast.makeText(Checkout.super.getContext(), "Para finalizar a compra, deve-se efetuar o login", Toast.LENGTH_LONG);
             toast.show();
             Login login = new Login();
             getFragmentManager().beginTransaction().replace(R.id.frag_container, login).commit();
