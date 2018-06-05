@@ -184,40 +184,48 @@
         android:id="@+id/tvQtdProdutos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="48dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="8dp"
         android:text="1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnAddQtd" />
+        app:layout_constraintStart_toEndOf="@+id/btnAddQtd"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
         android:id="@+id/btnAddQtd"
         android:layout_width="25dp"
         android:layout_height="23dp"
-        android:layout_marginBottom="260dp"
         android:layout_marginEnd="40dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:background="@color/colorPrimary"
         android:text="+"
         android:textColor="@color/cardview_light_background"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
         android:id="@+id/btnSubQtd"
         android:layout_width="25dp"
         android:layout_height="23dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="40dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:background="@color/colorPrimary"
         android:text="-"
         android:textColor="@color/cardview_light_background"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvQtdProdutos"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintStart_toEndOf="@+id/tvQtdProdutos"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="155dp"
+        android:layout_marginTop="13dp"
+        android:text="Quantidade:"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCategoria" />
 
 </android.support.constraint.ConstraintLayout>
