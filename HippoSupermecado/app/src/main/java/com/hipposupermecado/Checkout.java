@@ -114,7 +114,6 @@ public class Checkout extends Fragment {
                 View.OnClickListener listener = new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-
                         List<Carrinho> itemCarrinho = CarrinhoSingleton.getInstance().getProdutos();
                         int idAplicacao = 2;
                         int idStatus = 4;
